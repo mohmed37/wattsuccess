@@ -1,0 +1,84 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  }
+.nom{
+  background-color: cadetblue;
+  text-align: center;
+
+}
+.encadreNom{
+  border: thick double black;
+  margin: 2% 20%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: white;
+}
+
+.description{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.about{
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.imageCv{
+  width: 50%;
+  height: 100%;
+  padding-right: -20px;
+}
+.item ul{
+  list-style-type: none;}
+
+.adresse p{
+margin-bottom:30px;
+}
+
+mat-icon{
+  margin-bottom:30px;
+  margin-left: 100px;
+}
+
+.adresse{
+  margin-top: 20px;
+
+}
+
+
+.icom{
+  margin-top: 20px;
+}
+.educ{
+  border:solid black;
+  padding: 5px 50px;
+}
+
+.centre{
+background-color: darksalmon;
+  padding: 5px 50px;
+}
+.separateur{
+  border-top: 3px solid black;
+
+}
+.experience p{
+  text-align: center;
+  margin-right: 150px;
+}
+
+.education ul{
+  margin-right: 200px;
+}
+.education li{
+  margin-bottom: 10px;
+}
+.skills p{
+  margin-right: 250px;
+
+}

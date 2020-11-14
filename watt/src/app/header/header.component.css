@@ -1,0 +1,66 @@
+.ck-editor__editable_inline {
+  min-height: 300px;
+}
+/*
+HEADER
+*/
+
+.header{
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  height: 700px;
+  line-height: 70px;
+  background-color: rgba(38, 36, 65, 0.8);
+  top: 0;
+  position: absolute;
+
+}
+
+.header .header-logo{
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.header .header-menu{
+  font-size:large;
+  float: right;
+  margin-right:30px ;
+}
+
+
+.header .header-menu a{
+  margin-right: 15px;
+  color: white;
+}
+
+.header .header-menu a:hover{
+  color: #3498db;
+  text-decoration:none;
+}
+.portrais{
+  width: 100%;
+  height: 700px;
+}
+
+.textCentre{
+  text-align: center;
+  color: white;
+  margin-top: 200px;
+
+}
+.textCentre h1,.textCentre h2,.textCentre h3{
+  line-height: 2em;
+  font-size: 30px;
+ }
+
+.iconHeader{
+  margin-right: 10px;
+}
+
+.btnCentre{
+  background-color: #3498db ;
+  font-size: 25px;
+}
+

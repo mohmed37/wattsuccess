@@ -1,0 +1,207 @@
+.textePro p,.textePro b{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 20px;
+}
+.projetPro{
+  margin-bottom: 50px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.item{
+  border: solid 1px #134a6b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tableau{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tableau th{
+  color: #134a6b;
+  font-size: 20px;
+  font-family: Uberhand pro, serif;
+}
+.photoFicheMetier{
+  width: 40%;
+  height: auto;
+}
+.photoMetierSelect{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.texteProul ul{
+  list-style: none;
+  margin-top: 20px;
+  counter-reset: li;
+  line-height : 2
+}
+.texteProul li::before {content: counter(li); color: #134a6b;
+  display: inline-block; width: 2em;
+  margin-left: -1em}
+
+.textePro{
+  margin: 20px;
+}
+.imagePro{
+  margin-left: 20%;
+}
+h1{
+  color: #f8c620;
+}
+h3, h4 {
+  color: #134a6b;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-bottom:20px;
+}
+.lien{
+  margin-bottom: 10px;
+  margin-left: 40%;
+  width: 10%;
+  height: auto;
+  align-items: center;
+}
+
+.lien :hover{
+  width: 15%;
+  height: auto;
+}
+.metierNew{
+  color: #134a6b;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-bottom:20px;
+}
+.felicitation{
+ text-align: center;
+  margin-top: 20px;
+}
+
+/*contexte/objectifs/process*/
+
+.bndream{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+}
+
+.imgcontexte{
+  float: left;
+  height: 20%;
+}
+.item{
+  border: solid 1px grey ;
+
+}
+.item{
+  border: solid 1px #134a6b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bndream .item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.bndream p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.bndream ul{
+  list-style-type: disc;
+
+}
+
+.bndream li{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  line-height: 2em;
+  margin-left: 30px;
+}
+.bndream h4{
+  text-align: center;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.para{
+  color: #b65010;
+}
+
+h2{
+  text-align: center;
+}
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+
+
+/*contexte/objectifs/process*/

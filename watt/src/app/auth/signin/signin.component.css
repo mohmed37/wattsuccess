@@ -1,0 +1,50 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+.btn{
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.col-md-6{
+  margin-top: 50px;
+  width: 30%;
+  margin-left: 100px;
+}
+.imageN{
+  margin-top: 400px;
+
+}
+.imageM{
+  margin-left: 20px;
+}
+.mail{
+  width: 40%;
+  height: auto;
+  border:0.3mm ridge #134a6b;
+  font-family: Uberhand pro, serif;
+  text-align: center;
+  padding: 50px;
+  line-height:2em;
+  font-weight: bold;
+}
+
+label{
+  color: #f8c620;
+}
+.valideMail{
+  background-color: gainsboro;
+  color: #134a6b;
+  font-size:20px ;
+  margin-left: 0;
+  margin-top: 20px;
+}
+.btnMail{
+  color: #134a6b;
+
+}
+form{
+  margin-bottom: 20px;
+}

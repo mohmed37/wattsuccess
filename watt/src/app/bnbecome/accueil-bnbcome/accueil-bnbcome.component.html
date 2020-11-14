@@ -1,0 +1,226 @@
+<h1 class="titre" id="haut">B’n Believe</h1>
+<!--<div class="container-fluid">
+  &lt;!&ndash; Second navbar for categories &ndash;&gt;
+  <nav class="navbar navbar-default">
+    <div class="container">
+      &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      &lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a (click)="contexte()"  class="contexte">Contexte</a></li>
+          <li ><a class="objectif" (click)="objectif()">Objectifs</a></li>
+          <li ><a class="process" (click)="process()">Process</a></li>
+        </ul>
+      </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
+    </div>&lt;!&ndash; /.container &ndash;&gt;
+  </nav>&lt;!&ndash; /.navbar &ndash;&gt;
+</div>-->
+
+<div class="selection">
+    <div class="clic"  fxHide.lt-sm>
+      <button class="contexte" mat-button  (click)="contexte()">Contexte</button>
+      <button  class="objectif" mat-button  (click)="objectif()">Objectifs</button>
+      <button class="process" mat-button   (click)="process()">Process</button>
+    </div>
+  <div *ngIf="questionnaires">
+    <div class="pourcent0">
+      <p>0%</p>
+    </div>
+    <mat-progress-bar class="newProgressBar"  mode="determinate" value="{{progression}}"></mat-progress-bar>
+    <div class="pourcent100">
+      <p>100%</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="bndream" >
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <p><b>Allez à la découverte des métiers qui vous correspondent !</b></p>
+
+    <p><b>B’n Beleave</b> est une étape incontournable qui fait suite à l’étape B’n Dream.</p>
+    <p>Cette phase va vous aider à <b>mieux cerner vos forces</b> et vos axes d’amélioration en termes de
+      <b>personnalité</b>, de <b>motivation</b> et de <b>compétences.</b></p>
+    <p>A partir de tous ces éléments, vous pourrez enfin <b>découvrir les métiers</b> qui correspondent à votre profil en
+      explorant les <b>fiches métiers</b> via le <b>dico métiers</b> et choisir les métiers dans lesquels vous pourriez vous projeter.</p>
+    <p>Nous allons vous accompagner en parcourant trois étapes : <b>B’n Dream, B’n Beleave et Go’n Become.</b></p>
+    <p>Une fois ce <b>travail d’introspection</b> et <b>d’investigation</b> réalisé, vous allez pouvoir les <b>confronter à
+      l’environnement économique</b> afin d’analyser la <b>faisabilité de votre projet professionnel.</b></p>
+    </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <ul class="liObjectif">
+
+        <li>Découvrir les métiers qui correspondent à votre profil</li>
+        <li>Construire votre portefeuille de compétences</li>
+        <li>Evaluer vos aptitudes et potentialités</li>
+        <li>Cerner vos traits de personnalité et vos motivations</li>
+        <li>Etudier la faisabilité de votre projet en lien avec le marché du travail</li>
+
+    </ul>
+  </div>
+  <div class="item"   *ngIf="processValide"  id="process">
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+
+    <p>Durant cette étape <b>B’N Beleave</b>, vous allez passer par <b>différentes étapes</b>:</p>
+
+    <p><b class="para" >1er étape:</b> découvrir les métiers qui sont ressortis de votre tests d’intérêts professionnels Praico
+      et explorez les métiers qui vous intéressent via Dico métiers. Cette étape va vous permettre de sélectionner
+      les métiers dans lesquels vous souhaiteriez vous réaliser.</p>
+
+    <p><b class="para">2ème étape:</b> grâce au test de personnalité Profil – U, vous allez découvrir qui vous êtes avec vos forces
+      dans vos capacités à gérer vos relations aux autres et votre capacite à faire face aux situations du quotidien.
+      Ce test va vous permettre d’évaluer deux aspects de vous : <b>votre personnalité</b> et <b>vos valeurs professionnelles.</b> </p>
+
+    <p><b class="para">3ème étape:</b> en réalisant <b>votre portfolio</b>, vous allez pouvoir vous <b>reconnecter à vos talents</b> en identifiant
+      toutes les <b>compétences déployées</b> tout au long de votre vie.</p><p>
+      L’analyse de votre parcours professionnel et / ou scolaire va vous inviter à identifier vos expériences
+    personnelles, artistiques, sociales, professionnelles…</p><p>
+    Cet <b>exercice de réflexion</b> va également vous permettre <b>d’identifier vos talents pour vos nouvelles perspectives
+    professionnelles</b>, de <b>reprendre confiance en soi</b>, de <b>bâtir votre CV</b> et vous préparer efficacement à vos prochains
+    <b>entretiens de recrutement</b>.
+    </p>
+
+    <p><b class="para">4ème étape:</b> Cette étape va vous aider à valider la pertinence de votre projet professionnel en le confrontant
+      aux réalités socio-économiques du marché du travail. Vous allez pouvoir repérer les <b>conditions d’exercice du métier,
+        comment y accéder (formations, certifications…)</b> et <b>découvrir les opportunités d’emploi</b> en termes<b> de débouchés.</b></p>
+
+    <p>Cette dernière étape de B’n Beleave va vous permettre de savoir si <b>votre projet est réaliste et réalisable.</b></p>
+  </div>
+</div>
+
+<div class= etiquettes>
+<div class="our-team-main">
+  <div class="team-front">
+    <div class="imageN">
+      <img routerLink="/gonBelieve/dicoMetiers" fragment="haut" [src]="dicoImg"/>
+    </div>
+    <div class="projet" *ngIf="clientConnect">
+      <p class="numro" *ngIf="!dicoMetiers">1</p>
+      <p class="numro numroValide" *ngIf="dicoMetiers"><mat-icon>done_outline</mat-icon></p>
+      <p class="test" *ngIf="!dicoMetiers">Test à réaliser</p>
+      <p class="test testValide" *ngIf="dicoMetiers">Test validé</p>
+      <a class="titreProjet" routerLink="/gonBelieve/dicoMetiers" fragment="haut">Dico-Métiers</a>
+      <div class="time">
+        <mat-icon>access_time</mat-icon>
+        <p>20 minutes</p>
+    </div>
+  </div>
+    <div class="projet " *ngIf="!clientConnect">
+      <a class="titreProjet" routerLink="/gonBelieve/dicoMetiers" fragment="haut">Dico-Métiers</a>
+    </div>
+</div>
+</div>
+<div class="our-team-main">
+  <div class="team-front">
+    <div class="imageN">
+      <img routerLink="/gonBelieve/porteFolio" fragment="haut"  [src]="portefolioImg"/>
+    </div>
+    <div class="projet" *ngIf="clientConnect">
+      <p class="numro"*ngIf="!porteFolio">2</p>
+      <p class="numro numroValide" *ngIf="porteFolio"><mat-icon>done_outline</mat-icon></p>
+      <p class="test" *ngIf="!porteFolio">Test à réaliser</p>
+      <p class="test testValide" *ngIf="porteFolio">Test validé</p>
+      <a class="titreProjet" routerLink="/gonBelieve/porteFolio" fragment="haut" >PorteFolio</a>
+      <div class="time">
+        <mat-icon>access_time</mat-icon>
+        <p>20 minutes</p>
+      </div>
+    </div>
+    <div class="projet " *ngIf="!clientConnect">
+      <a class="titreProjet" routerLink="/gonBelieve/porteFolio" fragment="haut">PorteFolio</a>
+    </div>
+  </div>
+</div>
+  <div class="our-team-main">
+    <div class="team-front">
+      <div class="imageN">
+        <img routerLink="/gonBelieve/handiWatt" fragment="haut" [src]="handiWattImg"/>
+      </div>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro" *ngIf="!handiWattValode">5</p>
+        <p class="numro numroValide" *ngIf="handiWattValode"><mat-icon>done_outline</mat-icon></p>
+        <p class="test" *ngIf="!handiWattValode">Test à réaliser</p>
+        <p class="test testValide" *ngIf="handiWattValode">Test validé</p>
+        <a class="titreProjet" routerLink="/gonBelieve/handiWatt" fragment="haut">HandiWatt</a>
+        <div class="time" >
+          <mat-icon>access_time</mat-icon>
+          <p>20 minutes</p>
+        </div>
+      </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/gonBelieve/handiWatt" fragment="haut">HandiWatt</a>
+      </div>
+    </div>
+  </div>
+<div class="our-team-main">
+  <div class="team-front">
+    <div class="imageN">
+      <img routerLink="/gonBelieve/profilU" fragment="haut" [src]="profilImg"/>
+    </div>
+    <div class="projet" *ngIf="clientConnect" >
+      <p class="numro"*ngIf="!profilU">3</p>
+      <p class="numro numroValide" *ngIf="profilU"><mat-icon>done_outline</mat-icon></p>
+      <p class="test" *ngIf="!profilU">Test à réaliser</p>
+      <p class="test testValide" *ngIf="profilU">Test validé</p>
+      <a class="titreProjet" routerLink="/gonBelieve/profilU" fragment="haut">Profil-U</a>
+      <div class="time">
+        <mat-icon>access_time</mat-icon>
+        <p>30 minutes</p>
+      </div>
+    </div>
+    <div class="projet " *ngIf="!clientConnect">
+      <a class="titreProjet" routerLink="/gonBelieve/profilU" fragment="haut">Profil-U</a>
+    </div>
+  </div>
+</div>
+<div class="our-team-main">
+  <div class="team-front">
+    <div class="imageN">
+      <img routerLink="/gonBelieve/projetPro" fragment="haut" [src]="projetProImg"/>
+    </div>
+    <div class="projet" *ngIf="clientConnect">
+      <p class="numro" *ngIf="!projetPro">4</p>
+      <p class="numro numroValide" *ngIf="projetPro"><mat-icon>done_outline</mat-icon></p>
+      <p class="test" *ngIf="!projetPro">Test à réaliser</p>
+      <p class="test testValide" *ngIf="projetPro">Test validé</p>
+      <a class="titreProjet" routerLink="/gonBelieve/projetPro" fragment="haut">Projet Professionnel</a>
+      <div class="time">
+        <mat-icon>access_time</mat-icon>
+        <p>20 minutes</p>
+      </div>
+    </div>
+    <div class="projet " *ngIf="!clientConnect">
+      <a class="titreProjet" routerLink="/gonBelieve/projetPro" fragment="haut">Projet Professionnel</a>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,286 @@
+<h1 class="titre" id="haut">PorteFolio</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+  <div class="bndream" >
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+      <div class="button-container">
+        <h2>Contexte</h2>
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <p><b>VOUS ETES TOUTES ET TOUS DOTES.EES DE TALENTS EXTRAORDINAIRES !
+        VOUS ALLEZ POUVOIR ENFIN VOUS RECONNECTER A VOS TALENTS GRACE A TOUTES LES COMPETENCES DEPLOYEES TOUT AU LONG DE
+        VOTRE VIE !</b></p>
+      <img [src]="porteFolioImg1">
+
+      <p><b>Connaître vos compétences</b> vous permettra de <b>mieux cerner</b> ce pour quoi vous pourrez postuler et vous permettra
+        de comprendre quelles sont les compétences à développer quand vous choisirez le métier qui vous correspond.
+        L’analyse de votre itinéraire va vous inviter à identifier vos expériences personnelles, artistiques, sociales,
+        professionnelles…, afin de repérer les compétences développées en lien avec les productions réalisées.
+        Ces compétences que vous maîtrisez seront donc à <b>intégrer dans votre CV.</b></p>
+
+      <p>La construction de votre portefolio est une <b>étape très importante</b> pour vous : cet exercice de réflexion va vous
+        permettre de vous projeter sur de nouvelles possibilités d’activité, de <b>nouveaux horizons professionnels.</b></p>
+
+      <p>Elle vous apportera un bénéfice indéniable sur la <b>reprise de confiance</b> en vous et notamment sur vos forces et
+        vos talents. C’est une expérience à la fois libératrice et positive.</p>
+
+      <p>L’analyse de votre itinéraire va vous inviter à <b>décrire vos expériences personnelles, artistiques, sociales,
+        professionnelles, …,</b> afin de repérer les compétences que vous y avez développées, en lien avec les productions réalisées.</p>
+      <p>Vous avez capitalisé des compétences tout au long de votre parcours scolaire et / ou professionnel,
+        c’est l’occasion de faire le point sur vos compétences, vos talents !</p>
+      <p><p>Nota bene : Le portfolio que vous allez réaliser est un <b>outil vivant et évolutif.</b> Vous pourrez au
+        fur et à mesure de vos prochaines expériences <b>l’alimenter de vos nouvelles compétences acquises.</b></p>
+
+    </div>
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+
+      <div class="button-container">
+        <h2>Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <ul class="liObjectif">
+        <li>Identifier vos compétences / savoir faire - savoir être - savoirs</li>
+        <li>Analyser vos forces et vos axes d’amélioration en fonction du projet professionnel identifié</li>
+        <li>Cerner les besoins en formation pour rendre viable votre projet</li>
+        <li>Construire les bases de votre CV et de votre lettre de motivation</li>
+        <li>Gagner en confiance en soi</li>
+        <li>Avoir des arguments pour défendre votre candidature lors d’un entretien de recrutement</li>
+        <li>Préparer une VAE (Validation des Acquis par l’expérience) afin de valider un diplôme</li>
+        <li>Accroître son employabilité</li>
+      </ul>
+    </div>
+
+    <div class="item"   *ngIf="processValide"  id="process">
+
+      <div class="button-container">
+        <h2>Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>Dans un premier temps, vous allez vous remémorez toutes les expériences professionnelles et extraprofessionnelles
+             que vous avez développées au niveau scolaire, professionnel, associative ou sportive et identifier toutes
+             les compétences que vous avez déployées.</p>
+
+      <p>Il sera important de dissocier vos qualités (soft skills), vos savoir-faire (hard skills) et vos savoirs (connaissances acquises).</p>
+      <p>Vous pourrez également identifier vos compétences clés.*</p>
+      <p>Les compétences clés sont nécessaires à toute personne pour son épanouissement et le développement personnel.</p>
+      <p>Elles sont définies en 8 domaines de compétences :</p>
+      <ul class="liObjectif">
+        <li>Communiquer dans une langue étrangère </li>
+        <li>Communiquer dans une langue maternelle</li>
+       <li>Disposer d’une culture mathématiques et de compétences en sciences et technologies</li>
+        <li>Avoir une culture numérique</li>
+        <li>Apprendre à apprendre</li>
+        <li>Développer un esprit d’initiative et d’entreprise</li>
+        <li>Avoir une sensibilité et expression culturelles</li>
+      </ul>
+
+      <p>Vous allez repérer également vous autoévaluer sur votre niveau en compétences linguistiques et informatiques.</p>
+
+      <p>*la liste des compétences n’est pas exhaustive, vous avez donc la possibilité d’en rajouter.
+        Afin de faciliter la remémoration de votre parcours, nous vous proposons de renseigner votre tableau en identifiant
+        les domaines de compétences que vous avez développés (gestion, ressources humaines, développement informatique…).
+      </p>
+      <p>N’oubliez d’identifier les connaissances acquises lors de vos formations scolaires et continues
+        (ex : secourisme, BAFA, BAFD, stage de musique, danse…).</p>
+
+      <p>Dans un second temps, vous devrez vous auto-évaluer en premier lieu sur votre degré de maitrise sur la
+        compétence sélectionnée puis, en second temps, vous évaluer sur votre degré d’intérêt sur une échelle
+        de 1 à 4 pour cette compétence. </p>
+      <p><b>LET’S GO !</b></p>
+    </div>
+  </div>
+
+
+<!--<form [formGroup]="formCompetence" >
+  <div   class="photos ItemPhoto" >
+    <label>competence</label>
+    <input formControlName="competence" class="form-control" type="text" >
+    <label>faire1</label>
+    <input  formControlName="faire1" class="form-control" type="text" >
+    <label>faire2</label>
+    <input  formControlName="faire2" class="form-control" type="text">
+    <label>faire3</label>
+    <input formControlName="faire3" class="form-control" type="text" >
+    <label>faire4</label>
+    <input  formControlName="faire4" class="form-control" type="text" >
+    <label>faire5</label>
+    <input  formControlName="faire5" class="form-control" type="text">
+    <label>faire6</label>
+    <input  formControlName="faire6" class="form-control" type="text">
+    <label>savoir1</label>
+    <input  formControlName="savoir1" class="form-control" type="text" >
+    <label>savoir2</label>
+    <input  formControlName="savoir2" class="form-control" type="text">
+    <label>savoir3</label>
+    <input formControlName="savoir3" class="form-control" type="text" >
+    <label>savoir4</label>
+    <input  formControlName="savoir4" class="form-control" type="text" >
+    <label>savoir5</label>
+    <input  formControlName="savoir5" class="form-control" type="text">
+
+
+
+    <button class="btn btn-success " (click)="saveCompetence()">Je valide</button>
+    <p >{{message}}</p>
+  </div>
+</form>-->
+<div *ngIf="dicoMetier &&clientConnect" class="dico">
+<h3>Evaluer vos compétences et découvrez vos talents</h3>
+<p>Vous avez capitalisé des compétences tout au long de votre parcours scolaire et / ou professionnel,
+  faîtes le point sur vos talents :</p>
+<p>Sur la base d’une liste de domaines de compétences, vous allez vous autoévaluer en sélectionnant les compétences
+  que vous avez mobilisé durant votre parcours scolaire et professionnel.
+  Puis vous devrez vous positionner en évaluant votre degré de maîtrise pour cette compétence et votre degré d’intérêt
+  sur une échelle de 0 à 4.
+</p>
+  <div class="container">
+<form class="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Compétences:</mat-label>
+    <mat-select [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let competence of listCompetences" [value]="competence.competence" (click)="clic(competence.id)">
+        {{competence.competence}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+  <form class="form">
+    <mat-form-field appearance="fill">
+      <mat-label>Votre portefeuille de compétences:</mat-label>
+      <mat-select [(ngModel)]="selectedValueClient" name="food">
+        <mat-option *ngFor="let competence of dtailCompetence  let index = index" [value]="competence[0][2]" (click)="clicCompetencesClient(competence,index)">
+
+          {{competence[0][2]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  </div>
+</div>
+<a (click)="closeList2()"> <h3 *ngIf="selectCompetence">{{selectedValue}}</h3></a>
+<div class="ficheCompetence">
+
+<table class="table table-striped" *ngIf="selectCompetence">
+  <thead>
+  <tr>
+    <td class="colone">Compétences</td>
+    <td class="colone">Degré de maîtrise</td>
+    <td class="colone">Degré d’intérêt</td>
+  </tr>
+  </thead>
+  <tbody>
+
+    <p >Savoir faire :</p>
+  <tr *ngFor="let faire of competenceSelected.faire  ; let index = index">
+    <td  class="savoir " *ngIf="faire" >{{faire}}</td>
+    <td  *ngIf="faire">
+      <mat-radio-group aria-label="Select an option" (change)="save($event)">
+      <mat-radio-button value="{{index}}+1+{{selectedValue}}+{{faire}}+faire+maitrise">1</mat-radio-button>
+      <mat-radio-button value="{{index}}+2+{{selectedValue}}+{{faire}}+faire+maitrise">2</mat-radio-button>
+      <mat-radio-button value="{{index}}+3+{{selectedValue}}+{{faire}}+faire+maitrise">3</mat-radio-button>
+      <mat-radio-button value="{{index}}+4+{{selectedValue}}+{{faire}}+faire+maitrise">4</mat-radio-button>
+    </mat-radio-group>
+    </td>
+    <td *ngIf="faire">
+      <mat-radio-group aria-label="Select an option" (change)="save($event)">
+        <mat-radio-button value="{{index}}+1+{{selectedValue}}+{{faire}}+faire+interet">1</mat-radio-button>
+        <mat-radio-button value="{{index}}+2+{{selectedValue}}+{{faire}}+faire+interet">2</mat-radio-button>
+        <mat-radio-button value="{{index}}+3+{{selectedValue}}+{{faire}}+faire+interet">3</mat-radio-button>
+        <mat-radio-button value="{{index}}+4+{{selectedValue}}+{{faire}}+faire+interet">4</mat-radio-button>
+      </mat-radio-group>
+    </td>
+  </tr>
+    <p >Savoir :</p>
+  <tr *ngFor="let savoir of competenceSelected.savoir let index = index">
+    <td class="savoir " *ngIf="savoir" >{{savoir}}</td>
+    <td *ngIf="savoir">
+      <mat-radio-group aria-label="Select an option" (change)="save($event)"  >
+      <mat-radio-button value="{{index}}+1+{{selectedValue}}+{{savoir}}+savoir+maitrise">1</mat-radio-button>
+      <mat-radio-button value="{{index}}+2+{{selectedValue}}+{{savoir}}+savoir+maitrise">2</mat-radio-button>
+      <mat-radio-button value="{{index}}+3+{{selectedValue}}+{{savoir}}+savoir+maitrise">3</mat-radio-button>
+      <mat-radio-button value="{{index}}+4+{{selectedValue}}+{{savoir}}+savoir+maitrise">4</mat-radio-button>
+    </mat-radio-group>
+    </td>
+    <td *ngIf="savoir" >
+      <mat-radio-group aria-label="Select an option" (change)="save($event)" >
+        <mat-radio-button value="{{index}}+1+{{selectedValue}}+{{savoir}}+savoir+interet">1</mat-radio-button>
+        <mat-radio-button value="{{index}}+2+{{selectedValue}}+{{savoir}}+savoir+interet">2</mat-radio-button>
+        <mat-radio-button value="{{index}}+3+{{selectedValue}}+{{savoir}}+savoir+interet">3</mat-radio-button>
+        <mat-radio-button value="{{index}}+4+{{selectedValue}}+{{savoir}}+savoir+interet">4</mat-radio-button>
+      </mat-radio-group>
+    </td>
+  </tr>
+  </tbody>
+  <button class="btn btn-success " *ngIf="!selecvalide" (click)="selecSavoir()">Je valide</button>
+</table>
+</div>
+
+
+<div *ngIf="afficherSelection" class="ficheCompetence">
+  <button class="button btn-warning" (click)="deleteFicheMetierClient(metier)">Supprimer cette fiche</button>
+  <h3>{{metier}}</h3>
+  <button mat-mini-fab color="warn" (click)="closeList()">
+    <mat-icon>filter_list</mat-icon>
+  </button>
+<table class="table table-striped">
+
+  <thead>
+  <tr>
+    <td class="colone">Compétences</td>
+    <td class="colone">Degré de maîtrise</td>
+    <td class="colone">Degré d’intérêt</td>
+  </tr>
+  </thead>
+  <tbody>
+
+  <p >Savoir faire :</p>
+  <tr *ngFor="let faire of listFaireClient ; let index = index">
+    <td  class="savoir " *ngIf="faire" >{{faire[3]}}</td>
+    <td  *ngIf="faire">
+      <mat-icon *ngIf="faire[1]>=1">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[1]>=2">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[1]>=3">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[1]==4">done_outline</mat-icon>
+    </td>
+    <td  *ngIf="faire">
+      <mat-icon *ngIf="faire[5]>=1">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[5]>=2">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[5]>=3">done_outline</mat-icon>
+      <mat-icon *ngIf="faire[5]==4">done_outline</mat-icon>
+    </td>
+
+  </tr>
+  <p >Savoir :</p>
+  <tr *ngFor="let savoir of listSavoirClient let index = index">
+    <td class="savoir " *ngIf="savoir " >{{savoir[3]}}</td>
+    <td *ngIf="savoir">
+      <mat-icon *ngIf="savoir[1]>=1">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[1]>=2">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[1]>=3">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[1]==4">done_outline</mat-icon>
+
+    </td>
+    <td *ngIf="savoir">
+      <mat-icon *ngIf="savoir[5]>=1">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[5]>=2">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[5]>=3">done_outline</mat-icon>
+      <mat-icon *ngIf="savoir[5]==4">done_outline</mat-icon>
+    </td>
+  </tr>
+  </tbody>
+
+</table>
+</div>
+

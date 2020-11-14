@@ -1,0 +1,165 @@
+<h1 class="titre" id="haut">Dico-Métiers</h1>
+<div class="selection">
+  <div class="clic">
+    <button class="contexte" mat-button  fxHide.lt-sm (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button fxHide.lt-sm (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button fxHide.lt-sm (click)="process()">Process</button>
+  </div>
+</div>
+
+    <div class="bndream" >
+
+      <div class="item" *ngIf="contexteValide"  id="contexte">
+        <div class="button-container">
+          <h2>Contexte</h2>
+          <button mat-mini-fab color="warn" (click)="contexte()" >
+            <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+        <p><b>VOUS ALLEZ EXPLORER LES METIERS QUI VOUS CORRESPONDENT VRAIMENT ET ENFIN DECOUVRIR QUEL EST LE METIER QUI EST FAIT POUR VOUS !</b></p>
+
+        <p>Avant de choisir une formation ou une filière d’étude, il est essentiel de découvrir le métier ou les métiers
+          que vous avez envie d’exercer. Ce n’est qu’une fois le métier choisi que vous pourrez sélectionner la formation.</p>
+
+        <p style="color: red">Comment trouver le métier idéal ?</p>
+
+        <p> Grâce au test PRAICO que vous avez passé lors de la première phase B’N Dream, vous avez pu découvrir vos
+                aspirations professionnelles et ainsi identifier les métiers qui correspondent à vos intérêts professionnels.</p>
+
+        <p>Cette étape va donc vous permettre d’identifier tous les métiers qui pourraient vous plaire grâce au dico
+          métiers qui présente à la fois tous les secteurs d’activité et leurs métiers. </p>
+
+      </div>
+
+      <div class="item" *ngIf="objectifValide"  id="objectif">
+
+        <div class="button-container">
+          <h2>Objectifs</h2>
+          <button mat-mini-fab color="warn" (click)="objectif()">
+            <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+        <ul class="liObjectif">
+          <li>Découvrir des secteurs d’activité professionnelle</li>
+          <li>Identifier le/ les métiers qui correspondent à votre profil</li>
+          <li>Elaborer votre projet professionnel</li>
+        </ul>
+      </div>
+
+      <div class="item"   *ngIf="processValide"  id="process">
+        <div class="button-container">
+          <h2>Process</h2>
+          <button mat-mini-fab color="warn" (click)="process()">
+            <mat-icon>filter_list</mat-icon>
+          </button>
+        </div>
+
+        <p>Vous allez sélectionner les métiers au tenant compte des résultats que vous avez passées lors des différents
+          tests et exercices de réflexion durant la phase B’N Dream. Cette étape vous aura permis de mieux vous connaître,
+          de savoir ce que vous voulez et ne voulez pas ou plus et d’identifier ce qui vous intéresse et vous motive.</p>
+
+        <p>Pour vous aider, nous avons mis à votre disposition un dico métier qui se décompose comme suit :</p>
+        <ul class="liObjectif">
+          <li>Présentation des domaines professionnels</li>
+          <li>Définition des métiers en fonction des secteurs d’activité</li>
+        </ul>
+
+        <p> Vous allez donc explorer des métiers et sélectionner ceux qui vous plaisent.</p>
+
+        <p>Une fois que vous aurez identifié les métiers qui vous intéressent, vous allez les sélectionner en y indiquant un cœur.</p>
+        <p>A la fin de cette exploration métier, vous allez pouvoir obtenir une liste de métiers que vous appréciez
+          et que vous aimeriez exercer.</p>
+
+        <p>Pour aller plus loin dans votre exploration métiers, n’hésitez pas à consulter les <b>fiches métiers ROME</b>
+          (Répertoire Opérationnel des Métiers et des Emploi) et les <b>vidéos de professionnels</b> des métiers sélectionnés
+          via le <b>site de Pole Emploi.</b> Vous pourrez également lire des ouvrages sur les métiers auprès de la bibliothèque
+          de votre ville, visiter des forums, blogs dédiés aux métiers et secteurs d’activité choisis.  </p>
+        <p style="text-decoration: underline"><b>Liens pour aller plus loin dans votre exploration :</b></p>
+        <ul class="liObjectif">
+        <li> <a href="https://www.pole-emploi.fr/candidat/decouvrir-le-marche-du-travail/les-fiches-metiers.html" target="_blank">
+            https://www.pole-emploi.fr/candidat/decouvrir-le-marche-du-travail/les-fiches-metiers.html</a></li>
+          <li> <a href="https://www.explorateurdemetiers.tv/explorateur" target="_blank">https://www.explorateurdemetiers.tv/explorateur</a></li>
+          <li><a href="https://oniseptv.onisep.fr/" target="_blank">https://oniseptv.onisep.fr/</a></li>
+        </ul>
+      </div>
+    </div>
+
+<div *ngIf="clientConnect">
+<div class="bouton">
+  <button *ngIf="!dicoMetiersValide&&heroValide&&!select" mat-raised-button (click)="listFicheMetierClient()">Démarrez <mat-icon class="icon">send</mat-icon></button>
+</div>
+
+<div class="explication" *ngIf="select||dicoMetiersValide">
+  <h3>DICO-METIERS : EXPLORATION DES METIERS </h3>
+  <p>Vous allez explorer la liste de métiers ressortie du test PRAICO.</p>
+  <p>Le Dico-Métiers se présentent par domaines professionnels.</p>
+  <p>Découvrez pour quels métiers vous êtes fait.</p>
+  <p>Mettez un cœur rose devant le métier que vous aimez.</p>
+</div>
+
+
+<div class= etiquettes>
+  <div  *ngFor="let m of listImageFicheMetier">
+<div class="our-team-main">
+  <div class="team-front">
+    <div class="imageN">
+      <img [src]="m.photo" (click)="clic(m.metier)" />
+    </div>
+    <div class="projet">
+      <a class="titreProjet"  (click)="clic(m.metier)">{{m.metier}}</a>
+
+    </div>
+  </div>
+</div>
+</div>
+  <div class="container" *ngIf="selecMetier" id="select">
+    <table class="table table-hover" >
+      <thead>
+      <tr>
+        <th>Métier:  {{metierModif}} </th>
+        <th>Sélection</th>
+        <a (click)="close()">X</a>
+      </tr>
+      </thead>
+      <tbody *ngFor="let m of listDesMetierSelect"  >
+      <tr >
+        <td (click)="selectFicheMetier(m.ficheMetier.id)">{{m.ficheMetier.metier}}</td>
+        <td *ngIf="!m.etat" > <mat-icon class="icon"  (click)="changeColor(m.ficheMetier.id)" [style.color]="colorNewText">favorite</mat-icon></td>
+        <td *ngIf="m.etat"> <mat-icon class="icon"  (click)="changeColor(m.ficheMetier.id)" [style.color]="colorNewText2">favorite</mat-icon></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="containerfiche" *ngIf="FicheMetier &&selectFicheMetierValide" >
+
+  <div class=" item photo1">
+    <img class="photoFicheMetier" [src]="ImageFicheMetier">
+    <h1 class="fiche">{{metier}}</h1>
+  </div>
+  <div class="item texte">
+    <p>{{texte}}</p>
+  </div>
+
+  <div class="item texte ">
+    <h2>Compétences requises :</h2>
+    <ul *ngIf="competences" >
+      <li  *ngFor="let c of competences ">
+        <p>{{c}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="item texte">
+    <h2>Eléments de personnalité :</h2>
+    <ul *ngIf="qualites" >
+      <li  *ngFor="let q of qualites ">
+        <p>{{q}}</p>
+      </li>
+    </ul>
+  </div>
+
+</div>
+</div>

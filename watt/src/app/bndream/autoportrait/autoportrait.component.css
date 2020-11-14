@@ -1,0 +1,223 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.cont{
+  border: solid 1px #b65010;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 100%;
+}
+.bouton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+button{
+  background-color:#f8c620;
+  color: white;
+  font-size: 20px;
+}
+.icon{
+  color: white;
+}
+
+.btn{
+  margin: 20px 20px 20px 50px;
+}
+
+
+p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.resultat {
+ margin-right: 10px;
+}
+.resultat li{
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 20px;
+  color:  #b65010;
+  font-family: Uberhand pro, serif;
+}
+.photo{
+  position: relative;
+}
+
+.contenu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.editeur{
+  width: 20%;
+  height: auto;
+}
+.select li{
+  font-family: Uberhand pro, serif;
+  border: 1px solid #134a6b;
+  text-align: center;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.resultat li,.selection li,.select li{
+  font-family: Uberhand pro, serif;
+  border: 1px solid #134a6b;
+  text-align: center;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.resultat li:hover,.select li:hover,.selection li:hover{
+  background-color: #134a6b;
+  color: white;
+  font-family: Uberhand pro, serif;
+}
+
+.item .valide{
+  margin-top: 30px;
+  background-color: green;
+  color: white;
+}
+.item .invalide{
+  margin-top: 30px;
+  background-color: #3498db;
+  color: white;
+}
+.select{
+  background-color: #dfd5ce;
+  width: 450px;
+  margin-top: 20px;
+}
+.item .photo2{
+float: left;
+}
+.image p{
+  font-family: Uberhand pro, serif;
+  float: right;
+  font-size: 20px;
+  color: #ff0084;
+  margin-top: 100px;
+}
+.image{
+  background-color: #dfd5ce;
+}
+.select .icon{
+  color: black;
+}
+:host ::ng-deep .ck-editor__editable_inline {
+  min-width:50%;
+  color: #3498db;
+  font-size: 20px;
+  font-family: Uberhand pro, serif;
+}
+.liObjectif li{
+  font-size: 20px;
+  line-height: 2em;
+  font-family: Uberhand pro, serif;
+}
+.imgcontexte{
+  float: left;
+  height: 20%;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+}
+
+.selectionTheme{
+  font-size: 20px;
+  margin: 30px 50px;
+  text-align: center;
+}
+
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/
+
+.body{
+  margin-bottom: 20px;
+}
+
+.constat{
+  color: #b65010;
+}

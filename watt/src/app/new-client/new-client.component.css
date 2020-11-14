@@ -1,0 +1,27 @@
+.clickable{
+  cursor: pointer;
+}
+
+span{
+  color: red;
+  margin-left: 10px;
+}
+mat-form-field{
+  width: 50%;
+  margin-left: 20%;
+}
+.from{
+  margin-top: 50px;
+}
+
+mat-icon, mat-hint{
+  color:#3498db;
+  font-size: 15px;
+}
+button{
+  margin-left: 20%;
+  margin-top: 10px;
+}
+.btn-danger ,.btn-success{
+  margin-bottom: 20px;
+}

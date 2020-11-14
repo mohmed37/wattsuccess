@@ -1,0 +1,208 @@
+<h1 class="titre" id="haut">B' n Dream</h1>
+<div class="selection">
+
+    <div class="clic" fxHide.lt-sm>
+      <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+      <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+      <button class="process" mat-button (click)="process()">Process</button>
+    </div>
+  <div *ngIf="questionnaires">
+  <div class="pourcent0">
+  <p>0%</p>
+  </div>
+  <mat-progress-bar class="newProgressBar"  mode="determinate" value="{{progression}}"></mat-progress-bar>
+  <div class="pourcent100">
+    <p>100%</p>
+  </div>
+  </div>
+</div>
+
+  <div class="bndream" >
+
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+
+      <div class="button-container">
+        <h2>Contexte</h2>
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <p><b>IMAGINEZ VOTRE FUTUR</b></p>
+
+      <p>Choisissez un METIER QUE VOUS AIMEZ et vous n’aurez jamais l’impression de travailler !</p>
+      <p>Vous vous sentez perdu dans votre scolarité, votre emploi ne vous satisfait plus et les perspectives que l’on
+        vous propose ne vous réjouissent pas du tout.</p>
+      <p>Ça c’était hier – Aujourd’hui est un autre jour avec des solutions à porter de celui ou celle qui <b>ose vivre sa vie.</b></p>
+      <p>Nous allons vous accompagner en parcourant trois étapes : <b>B’n Dream, B’n Beleave et Go’n Become.</b></p>
+      <p><b>Alors commençons par le commencement !</b></p>
+      <p><b>B’n DREAM :</b></p>
+      <p>Cette première étape de votre bilan va vous permettre de découvrir votre ADN vocationnel et mieux vous connaitre
+        pour mieux vous reconnecter à qui vous êtes.</p>
+      <p><b>Nous avons une vie alors autant la vivre pleinement !</b></p>
+      <p>Nous vous invitons grâce à B’N Dream à vous découvrir : vos priorités, vos sphères de vie, vos qualités,
+        vos aspirations, vos centres d’intérêts, vos valeurs pour révéler votre potentiel et ainsi entrevoir les métiers
+        qui vous correspondent.</p>
+      <p>Cette étape vous ouvre tous les champs des possibles. Alors ne vous mettez pas de freins et
+        <b>goûter au plaisir de l’infiniment possible.</b></p>
+    </div>
+
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+
+      <div class="button-container">
+        <h2>Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <ul class="liObjectif">
+        <li>Mieux connaître ses potentialités, ses atouts, ses aspirations</li>
+        <li>Se reconnecter à ses besoins au niveau de sa sphère privée, sociale et professionnelle</li>
+        <li>Identifier les valeurs qui vous animent</li>
+        <li>Découvrir ses intérêts professionnels et les métiers qui ressortent</li>
+      </ul>
+    </div>
+
+    <div class="item"   *ngIf="processValide"  id="process">
+
+      <div class="button-container">
+        <h2>Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>Durant ce premier parcours, vous allez vous découvrir en passant par 5 étapes.</p>
+
+      <p><b>1er étape : Photolangage</b> pour faire un point sur sa situation actuelle et sa situation désirée au travers
+        d’une cinquantaine de photographies.</p>
+
+      <p><b>2ème étape : La roue de la vie</b>va vous permettre d’évaluer vos 5 domaines de vie et identifier quelle
+        est votre vision de votre avenir. </p>
+
+      <p><b>3ème étape : L’autoportrait</b>va vous aider à identifier vos qualités et vos défauts.</p>
+
+      <p><b>4ème étape : Le test PRAICO</b>va vous permettre de découvrir votre ADN Vocationnel, vos aspirations
+        professionnelles et ainsi vous aider à identifier les métiers qui correspondent à votre profil d’intérêt. </p>
+
+      <p><b>5ème étape : Quel.le Héros / Héroïne êtes-vous ?</b>Vous allez découvrir les valeurs qui vous animent,
+        celles qui vous donnent envies de vous lever tous les matins.</p>
+
+      <h4><b>Ces 5 étapes vous ont permis de mieux vous connaître et d’identifier des pistes de métiers.</b></h4>
+      <h4><b>Cette phase est incontournable avant de passer à la 2ème étape B’N Beleave !</b></h4>
+    </div>
+</div>
+
+<div class= etiquettes>
+  <div class="our-team-main">
+    <div class="team-front">
+      <div class="imageN">
+      <img routerLink="/bndream/photolangage" [src]="photlangageImg"/>
+      </div>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro" *ngIf="!photolangage">1</p>
+        <p class="numro numroValide" *ngIf="photolangage"><mat-icon>done_outline</mat-icon></p>
+        <p class="test" *ngIf="!photolangage">A réaliser</p>
+        <p class="test testValide" *ngIf="photolangage">Validé</p>
+        <a class="titreProjet" routerLink="/bndream/photolangage" fragment="haut">Photolangage</a>
+        <div class="time">
+          <mat-icon>access_time</mat-icon>
+          <p>30 minutes</p>
+        </div>
+    </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/bndream/photolangage" fragment="haut">Photolangage</a>
+      </div>
+  </div>
+  </div>
+
+  <div class="our-team-main">
+    <div class="team-front">
+      <div class="imageN">
+        <img routerLink="/bndream/roue-de-la-vie" fragment="haut" [src]="rouedelavieImg"/>
+      </div>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro"*ngIf="!roueVie">2</p>
+        <p class="numro numroValide" *ngIf="roueVie"><mat-icon>done_outline</mat-icon></p>
+        <p class="test" *ngIf="!roueVie">A réaliser</p>
+        <p class="test testValide" *ngIf="roueVie">Validé</p>
+        <a class="titreProjet" routerLink="/bndream/roue-de-la-vie" fragment="haut" (click)="serviceBream.getResultRoueDeLaVie()" >Roue de la vie </a>
+        <div class="time">
+          <mat-icon>access_time</mat-icon>
+          <p>40 minutes</p>
+        </div>
+      </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/bndream/roue-de-la-vie" fragment="haut">Roue de la vie</a>
+      </div>
+      </div>
+    </div>
+  <div class="our-team-main">
+    <div class="team-front">
+      <div class="imageN">
+        <img routerLink="/bndream/autoPortrait" fragment="haut" [src]="autoportraitImg"/>
+      </div>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro"*ngIf="!autoportrait">3</p>
+        <p class="numro numroValide" *ngIf="autoportrait"><mat-icon>done_outline</mat-icon></p>
+        <p class="test" *ngIf="!autoportrait">A réaliser</p>
+        <p class="test testValide" *ngIf="autoportrait">Validé</p>
+        <a class="titreProjet" routerLink="/bndream/autoPortrait" fragment="haut">Autoportrait</a>
+        <div class="time">
+          <mat-icon>access_time</mat-icon>
+          <p>30 minutes</p>
+        </div>
+      </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/bndream/autoPortrait" fragment="haut">Autoportrait</a>
+      </div>
+    </div>
+  </div>
+  <div class="our-team-main">
+    <div class="team-front">
+      <div class="imageN">
+        <img routerLink="/bndream/praico" fragment="haut" [src]="praicoImg"/>
+      </div>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro" *ngIf="!qcm1">4</p>
+        <p class="numro numroValide" *ngIf="qcm4"><mat-icon>done_outline</mat-icon></p>
+        <p class="numro numroCours" *ngIf="qcm1&&!qcm4"><mat-icon>timer</mat-icon></p>
+        <p class="test" *ngIf="!qcm1">A réaliser</p>
+        <p class="test testCours" *ngIf="qcm1&&!qcm4">En cours </p>
+        <p class="test testValide" *ngIf="qcm4">Validé</p>
+        <a class="titreProjet" routerLink="/bndream/praico" fragment="haut">PRAICO</a>
+        <div class="time ">
+          <mat-icon>access_time</mat-icon>
+          <p>20 minutes</p>
+        </div>
+        <p [style.color]="colorNewQcm1" *ngIf="qcm1&&!qcm2"><mat-icon >done</mat-icon>Questionnaire n°1 – Comment vous décririez-vous ? (5 minutes)</p>
+        <p [style.color]="colorNewQcm2" *ngIf="qcm2&&!qcm3" ><mat-icon >done</mat-icon>Questionnaire n°2 – Quelles activités et environnements préférez-vous ? (7 minutes)</p>
+        <p [style.color]="colorNewQcm3" *ngIf="qcm3&&!qcm4"><mat-icon >done</mat-icon>Questionnaire n°3 – Quels sont vos loisirs ? (7 minutes)</p>
+        <P [style.color]="colorNewQcm4" *ngIf="qcm4"><mat-icon >done</mat-icon>Questionnaire n°4 – Quels métiers vous attirent ? (3 minutes)</P>
+    </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/bndream/praico" fragment="haut">PRAICO</a>
+      </div>
+  </div>
+  </div>
+  <div class="our-team-main">
+    <div class="team-front">
+        <img routerLink="/bndream/heros" fragment="haut" [src]="herosImg"/>
+      <div class="projet" *ngIf="clientConnect">
+        <p class="numro" *ngIf="!hero">5</p>
+        <p class="numro numroValide" *ngIf="hero"><mat-icon>done_outline</mat-icon></p>
+        <p class="test" *ngIf="!hero">A réaliser</p>
+        <p class="test testValide" *ngIf="hero">Validé</p>
+        <a class="titreProjet" routerLink="/bndream/heros" fragment="haut">Héros / Héroïne</a>
+        <div class="time">
+          <mat-icon>access_time</mat-icon>
+          <p>20 minutes</p>
+        </div>
+      </div>
+      <div class="projet " *ngIf="!clientConnect">
+        <a class="titreProjet" routerLink="/bndream/heros" fragment="haut">Héros / Héroïne</a>
+      </div>
+    </div>
+    </div>
+  </div>
+
+

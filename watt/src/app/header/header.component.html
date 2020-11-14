@@ -1,0 +1,27 @@
+<img  [src]="portraits"  class="portrais">
+<div class="block">
+  <header class="header">
+    <div class="header-logo"><a ><img [src]="logo" alt=""></a></div>
+    <nav class="header-menu">
+      <a  routerLink="/admin" *ngIf="authService.isUserAdmin"  >Administrateur</a>
+      <a *ngIf="authService.isAuthenticated"  routerLink="/gonBelieve/fichesMetiers"  fragment="haut">Fiches métier</a>
+      <a *ngIf="authService.isAuthenticated"  routerLink="/wattMatch"  fragment="haut">Watt Match </a>
+      <a routerLink="/">Accueil</a>
+      <a (click)="onLogin()" *ngIf="!authService.isAuthenticated"><i class="fas fa-external-link-square-alt"></i> Connexion</a>
+      <a *ngIf="authService.isAuthenticated"  (click)="onLogout()"><i class="fas fa-external-link-square-alt"></i> Déconnection</a>
+      <a routerLink="/new-client" fragment="haut" *ngIf="!authService.isAuthenticated">Inscription</a>
+      <a routerLink="/listClient" *ngIf="authService.isUserAdmin" >list des clients</a>
+      <a routerLink="/personalinfo"  fragment="haut" *ngIf="authService.isAuthenticated" >Infos compte</a>
+
+
+    </nav>
+    <div class="textCentre" fxHide.lt-sm>
+      <h1 >TROUVEZ VOTRE VOIE – CHANGEZ DE METIER – BOOSTEZ VOTRE CARRIERE – DEVENEZ ENTREPRENEUR</h1>
+      <h2 >VOUS CHERCHEZ A VOUS REALISER ?</h2>
+      <h3>WATT est là pour vous accompagner à faire les bons choix.</h3>
+     <!-- <button class="btn btnCentre" routerLink="/EnSavoirPlus">En savoir plus</button>-->
+    </div>
+  </header>
+</div>
+
+

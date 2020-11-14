@@ -1,0 +1,11 @@
+
+  <div class="container" id="haut">
+    <a routerLink="home" class="icon"><mat-icon>home</mat-icon>&nbsp;</a>
+    <div *ngFor="let item of menuItems; let i = index"
+        [class.active]="i===menuItems.length-1">
+      <a [routerLink]="item.url" *ngIf="i!==menuItems.length-1">&nbsp;{{item.label}}&nbsp;/&nbsp;</a>
+      <span class="item" *ngIf="i===menuItems.length-1">{{ item.label }}&nbsp;</span>
+    </div>
+  </div>
+
+

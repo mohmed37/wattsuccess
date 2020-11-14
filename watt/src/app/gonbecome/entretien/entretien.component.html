@@ -1,0 +1,168 @@
+<h1 class="titre" id="haut">Réussir un entretien d’embauche</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button mat-button class="contexte" (click)="contexte()">Contexte</button>
+    <button  mat-button class="objectif" (click)="objectif()">Objectifs</button>
+    <button mat-button class="process" (click)="process()">Process</button>
+  </div>
+</div>
+
+<div class="bndream" >
+
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><span>L'<b>entretien&#10;d&#8217;embauche </b>est&#160;un moment cl&#233; et l&#8217;ultime
+        &#233;tape du process de&#10;recrutement o&#249; le candidat et le futur employeur se rencontrent pour v&#233;
+        rifier&#10;l&#8217;ad&#233;quation entre le profil du candidat et le poste propos&#233;. </span></p>&#10;&#10;
+      <p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>Cette&#10;ultime &#233;tape du process
+      de recrutement intervient apr&#232;s la p&#233;riode de s&#233;lection&#10;sur la base - dans la majorit&#233; des cas
+      - du CV et de la lettre de motivation. </span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;
+      <p class="Pardfaut"><span>Des deux&#10;c&#244;t&#233;s, pour l&#8217;employeur comme pour le candidat, ce moment
+        est v&#233;cu comme&#10;stressant.</span></p>&#10;&#10;<p class="Pardfaut"><span>Pour le&#10;candidat, c&#8217;
+      est un enjeu majeur car il doit donner la meilleure version de&#10;lui-m&#234;me pour &#234;tre retenu sur le poste.
+    </span></p>&#10;&#10;<p class="Pardfaut"><span>Pour&#10;l&#8217;employeur, c&#8217;est un enjeu majeur car il ne peut
+      se permettre de se tromper&#10;car cela repr&#233;sente un co&#251;t moyen de 45 KE (temps de s&#233;lection, p&#233;
+      riode&#10;d&#8217;int&#233;gration&#8230;jusque la p&#233;riode de licenciement). &#160;L&#8217;objectif est donc
+      d&#8217;&#233;valuer sous tous ses&#10;angles son futur collaborateur pour &#233;viter toute erreur de casting.
+      &#160;</span><span></span></p>
+    </div>
+  </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Faire valoir tous vos atouts
+        (et vos int&#233;r&#234;ts)</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+    </span><span>D&#233;velopper vos comp&#233;tences cl&#233;s en lien avec le&#10;poste &#224; pourvoir</span><span></span></p>&#10;&#10;
+      <p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Faire valoir votre valeur ajout&#233;e</span><span></span>
+      </p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>D&#233;couvrir les attentes pr&#233;cises
+      de votre&#10;interlocuteur en termes de missions pour pouvoir adapter au plus pr&#232;s vos&#10;arguments</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>
+      -<span>&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><b><span>Convaincre&#10;le recruteur</span></b><span> et lui&#10;prouver que vous &#234;
+      tes la personne qu&#8217;il recherche.&#160;</span><span></span></p>
+    </div>
+  </div>
+
+  <div class="item"   *ngIf="processValide"  id="process">
+
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><span>D&#233;roulement d&#8217;un entretien de&#10;recrutement&#160;: &#160;</span><span></span>
+      </p>&#10;&#10;<p class="Pardfaut"><b><span>1<sup>er</sup> &#233;tape&#160;: Bien&#10;pr&#233;parer son entretien </span></b><b><span></span>
+    </b></p>&#10;&#10;<p class="Pardfaut"><span>Avant l&#8217;entretien&#160;:</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span lang="DE">- Pensez </span>
+      <span>&#224; votre pr&#233;sentation, privil&#233;giez une&#10;tenue qui soit adapt&#233;e au travail souhait&#233;.</span><span></span></p>&#10;&#10;<p class="Pardfaut">
+      <span lang="DE">- Pr</span><span>&#233;voyez plusieurs outils comme un agenda,&#10;un bloc note, une copie de votre CV ainsi que de votre lettre de motivation.</span><span></span>
+    </p>&#10;&#10;<p class="Pardfaut"><span>- N<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;
+    </span>oubliez&#10;pas de vous renseigner sur l<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;
+    </span>entreprise&#10;</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span lang="DE">- Pr</span><span>&#233;parez-vous vos arguments&#160;: votre&#10;pitch, qualit&#233;s &#8230;
+      en bref tous vos atouts pour le poste et pr&#233;parez-vous &#224;&#10;r&#233;pondre aux questions pi&#232;ges.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span>
+    </p>&#10;&#10;<p class="Pardfaut"><b><span>Pendant l<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>
+      entretien&#160;:</span></b><b><span></span></b></p>&#10;&#10;<p class="Pardfaut"><span>-Nous vous conseillons d<span dir="RTL"></span><span dir="RTL"></span>
+      <span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span></span><span lang="IT">arriver 10 min&#10;</span><span>en avance pour avoir le&#10;temps de vous pr
+      &#233;parer et de vous familiariser avec les locaux, cela vous&#10;permettra de diminuer votre </span><span lang="PT">stress.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-
+      Lors de votre pr&#233;sentation, &#233;voquez l<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>
+      ensemble de votre parcours en commen&#231;ant par vos&#10;formations puis vos exp&#233;riences professionnelles des plus anciennes au plus&#10;r&#233;centes, tout en citant les entreprises
+      ou bien les secteurs d<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>activit&#233;s&#10;dans lesquelles
+      vous avez travaill&#233;.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-Un point crucial, pensez &#224; ne jamais&#10;critiquer les entreprises dans lesquelles vous avez travaill&#233;.
+    </span><span></span></p>&#10;&#10;<p class="Pardfaut"><span lang="NL">- Veillez </span><span>&#224; bien expliquer les raisons de votre&#10;candidature en pr&#233;sentant vos motivations pour le poste
+      que vous avez choisi. </span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- N&#8217;h&#233;sitez pas &#224; poser des questions&#10;sur l&#8217;entreprise, son secteur, le poste ou bien la
+      r&#233;mun&#233;ration. Cela montrera l&#8217;int&#233;r&#234;t&#10;que vous portez &#224; l&#8217;entreprise.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;
+      <p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><span>Petit conseil en plus*&#160;:</span></b><b><span></span></b></p>&#10;&#10;<p class="Pardfaut"><span>Lors du recrutement,
+      votre recruteur&#10;voudra peut-&#234;tre vous d&#233;stabiliser. Veillez &#224; ne pas l&#8217;&#234;tre. Restez souriant et&#10;s&#233;rieux, gardez confiance en vous. </span><span></span>
+    </p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><span>Apr</span></b><b><span lang="IT">&#232;</span></b><b><span>s l<span dir="RTL"></span><span dir="RTL"></span>
+      <span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>entretien&#160;:</span></b><b><span></span></b></p>&#10;&#10;<p class="Pardfaut"><span>- F&#233;licitez-vous
+      d&#8217;avoir abouti &#224; cette&#10;&#233;tape ultime du recrutement&#160;!</span></p>&#10;&#10;<p class="Pardfaut"><span>- Faites le point sur tous les avantages&#10;du poste et &#233;valuez s&#8217;
+      il est bien fait pour vous.</span></p>&#10;&#10;<p class="Pardfaut"><span>- Remerciez le recruteur de vous avoir&#10;re&#231;u&#160;: vous pouvez envoyer un mail apr</span><span lang="IT">&#232;</span>
+      <span>s l<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>entretien&#10;pour confirmer et appuyer votre motivation
+        et votre int&#233;r&#234;t pour le poste.</span></p>&#10;&#10;<p class="Pardfaut"><span>Ex : Merci de m&#8217;avoir re&#231;u et du temps&#10;que vous m&#8217;avez accord&#233;. Je tiens &#224; vous
+      r&#233;it&#233;rer l&#8217;int&#233;r&#234;t que je porte au&#10;poste que vous proposez et je suis tr&#232;s enthousiaste &#224; l&#8217;id&#233;e de &#8230;. (pr&#233;sentez&#10;une des missions ou un
+      challenge que vous aimeriez mener au sein de son&#10;entreprise).</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- Fa&#238;tes le bilan de votre&#10;entretien&#160;: ce qui vous a paru
+      &#234;tre des arguments gagnants et identifier&#10;les axes o&#249; vous avez p&#234;ch&#233;s.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- Sans r&#233;ponse de leur part,
+      vous pouvez&#10;les relancer en veillant &#224; respecter un d&#233;lai de 2 ou 3 semaines.</span></p>&#10;&#10;<p class="Pardfaut"><span>- Poursuivez vos d&#233;marches de recherche&#10;d&#8217;
+      emploi et continuez &#224; vous positionner sur d&#8217;autres offres.</span></p>&#10;&#10;<p class="Pardfaut"><span>Une de mes devises&#160;: Quelqu&#8217;un vous&#10;attend quelque part alors ne
+      perdez pas courage et gardez votre&#10;enthousiasme&#160;! &#199;a paie&#160;!</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><u><span>
+      Quelques attitudes qui favorisent vos&#10;chances d&#8217;&#234;tre recrut&#233;.e&#160;:</span></u></b><b><u><span></span></u></b></p>&#10;&#10;<p class="Pardfaut"><span>- Vous devez <b>bien vous
+      conna&#238;tre</b>&#10;pour pouvoir vous</span><span lang="IT"> &#171;&#160;</span><span>vendre&#160;&#187;.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- Vous devez aussi bien <b>
+      conna&#238;tre l<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>entreprise</b> pour savoir en parler et montrer
+      en quoi&#10;vous r&#233;</span><span lang="ES-TRAD">pondez </span><span>&#224;&#10;ses besoins.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- Veillez &#224; adopter une <b>attitude&#10;
+      proactive</b> qui montre votre motivation.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- &#160;<b>Ayez</b></span><b><span lang="PT"> confian</span></b><b><span>ce en vous&#160;!</span>
+    </b><span></span></p>&#10;&#10;<p class="Pardfaut"><span>- Soyez <b>optimiste, dynamique,&#10;enthousiaste,</b> montrez <b>votre</b> <b>volont&#233; de travailler</b>, <b>votre&#10;bonne humeur</b> et
+      <b>votre s&#233;rieux</b>.</span></p><p class="Pardfaut"><b><u><span>Pour maximiser vos chances de
+      r&#233;ussir&#10;votre entretien de recrutement nous vous avons s&#233;lectionn&#233; quelques questions&#10;qui pourront vous &#234;tre pos&#233;es :</span></u></b><b><u><span></span></u></b>
+    </p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<table class="TableNormal" border="1" cellspacing="0" cellpadding="0" width="627">
+      &#10; <thead>&#10; <tr>&#10; <td width="413" valign="top" style="background-color: grey;color: black">&#10; <p class="Styledetableau1"><span>Questions&#10; pos&#233;es en entretien d&#8217;embauche</span><span></span></p>&#10; </td>&#10;
+      <td width="214" valign="top" style="background-color: grey;color: black">&#10; <p class="Styledetableau1"><span >Vos&#10; r&#233;ponses</span><span></span></p>&#10; </td>&#10; </tr>&#10; </thead>&#10; <tbody ><tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">
+      &#10; <p class="Pardfaut"><span>-</span><span>Parlez-moi de vous&#160;</span><span lang="ZH-TW">? </span><span></span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal">
+      <span lang="EN-US">&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Pouvez-vous pr&#233;senter votre&#10; parcours&#160;
+    </span><span lang="ZH-TW">? </span><span></span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10;
+      <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Pourquoi avoir postul&#233; &#224; ce poste et&#10; dans notre entreprise en particulier&#160;? Introspection&#160;;
+        personnalit&#233;</span><span lang="EN-US">,&#10; motivation et d</span><span>&#233;montrez&#10; que vous avez une bonne connaissance de l<span dir="RTL"></span><span dir="RTL"></span>
+        <span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>entreprise.</span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal">
+        <span lang="EN-US">&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10;  <p class="Pardfaut"><span>-</span><span class="Aucun"><span>Que connaissez-vous&#10;
+      de notre soci&#233;t&#233;&#160;</span></span><span class="Aucun"><span lang="ZH-TW">?</span></span><span class="Aucun"><span>&#160;Pr&#233;parer&#10; un petit r&#233;sum&#233; de l
+      <span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>entreprise</span></span><span>.</span></p>&#10;
+    </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>
+      -</span><span>Quelle est la r&#233;alisation&#10; professionnelle dont vous &#234;tes le plus fi</span><span lang="IT">&#232;</span><span>re&#160;</span><span lang="ZH-TW">? </span><span></span>
+    </p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>
+      -</span><span>Que mettriez-vous en place en arrivant&#10; &#224; ce poste&#160;</span><span lang="ZH-TW">?</span><span></span></p>&#10; </td>&#10; <td width="214" valign="top">&#10;
+      <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Pourquoi devrions-nous vous&#10;
+      embaucher&#160;? Quelle est votre plus-value&#160;</span><span lang="ZH-TW">? </span><span></span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span>
+    </p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10;  <p class="Pardfaut"><span>-</span><span>Comment expliquez-vous votre p&#233;riode d<span dir="RTL"></span>
+      <span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>inactivit&#233;&#160;? (Valorisez ce temps d<span dir="RTL"></span>
+      <span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>inactivit&#233;)&#10; </span></p>&#10; </td>&#10; <td width="214" valign="top">&#10;
+      <p class="MsoNormal"><span lang="EN-US">&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10;  <p class="Pardfaut"><span>-</span><span>Quelles sont vos
+      ambitions&#10; professionnelles &#224; 2 ou 5 ans&#160;? Parlez des &#233;volutions possibles dans la&#10; structure (attention aux ambitions d&#233;mesur&#233;es&#160;!). </span></p>&#10;
+    </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black" >&#10; <p class="Pardfaut"><span>-
+    </span><span>Quelles sont vos motivations pour&#10; int&#233;grer ce poste&#160;? Mettre en valeur ce qui vous a particuli&#232;rement&#10; attir&#233; dans le poste, l&#8217;entreprise, les valeurs
+      qu&#8217;elle v&#233;hicule&#8230; et en quoi&#10; vos exp&#233;riences professionnelles, vos passions et vos qualit&#233;s seraient une&#10; chance pour le recruteur.</span></p>&#10; </td>&#10;
+      <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>
+      Pourquoi rejoindre notre entreprise&#10; plut&#244;t qu<span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>
+      un concurrent&#160;</span><span lang="ZH-TW">? </span><span></span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10;
+    <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Citez 3 d&#233;fauts et 3 qualit&#233;s&#160;? Les&#10; d&#233;fauts ne doivent pas &#234;tre en contradiction avec
+      le poste et ne pas &#234;tre&#10; r&#233;dhibitoires et fond&#233;s sur une base r&#233;elle. </span></p>&#10; </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span>
+    </p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Quelles sont vos pr&#233;tentions&#10; salariales&#160;</span><span lang="ZH-TW">?
+      (</span><span>bien se renseigner avant en tenant&#10; compte de votre exp&#233;rience et des salaires pratiqu&#233;s pour le poste vis&#233;)</span></p>&#10; </td>&#10; <td width="214" valign="top">
+      &#10; <p class="MsoNormal"><span lang="EN-US">&#160;</span></p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="413" valign="top" style="background-color:darkgray;color: black">&#10; <p class="Pardfaut"><span>-</span><span>Avez-vous des
+      questions&#160;? Obtenir&#10; des pr&#233;cisions sur les missions, la date de d&#233;marrage du poste, le d&#233;lai de&#10; r&#233;ponse suite &#224; cet entretien&#8230;</span></p>&#10;
+    </td>&#10; <td width="214" valign="top">&#10; <p class="MsoNormal"><span>&#160;</span></p>&#10; </td>&#10; </tr>&#10;</tbody></table>
+
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="clientConnect">
+<div class="text">
+  <p>Préparer votre prochain entretien de recrutement est une étape essentielle dans votre recherche d’emploi.</p>
+  <p>Congratulation !</p>
+  <p>Si vous atteignez l’étape de l’entretien d’embauche c’est que votre candidature (Cv et lettre de motivation)
+    a passé la première sélection du process de recrutement et votre profil semble coller au poste.</p>
+  <p>Il est temps de préparer vos arguments afin d’être prêt le jour J et donner la meilleure image de vous et surtout
+    se démarquer et faire la différence.</p>
+  <p>Nous vous invitons à découvrir cette petite vidéo qui va vous guider pour vous entrainer à votre prochain entretien
+    de recrutement.</p>
+</div>
+<h4>VIDEO PREPARER SON ENTRETIEN D’EMBAUCHE</h4>
+<div class="container">
+  <video width="500" height="300" controls>
+    <source [src]="entretien" type="video/mp4">
+  </video>
+</div>
+</div>

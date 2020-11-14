@@ -1,0 +1,100 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+span{
+  color: red;
+  margin-left: 10px;
+}
+mat-form-field{
+  width: 50%;
+  margin-left: 20%;
+}
+.from{
+  font-family: Uberhand pro, serif;
+}
+
+mat-icon, mat-hint{
+  color:#134a6b;
+  font-size: 15px;
+}
+button{
+  margin-left: 20%;
+  margin-top: 10px;
+}
+h1{
+color: #f8c620;
+  font-size: 40px;
+  margin-bottom: 40px;
+  margin-left: 120px;
+}
+
+label{
+ margin-left: 100px;
+  color: #f8c620;
+  font-size: 20px;
+}
+.valide{
+  background-color: #f8c620;
+  color: white;
+  font-size:20px ;
+}
+.valideMail{
+  background-color: gainsboro;
+  color: #134a6b;
+  font-size:20px ;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.arrow{
+  margin-left: 50px;
+  color: white;
+  margin-bottom: 15px;
+  font-size:40px;
+}
+.btnMail{
+  color: #134a6b;
+
+}
+a{
+  color: #f8c620;
+}
+.example-section{
+  margin-left: 100px;
+  color: #134a6b;
+}
+.imageN{
+  margin-top: 400px;
+
+}
+.imageM{
+  margin-left: 20px;
+}
+.mail{
+  width: 40%;
+  height: auto;
+  border:0.3mm ridge #134a6b;
+  font-family: Uberhand pro, serif;
+  text-align: center;
+  padding: 50px;
+  line-height:2em;
+  font-weight: bold;
+}
+.mail h3{
+  color: #f8c620;
+  font-size: 30px;
+
+}
+.mail p{
+  color: #134a6b;
+  font-size: 20px;
+  line-height:3em;
+}

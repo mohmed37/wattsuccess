@@ -1,0 +1,198 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.photoFicheMetier{
+  width: 100%;
+  height: 500px;
+
+}
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.metier{
+  position: absolute;
+
+  background-color: #134a6b;
+  font-size: 2vw;
+  font-family: Uberhand pro, serif;
+  top: 20%;
+  color: white;
+  padding: 10px 50px 10px 50px;
+}
+
+ul{
+  list-style: none;
+ font-family: Uberhand pro, serif;
+  font-size: 20px;
+
+}
+.texte p{
+  font-family: Uberhand pro, serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+
+}
+.photo{
+  position: relative;
+
+}
+
+.photoFicheMetier1{
+  width: 30%;
+  height: auto;
+}
+.active{
+  margin-left: 40%;}
+
+.left{
+  margin-left: 20%;
+}
+.right{
+  margin-right: 20%;
+}
+.carousel{
+  margin-top: 50px;
+}
+label{
+  margin-left: 40%;
+  margin-top: 10px;
+}
+
+.table{
+  width: 50%;
+  margin-top: 10px;
+}
+
+
+.photos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 20%;
+  height: auto;
+}
+
+.etiquettes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.our-team-main
+{
+  margin: 20px;
+  border-bottom:5px #323233 solid;
+  background:#fff;
+  border-radius:10px;
+  transition:0.5s;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+}
+
+.our-team-main img{
+  align-items: center;
+  width: 200px;
+  height: 133px;
+  cursor: pointer;
+}
+.our-team-main p
+{
+  margin-bottom:0;
+}
+
+.team-back
+{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:5px 5px 0 5px;
+  text-align:left;
+  background:#fff;
+}
+
+.team-front
+{
+  position:relative;
+  z-index:0.5;
+  background:#fff;
+  padding:15px;
+  transition: all 0.5s ease;
+}
+
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/
+
+
+.titreProjet {
+  text-decoration: none;
+  color: #b65010;
+  font-size: 20px;
+}
+
+.imageN{
+  margin-bottom: 20px;
+}

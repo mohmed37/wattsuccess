@@ -1,0 +1,93 @@
+<div id="message"></div>
+<div *ngIf="!valide">
+<div class="texte">
+<h1>Etablir le contact</h1>
+<h2>Vous avez une question, une requête ou besoin d’un rendez-vous ?</h2>
+<h2>Ou appelez nous au 02 47 46 30 08 ou au 06 12 09 54 98</h2>
+</div>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<div class="container">
+
+
+
+      <div class="item">
+        <div class="form-group ">
+          <label>Nom*</label>
+          <input type="text" formControlName="nom" class="form-control input" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+          <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+            <div *ngIf="f.nom.errors.required">Nom obligatoire</div>
+          </div>
+        </div>
+        <div class="form-group ">
+          <label>Prénom*</label>
+          <input type="text" formControlName="prenom" class="form-control input" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }" />
+          <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+            <div *ngIf="f.prenom.errors.required">Prénom obligatoire</div>
+          </div>
+        </div>
+        <div class="form-group input">
+          <label>Nom de l'entreprise</label>
+          <input type="text" formControlName="entreprise" class="form-control input" [ngClass]="{ 'is-invalid': submitted && f.entreprise.errors }" />
+          <div *ngIf="submitted && f.entreprise.errors" class="invalid-feedback">
+
+          </div>
+        </div>
+        <div class="form-group input">
+          <label>E-mail*</label>
+          <input type="text" formControlName="email" class="form-control input" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">E-mail obligatoire</div>
+          </div>
+        </div>
+        <div class="form-group input">
+          <label>Numéro de téléphone</label>
+          <input type="text" formControlName="phone" class="form-control input" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+          <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+            <div *ngIf="f.phone.errors.required">Numéro de téléphone obligatoire</div>
+          </div>
+        </div>
+      </div>
+
+
+  <div class="item">
+    <div class="form-group">
+      <label>Votre message</label>
+      <input type="text" formControlName="messageObjet" class="form-control objet" [ngClass]="{ 'is-invalid': submitted && f.messageObjet.errors }" placeholder="Objet"/>
+      <div *ngIf="submitted && f.messageObjet.errors" class="invalid-feedback">
+        <div *ngIf="f.messageObjet.errors.required">Objet obligatoire</div>
+      </div>
+    </div>
+    <div class="form-group ">
+        <textarea type="text" formControlName="message" class="form-control message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+
+      <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+        <div *ngIf="f.message.errors.required">Message obligatoire</div>
+      </div>
+    </div>
+
+    <button class="valideContact" mat-button >Envoyer<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+      <button class="btn btn-secondary" type="reset" (click)="onReset()">Revenir à l'accueil</button>
+  </div>
+<div class="item img">
+<img  [src]="photoPsycho">
+    <h2>Votre Coach et</h2>
+    <h2>psychologue du travail</h2>
+    <h4>Zubida HEMARID</h4>
+
+</div>
+
+</div>
+</form>
+</div>
+<div class="container" *ngIf="valide">
+  <div class="mail">
+    <p>Votre message a bien été envoyé.</p>
+    <p>Nous vous recontacterons dans</p>
+    <p>les plus brefs délais.</p>
+    <button class="valideMail " mat-button  [routerLink]="['/'] ">Revenir à l'accueil<mat-icon class="arrow btnMail">keyboard_arrow_right</mat-icon></button>
+  </div>
+  <div class="imageM">
+    <img [src]="salarieImg"/>
+  </div>
+
+</div>

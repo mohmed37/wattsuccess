@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+<div id="valide"></div>
+<div class="container" *ngIf="!mode">
+  <div class="error-wrapper">
+    <div class="man-icon"></div>
+    <h3 class="title">Oops!</h3>
+    <p class="info">Le lien n'est plus valide</p>
+    <button type="button" class="home-btn" routerLink="/">HOME</button>
+  </div>
+</div>
+<div class="container" *ngIf="mode">
+  <div class="mail">
+    <h3>Félicitations !</h3>
+    <p>Votre compte est activé !</p>
+    <button class="valideMail " mat-button  [routerLink]="['/'] ">Revenir à l'accueil<mat-icon class="arrow btnMail">keyboard_arrow_right</mat-icon></button>
+  </div>
+  <div class="imageM">
+    <img [src]="salarieImg"/>
+  </div>
+
+</div>
+

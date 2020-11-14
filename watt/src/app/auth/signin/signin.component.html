@@ -1,0 +1,58 @@
+  <div class="container" id="haut"*ngIf="!initPassWord">
+    <div class="mail">
+       <form [formGroup]="form">
+         <label>Identifiant</label>
+         <p>
+           <mat-form-field appearance="outline">
+             <mat-label>Entrer votre identifiant</mat-label>
+             <input matInput formControlName="username" class="form-control" >
+             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+           </mat-form-field>
+         </p>
+         <label>Mot de passe</label>
+         <p>
+           <mat-form-field appearance="outline">
+             <mat-label>Entrer votre mot de passe</mat-label>
+             <input matInput formControlName="password" class="form-control" [type]="hide ? 'password' : 'text'" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%=:\?]).{8,12})">
+             <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+             </button>
+           </mat-form-field>
+
+         </p>
+         <button class="valideMail " mat-button  (click)="userConnect()">Valider<mat-icon class="arrow btnMail">keyboard_arrow_right</mat-icon></button>
+       </form>
+      <a (click)="reInitPass()"><p>Réinitialisation de votre mot de passe</p></a>
+    </div>
+
+    <div class="imageM">
+      <img [src]="salarieImg"/>
+    </div>
+  </div>
+
+<div class="col-md-6" *ngIf="initPassWord" >
+
+  <div class="panel panel-primary" >
+    <div class="panel-heading">Réinitialisation de votre mot de passe</div>
+    <div class="panel-body">
+      <form [formGroup]="formInit ">
+        <div class="form-group">
+          <label class="control-label">Mail</label>
+          <input type="text" formControlName="mail" class="form-control">
+        </div>
+        <p style="color: red">{{message}}</p>
+        <p style="color: green">{{messageOK}}</p>
+
+        <button *ngIf="!passworEnvoye" class="btn btn-primary"  (click)="initPass()" type="submit">Envoyer</button>
+        <button class="btn btn-primary"  (click)="reInitPass()" type="submit">Retour</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+

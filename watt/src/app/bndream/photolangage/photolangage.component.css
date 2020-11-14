@@ -1,0 +1,181 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.bouton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+button{
+  background-color:#f8c620;
+  color: white;
+  font-size: 20px;
+}
+.icon{
+  margin-left: 20px;
+  color: white;
+}
+table {
+  width: 100%;
+}
+
+.photos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+
+
+
+.ItemPhoto input{
+  width: 10%;
+  border:solid #134a6b;
+  border-radius: 20px;
+
+}
+.photo{
+  width: 15%;
+  height: auto;
+  margin: 50px 10px;
+}
+
+p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;
+
+}
+.btn{
+  margin: 50px;
+  border-radius: 20px;
+}
+.editor{
+  margin-top: 50px;
+  width: 50%;
+}
+
+.resultat{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.action{
+  text-align: center;
+}
+.photIntero{
+  opacity: 0.7;
+  border: 1px solid #134a6b;
+}
+.image1{
+  float: right;
+}
+.image5{
+  float: left;
+  width: 40%;
+  height: auto;
+}
+.image2{
+  float: left;
+  width: 50%;
+  height: auto;
+}
+.image6{
+  float: right;
+  width: 50%;
+  height: auto;
+}
+.envol,.envie, .ancrage{
+  margin-top: 50px;
+}
+h4{
+  color: #b65010;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top: 30px;
+  text-decoration: underline;
+}
+a{
+  text-decoration:none;
+}
+
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.bndream{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/

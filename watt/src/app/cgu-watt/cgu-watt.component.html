@@ -1,0 +1,24 @@
+<div *ngIf="authService.isUserAdmin">
+<div class="container">
+  <div class="container">
+    <form [formGroup]="registerForm" >
+      <div class="form-group">
+        <label>Date</label>
+        <input type="text" formControlName="date" class="form-control objet"/>
+      </div>
+    </form>
+  </div>
+<angular-editor [config]="editorConfig" [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>
+  <button class="btn btn-success" (click)="valide()">Valider</button></div>
+  <p style="color: #c1260e;margin-top: 10px; margin-left: 50px">{{message}}</p>
+ <!-- <div [innerHTML]="htmlContent"></div>-->
+  <!--<div>{{htmlContent}}</div>-->
+</div>
+
+<div class="texte" id="cgu">
+<h2 *ngIf="cguGet.date">{{cguGet.date}}</h2>
+<h1>Portail de recrutement WATT MATCH.</h1>
+<h1>Informations légales et conditions générales d'utilisation</h1>
+<div *ngIf="cguGet.texte" [innerHTML]="cguGet.texte"></div>
+</div>
+

@@ -1,0 +1,51 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+ height: 100%;
+  width: 100%;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+}
+
+.clic{
+
+  float: right;
+  margin-right: 50px;
+}
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}

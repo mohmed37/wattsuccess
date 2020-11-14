@@ -1,0 +1,78 @@
+<div class="container">
+  <button type="button" class="btn btn-success" [style.backgroundColor]="colorBotton1"  (click)="changeColor()">new color</button>
+  <button type="button" class="btn btn-success" [style.backgroundColor]="colorBotton2"   (click)="changeColor2()">new color</button>
+<!--    <button class="btn btn-success" (click) = "captureScreen ()">capture</button>-->
+  <div id="htmlData">
+
+  <P>{{nomClient2?.nom}}</P>
+  <div class="row">
+    <div class="competences col-lg-4" [style.backgroundColor]="colorNew" [style.color]="colorNewText" >
+      <div *ngIf="bouttonActif">
+        <ckeditor  *ngIf="modifMetier" [editor]="Editor" data="{{currentCv.metier}}" (change)="onChange($event)"></ckeditor>
+        <ckeditor  *ngIf="modifNom" [editor]="Editor" data="{{currentCv.nom}}" (change)="onChange($event)"></ckeditor>
+        <button *ngIf="bouttonActif" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+      </div>
+      <form>
+        <img *ngIf="!bouttonActif" [src]="cheminImage" class="portrait" alt=" " (click)="fileInput.click()" title="Cliquez ici pour changer la photo">
+      <input style="display: none" type="file" #Image accept="image/*"  (change)="handleFinInput($event.target.files)" #fileInput >
+      </form>
+
+      <h3 *ngIf="!modifProf"><a (click)="modif('competences')" [style.color]="colorNewText" title="Cliquez ici pour modifier">COMPETENCES PROFESSIONNELLES</a></h3>
+      <P *ngIf="!modifProf" class="competences" [innerHTML]="currentCv.competence"></P>
+
+      <div class="editorExperience">
+      <ckeditor  *ngIf="modifProf" [editor]="Editor" data="{{currentCv.experience}}" (change)="onChange($event)"></ckeditor>
+      <button *ngIf="bouttonActif3" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+      </div>
+
+        <h4>Contact</h4>
+          <a (click)="modif('adresse')" > <div [style.color]="colorNewText" [innerHTML]="currentCv.adresse" title="Cliquez ici pour modifier"></div></a>
+          <a (click)="modif('mail')" ><div [style.color]="colorNewText"  [innerHTML]="currentCv.mail" title="Cliquez ici pour modifier"></div></a>
+          <a (click)="modif('phone')" ><div [style.color]="colorNewText" [innerHTML]="currentCv.mobile" title="Cliquez ici pour modifier"></div></a>
+
+      <ckeditor  *ngIf="modifAdresse" [editor]="Editor" data="{{currentCv.adresse}}" (change)="onChange($event)"></ckeditor>
+      <ckeditor  *ngIf="modifMail" [editor]="Editor" data="{{currentCv.mail}}" (change)="onChange($event)"></ckeditor>
+      <ckeditor  *ngIf="modifPhone" [editor]="Editor" data="{{currentCv.mobile}}" (change)="onChange($event)"></ckeditor>
+      <button *ngIf="bouttonActif5" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+    </div>
+
+    <div class="editorText col-lg-8">
+            <ckeditor  *ngIf="modifPhoto" [editor]="Editor" data="{{currentCv.photo}}" (change)="onChange($event)"></ckeditor>
+        <button *ngIf="bouttonActif6" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+
+      <ckeditor  *ngIf="modifCom" [editor]="Editor" data="{{currentCv.competence}}" (change)="onChange($event)"></ckeditor>
+      <button *ngIf="bouttonActif2" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+    </div>
+    <div class="presentations col-lg-8" *ngIf="!modifCom" >
+
+      <div class="presentation" [style.backgroundColor]="colorNew2" >
+        <a  *ngIf="!userConnectClient" (click)="modif('nom')" title="Cliquez ici pour modifier"> <h1 [style.color]="colorNewTextNom" [innerHTML]="currentCv.nom" ></h1></a>
+        <div *ngIf="userConnectClient"> <h1 [style.color]="colorNewTextNom" >{{nomClient}}&nbsp;{{premomClient}}</h1></div>
+
+        <a (click)="modif('metier')" title="Cliquez ici pour modifier" ><h3 [style.color]="colorNewTextMetier"  [innerHTML]="currentCv.metier" ></h3></a>
+
+      </div>
+
+      <div class="experiences">
+        <a  (click)="modif('experience')" ><h3 [style.backgroundColor]="colorNew" [style.color]="colorNewText" title="Cliquez ici pour modifier">EXPERIENCES PROFESSIONNELLES</h3></a>
+        <P class="experience" [innerHTML]="currentCv.experience"></P>
+      </div>
+
+      <div class="diplomes" >
+        <a (click)="modif('diplomes')" title="Cliquez ici pour modifier"><h3 [style.backgroundColor]="colorNew" [style.color]="colorNewText">DIPLÔMES</h3></a>
+        <P class="diplome" [innerHTML]="currentCv.diplome"></P>
+      </div>
+      <ckeditor  *ngIf="modifDiplom" [editor]="Editor" data="{{currentCv.diplome}}" (change)="onChange($event)"></ckeditor>
+
+      <button *ngIf="bouttonActif4" type="button" class="btn btn-success" (click)="finModif()" >Valider</button>
+    </div>
+
+    <div class="basPage col-lg-12" [style.backgroundColor]="colorNew2"></div>
+</div>
+    <div class="elementH"></div>
+</div>
+
+</div>
+
+
+

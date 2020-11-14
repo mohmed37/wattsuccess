@@ -1,0 +1,26 @@
+a{
+  text-align: center;
+  color: #60cfbe;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  text-decoration:none;
+}
+.icon{
+  color: #134a6b;
+}
+.item{
+  text-align: center;
+  color: #b65010;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  text-decoration:none;}
+.container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ align-items: center;
+ justify-content: flex-start;
+
+}
+

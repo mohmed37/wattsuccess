@@ -1,0 +1,110 @@
+<h1 class="titre" id="haut">Réussir un entretien d’embauche</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+
+<div class="bndream" >
+
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoNormal"><span>Pour <b>trouver</b> un <b>emploi</b>&#10;ou un <b>stage</b>, le r&#233;seau est un outil tr
+        &#232;s efficace. </span></p>&#10;&#10;<p class="MsoNormal"><span>Le <b>r&#233;seautage</b>, c&#8217;est la&#10;capacit
+      &#233; &#224; d&#233;velopper son r&#233;seau gr&#226;ce &#224; une d&#233;marche structur&#233;e et&#10;professionnelle.
+    </span></p>&#10;&#10;<p class="MsoNormal"><span>Sachez qu&#8217;une offre sur deux&#10;se fait par r&#233;seau&#160;!</span>
+    </p>&#10;&#10;<p class="MsoNormal"><span>&#160;</span></p>&#10;&#10;<p class="MsoNormal"><span>Gare aux id&#233;es&#10;re&#231;
+      ues&#160;:&#160; <b>On conna&#238;t bien plus de&#10;personnes qu&#8217;on ne croit&#160;!</b></span></p>&#10;&#10;<p class="MsoNormal">
+      <span>Notre r&#233;seau est constitu&#233; au&#10;minimum d&#8217;une <b>cinquantaine de personnes</b>.</span></p>&#10;&#10;
+      <p class="MsoNormal"><b><u><span>A titre d&#8217;exemple</span></u></b><span>&#160;:</span></p>&#10;&#10;<p class="MsoListParagraphCxSpFirst"><span>
+      -<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>La famille&#160;: parents, conjoints, cousins,&#10;fr&#232;res&#8230;
+    </span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>L&#8217;
+      entourage proche&#160;: amis, la famille de&#10;vos amis, vos voisins</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Votre environnement de proximit&#233;&#160;:&#10;commer&#231;ants,
+      m&#233;decin de famille, pharmacien&#8230;</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+    </span><span>Vos ex-camarades de classe </span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+      <span>Vos ex-coll&#232;gues </span></p>&#10;&#10;<p class="MsoListParagraphCxSpLast"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+      <span>Vos relations via les r&#233;seaux sociaux </span></p>&#10;&#10;<p class="MsoNormal"><span>Pour pouvoir utiliser&#10;efficacement son r&#233;seau, il est n&#233;cessaire de d&#233;
+      finir un <b>objectif</b> <b>pr&#233;cis</b>&#160;:&#10;trouver un emploi en tant que&#8230;&#8230;., un stage dans le marketing&#8230;, une information&#10;sur une entreprise,
+      un secteur d&#8217;activit&#233;, un m&#233;tier&#8230;.</span></p>&#10;&#10;<p class="MsoNormal"><span>R&#233;seauter demande de <b>l&#8217;&#233;nergie</b>,&#10;de <b>l&#8217;
+      enthousiasme</b> et de <b>la</b> <b>d&#233;termination</b>&#160;:</span></p>&#10;&#10;<p class="MsoNormal"><span>Certains prendront le temps de&#10;vous r&#233;pondre spontan&#233;ment.
+      Et pour certains, vous n&#8217;aurez aucune r&#233;ponse de&#10;leur part&#160;: relancez une nouvelle fois puis passez &#224; autre chose sans&#10;d&#233;velopper de sentiment d&#8217;animosit&#233;.
+      La personne a s&#251;rement d&#8217;autres imp&#233;ratifs&#10;&#224; traiter.</span></p>&#10;&#10;<p class="MsoNormal"><b><span>Gardez le lien&#160;:</span></b></p>&#10;&#10;
+      <p class="MsoNormal"><span>Le r&#233;seau s&#8217;entretient et il&#10;est essentiel de <b>remercier</b> les personnes qui vous ont mis en lien ou&#10;donner des infos ou conseils.
+        N&#8217;oubliez pas de leur donner des nouvelles&#160;!</span></p>
+    </div>
+  </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoListParagraphCxSpFirst"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+        <span>Faciliter sa prospection et acc&#233;der aux offres&#10;du march&#233; cach&#233;</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">
+      <span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Obtenir des informations ou des conseils</span></p>&#10;&#10;
+      <p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>D&#233;
+        velopper de nouvelles id&#233;es</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+    </span><span>Se faire recommander </span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+    </span><span>R&#233;aliser des enqu&#234;tes professionnelles</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">
+      <span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Faciliter votre reconversion professionnelle</span>
+    </p>&#10;&#10;<p class="MsoListParagraphCxSpLast"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Acc&#233;der &#224;
+      des postes plus attractifs</span></p>&#10;&#10;<p class="MsoListParagraphCxSpLast"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+      <span>D&#233;velopper son business&#10;/ une client&#232;le</span>
+
+    </div>
+  </div>
+
+  <div class="item"   *ngIf="processValide"  id="process">
+
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoNormal"><span>La vid&#233;o propos&#233;e va vous accompagner&#10;sur la mani&#232;re de d&#233;velopper votre r&#233;
+        seau et comment utiliser efficacement vos&#10;relations.</span></p>&#10;&#10;<p class="MsoNormal"><span>Une fois visionn&#233;
+      e, vous allez&#10;faire le bilan de votre r&#233;seau proche et professionnel, en direct ou en ligne.&#10;Cela vous permettra d&#8217;
+      avoir un &#233;tat des lieux des personnes que vous pourriez&#10;solliciter en fonction de votre objectif professionnel. Que pourraient-ils vous&#10;
+      apporter&#160;? </span></p>&#10;&#10;<p class="MsoNormal"><span>D&#233;finissez ensuite une&#10;strat&#233;gie de d&#233;veloppement de votre r&#233;seau.
+    </span></p>&#10;&#10;<p class="MsoNormal"><b><u><span>Quelques id&#233;es&#160;:</span></u></b></p>&#10;&#10;<p class="MsoListParagraphCxSpFirst"><span>-
+      <span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Participez &#224; des salons, forums, soir&#233;es&#10;culturelles&#8230;
+    </span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Reprendre
+      contact avec de anciens coll&#232;gues,&#10;amis de promo...</span></p>&#10;&#10;<p class="MsoListParagraphCxSpLast"><span>-<span>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>S&#8217;inscrire &#224; des groupes de discussion sur les&#10;r&#233;seaux sociaux.
+    </span></p>&#10;&#10;<p class="MsoNormal"><span>Soyez authentique, &#224; l&#8217;&#233;coute&#10;et enthousiaste dans vos relations.</span></p>&#10;&#10;
+      <p class="MsoNormal" align="right"><b><span>Et&#10;n&#8217;oubliez pas, prenez soin de votre r&#233;seau&#160;!</span></b></p>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="clientConnect">
+<div class="text">
+  <p>Développer son réseau est un atout précieux pour trouver un emploi ou faire évoluer sa carrière.</p>
+  <p>Nouer des contacts et entretenir ses relations demande du temps et de l’énergie.</p>
+  <p>Nous vous invitons à découvrir cette petite vidéo pour vous aider à construire un bon réseau de professionnels de
+    qualité, maximiser vos chances de trouver plus rapidement un travail et saisir les opportunités plus facilement. </p>
+ </div>
+<h4>VIDEO CREER SON RESEAU</h4>
+<div class="container">
+  <video width="500" height="300" controls>
+    <source [src]="reseau" type="video/mp4">
+  </video>
+</div>
+</div>

@@ -1,0 +1,321 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.bndream{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img{
+  border-radius: 3%;
+  cursor: pointer;
+}
+
+img{
+  cursor: pointer;
+}
+
+
+.bouton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+button{
+  background-color:#f8c620;
+  color: white;
+  font-size: 20px;
+}
+.icon{
+  margin-left: 20px;
+  color: white;
+}
+
+.progressTotal{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  margin: 50px;
+}
+.image{
+  width: 10%;
+  height: auto;
+}
+
+
+.newProgressBar{
+  width: 40%;
+  float: left;
+  margin: 20px;
+}
+
+.pourcent0{
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: white;
+}
+.pourcent100{
+  float: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: white;
+}
+
+.progressBar{
+  width: 700px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.progression{
+  padding-left: 10px;
+  padding-right: 20px;
+
+}
+.date{
+  padding: 10px;
+}
+.pourcentAttient{
+  float: right;
+  color:#134a6b;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.pourcentMini{
+  float: left;
+  color:#134a6b;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.numro{
+  border-radius: 25px;
+  background-color:#f8c620;
+  width: 40px;
+  height:40px;
+  text-align: center;
+  color:  #b65010;
+  font-size: 30px;
+  float: left;
+  padding-top: 10px;
+  margin-left: 5px;
+
+}
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 60px;
+  flex-wrap: nowrap;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+
+}
+
+/*contexte/objectifs/process*/
+.test{
+  color: #134a6b;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a.titreProjet{
+  text-decoration:none;
+  color: #b65010;
+  font-size: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+
+}
+a.titreProjet:hover{
+  color: #134a6b;
+}
+
+.time{
+  float: right;
+  color: #3498db;
+  margin-right: 20px;
+
+}
+.qcm{
+  float: right;
+  margin-right: 50px;
+
+}
+
+.projet{
+  padding-top: 20px;
+}
+.testValide{
+  color: green;
+}
+.testCours{
+  color: #f8c620;
+}
+
+.numroValide{
+  background-color:green;
+}
+.numroCours{
+  background-color: #f8c620;
+}
+
+
+.bndream p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+
+.liObjectif li{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  line-height: 2em;
+}
+.bndream h4{
+  text-align: center;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.bndream b{
+  color: #b65010;
+}
+
+.imgcontexte{
+  float: left;
+  height: 20%;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.etiquettes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.our-team-main
+{
+  margin: 20px;
+  border-bottom:5px #323233 solid;
+  background:#fff;
+  border-radius:10px;
+  transition:0.5s;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+}
+
+.our-team-main img{
+  align-items: center;
+}
+.our-team-main p
+{
+  margin-bottom:0;
+}
+
+.team-back
+{
+  position:absolute;
+  top:0;
+  left:0;
+  padding:5px 5px 0 5px;
+  text-align:left;
+  background:#fff;
+}
+
+.team-front
+{
+  position:relative;
+  z-index:0.5;
+  background:#fff;
+  padding:15px;
+  transition: all 0.5s ease;
+}
+.projet2 p{
+  color:white;
+  font-size: 30px;
+  font-family: Uberhand pro, serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.projet2{
+  position: absolute;
+  margin-top: -50px;
+  margin-left: 30px;}
+

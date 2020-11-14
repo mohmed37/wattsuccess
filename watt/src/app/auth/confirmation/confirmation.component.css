@@ -1,0 +1,122 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  background: #f3f3f3;
+}
+
+.error-wrapper {
+  margin-top: 50px;
+}
+
+.error-wrapper .title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+.error-wrapper .info {
+  font-size: 14px;
+  text-align: center;
+}
+
+.home-btn,
+.home-btn:focus,
+.home-btn:hover,
+.home-btn:visited {
+  text-decoration: none;
+  font-size: 14px;
+  color: #55aa29;
+  padding: 17px 77px;
+  border: 1px solid #55aa29;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  margin: 20px 0;
+  width: max-content;
+  background-color: transparent;
+  outline: 0;
+}
+.man-icon {
+  align-items: center;
+  background: url('https://www.hotstar.com/assets/b5e748831c911ca02f9c07afc11f2ae5.svg') center center no-repeat;
+  display: inline-block;
+  height: 100px;
+  width: 118px;
+  margin-bottom: 16px;
+  margin-left: 40px;
+}
+.valide{
+  background-color: #f8c620;
+  color: white;
+  font-size:20px ;
+}
+.valideMail{
+  background-color: gainsboro;
+  color: #134a6b;
+  font-size:20px ;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.arrow{
+  margin-left: 50px;
+  color: white;
+  margin-bottom: 15px;
+  font-size:40px;
+}
+.btnMail{
+  color: #134a6b;
+
+}
+a{
+  color: #f8c620;
+}
+.example-section{
+  margin-left: 100px;
+  color: #134a6b;
+}
+.imageN{
+  margin-top: 400px;
+
+}
+.imageM{
+  margin-left: 20px;
+}
+.mail{
+  width: 40%;
+  height: auto;
+  border:0.3mm ridge #134a6b;
+  font-family: Uberhand pro, serif;
+  text-align: center;
+  padding: 50px;
+  line-height:2em;
+  font-weight: bold;
+}
+.mail h3{
+  color: #f8c620;
+  font-size: 30px;
+  margin-bottom: 100px;
+
+}
+.mail p{
+  color: #134a6b;
+  font-size: 20px;
+  margin-bottom: 100px;
+}

@@ -1,0 +1,103 @@
+.texte{
+  font-family: Uberhand pro, serif;
+  color: #134a6b;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 100px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+label{
+  color: #f8c620;
+}
+.message{
+width: 500px;
+height: 280px;
+}
+.input, .objet{
+  width: 200px;
+}
+.valideContact{
+  background-color: #f8c620;
+  color: white;
+  margin-right: 20px;
+
+}
+.arrow{
+  margin-left: 50px;
+  color: white;
+  margin-bottom: 15px;
+  font-size:40px;
+}
+.img img {
+  clip-path:ellipse(50% 50%);
+  margin-bottom: 30px;
+}
+
+.img{
+  margin-left: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h2{
+  font-size: 20px;
+  color: gray;
+  font-family: Uberhand pro, serif;
+  font-weight: bold;
+}
+
+h4{
+  font-size: 20px;
+  color: #134a6b;
+  font-family: Uberhand pro, serif;
+  font-weight: bold;
+}
+.mail{
+  width: 40%;
+  height: auto;
+  border:0.3mm ridge #134a6b;
+  font-family: Uberhand pro, serif;
+  text-align: center;
+  padding: 50px;
+  line-height:2em;
+  font-weight: bold;
+  margin-top: 50px;
+}
+.mail h3{
+  color: #f8c620;
+  font-size: 30px;
+  margin-bottom: 100px;
+
+}
+.mail p{
+  color: #134a6b;
+  font-size: 20px;
+}
+.imageM{
+  margin-left: 20px;
+}
+.valideMail{
+  background-color: gainsboro;
+  color: #134a6b;
+  font-size:20px ;
+  margin-left: 0;
+  margin-top: 100px;
+
+}
+
+.arrow{
+  margin-left: 50px;
+  color: white;
+  margin-bottom: 15px;
+  font-size:40px;
+}
+.btnMail{
+  color: #134a6b;
+
+}

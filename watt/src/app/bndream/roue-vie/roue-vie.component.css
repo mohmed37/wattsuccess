@@ -1,0 +1,198 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
+.bouton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+button{
+  background-color:#f8c620;
+  color: white;
+  font-size: 20px;
+}
+.icon{
+  margin-left: 20px;
+  color: white;
+}
+.chart{
+  width: 60%;
+}
+.diagramme{
+  margin-top: 20px;
+}
+.formulaire input{
+  margin-bottom: 20px;
+  border-color: #134a6b;
+  width: 280px;
+}
+#personnelle,#personnelle2{
+border-color: rgba(193, 28, 199, 1);
+  background-color: rgba(193, 28, 199, 0.3);
+}
+#sante,#sante2{
+  border-color:rgba(29, 4, 255,1);
+  background-color: rgba(29, 4, 255,0.3);
+}
+#famille,#famille2{
+  border-color:rgba(25,193 ,13, 1);
+  background-color: rgba(25,193 ,13, 0.3);
+}
+
+#professionne,#professionne2{
+border-color: rgba(255, 213, 4, 1);
+  background-color: rgba(255, 213, 4, 0.3);
+}
+
+#social1,#social2{
+  border-color:rgba(255, 4, 4, 1);
+  background-color: rgba(255, 4, 4, 0.3);
+}
+
+p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top:30px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+.editor{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+.contenu p{
+  margin-top:20px;
+  font-family: Uberhand pro, serif;
+  margin-left: 0;
+
+}
+.btn{
+  margin-top: 20px;
+}
+
+.resultat .diagramme {
+  margin-top: 30px;
+
+}
+.choix .item{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.message{
+  font-family: Uberhand pro, serif;
+  color: red;
+}
+.domaine{
+  color: #e52d27;
+}
+.olDomaine{
+  list-style-type: none;
+}
+
+.image{
+  float: right;
+}
+h4{
+  color: #b65010;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top: 30px;
+  text-decoration: underline;
+}
+.haut{
+  margin-left: 50px;
+}
+
+:host ::ng-deep .ck-editor__editable_inline {
+  min-width:50%;
+  color: #134a6b;
+  font-size: 20px;
+  font-family: Uberhand pro, serif;
+}
+.bouton{
+  margin-top: 20px;
+
+}
+a{
+  text-decoration:none;
+}
+h3{
+  font-size: 20px;
+  font-family: Uberhand pro, serif;
+}
+
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/

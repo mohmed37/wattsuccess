@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Liste des clients</div>
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="onChercher(f.value)" >
+        <div class="form-group">
+          <label>keyword :</label>
+          <input style="margin-left: 10px" type="test" name="keyword" ngModel>
+          <button style="margin-left: 10px" type="submit" class="btn btn-primary" (click)="click()">
+            <samp class="glyphicon glyphicon-search"></samp>
+            Chercher</button>
+        </div>
+      </form>
+
+      <table *ngIf="clients " class="table table-striped" id="table">
+        <tr>
+          <th>id</th>
+          <th>date</th>
+          <th>email</th>
+          <th>nom</th>
+          <th>prénom</th>
+          <th>phone</th>
+        </tr>
+        <tr *ngFor="let p of clients">
+          <td>{{p.id}}</td>
+          <td>{{p.date | date :'shortDate'}}</td>
+          <td>{{p.email}}</td>
+          <td>{{p.nom}}</td>
+          <td>{{p.prenom}}</td>
+          <td>{{p.phone }}</td>
+          <td><a class="btn btn-danger" (click)="onDeleteClient(p)">Supprimer</a></td>
+          <td><a class="btn btn-success" (click)="onEditClient(p)">Modifier</a></td>
+        </tr>
+      </table>
+      <ul *ngIf="pages"  class="nav nav-pills">
+        <li class="clickable" [ngClass]="i==currentPage?'active':''" *ngFor="let p of pages; let i=index">
+          <a (click)="onPageClient(i)">{{i}}</a>
+        </li>
+      </ul>
+
+</div>
+
+
+<div class="container" *ngIf="modeClient==2">
+  <div class="panel panel-default">
+    <div class=" panel panel-heading">Modification Client</div>
+    <div class="panel panel-body" *ngIf="currentClient" >
+      <form #f="ngForm"  (ngSubmit)=modifOk(f.value)>
+        <div class="form-group">
+          <label class="control-label">ID</label>
+          <input class="form-control" type="text" name="id" ngModel [(ngModel)]="currentClient.id" >
+        </div>
+        <div class="form-group">
+          <label class="control-label">Prénom</label>
+          <input class="form-control" type="text" name="prenom" ngModel [(ngModel)]="currentClient.prenom" >
+        </div>
+        <div class="form-group">
+          <label class="control-label">Nom</label>
+          <input class="form-control" type="text" name="nom" ngModel [(ngModel)]="currentClient.nom">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Email</label>
+          <input class="form-control" type="email" name="email" ngModel [(ngModel)]="currentClient.email">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Numéro de téléphone</label>
+          <input class="form-control" type="text" name="phone" ngModel [(ngModel)]="currentClient.phone">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Validation</label>
+          <input class="form-control" type="boolean" name="active" ngModel [(ngModel)]="currentClient.active">
+        </div>
+        <button class="btn btn-success" type="submit">Modification</button>
+      </form>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

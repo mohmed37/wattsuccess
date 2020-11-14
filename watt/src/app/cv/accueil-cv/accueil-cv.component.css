@@ -1,0 +1,96 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+/*contexte/objectifs/process*/
+.texte{
+  margin: 20px;
+}
+
+.bndream{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h2{
+  text-align: center;
+}
+.item{
+
+  border: solid 1px #b65010;
+  padding: 20px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 60px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/
+
+
+h4{
+  text-align: center;
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  margin: 30px 50px;
+  color: #134a6b;
+}
+.text{
+  margin-left: 10%;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+}

@@ -1,0 +1,345 @@
+
+  <h1 class="titre" id="haut">PRAICO</h1>
+  <div class="selection">
+    <div class="clic" fxHide.lt-sm>
+      <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+      <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+      <button class="process" mat-button (click)="process()">Process</button>
+    </div>
+  </div>
+  <div class="container" >
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+      <div class="button-container">
+        <h2  >Contexte</h2 >
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p><b>Bienvenue dans Praico et découvrez votre ADN Vocationnel</b></p>
+
+      <p>Nous vous proposons un <b>test d’orientation professionnelle.</b> Les tests sont très fréquemment utilisés
+        dans le cadre de <b>bilan d’orientation professionnelle</b>.
+      </p>
+      <p>Le questionnaire <b>PRAICO est un outil d’aide à l’orientation et s’adresse aux étudiants, salariés, chercheurs d’emploi</b>.</p>
+      <p>PRAICO vous propose de découvrir <b>votre profil d’intérêts professionnels</b>. Il vous permettra de mieux connaître
+        vos intérêts, les activités ou les situations que vous préférez, les sujets d’intérêt, les situations de travail
+        où vous êtes le plus à l’aise.</p>
+      <p>Les résultats vous permettront d’accéder à un rapport permettant de visualiser rapidement vos intérêts
+        personnels et professionnels.</p>
+      <p>Une fois le questionnaire passé, vous pourrez accéder à une liste de métiers correspondant à votre profil d’intérêt.</p>
+      <p>Alors avez-vous un profil <span class="lettrePraico">P</span>ratique, <span class="lettrePraico">R</span>éfléchi,
+        <span class="lettrePraico">A</span>ctif, <span class="lettrePraico">I</span>nventif, <span class="lettrePraico">C</span>oopératif
+        ou <span class="lettrePraico">O</span>rganisé ?</p>
+      <p><b>Le test PRAICO reste une étape incontournable pour bâtir votre PROJET PROFESSIONNEL !</b></p>
+      <p class="lettrePraico"  >Pour info : pour s’épanouir dans son futur métier il faut choisir un métier en cohérence avec votre profil
+        d’intérêt et c’est une des clés du bonheur dans son travail !</p>
+
+    </div>
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+      <div class="button-container">
+        <h2  >Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+    <ol>
+      <li>Vous aider à trouver votre voie.</li>
+      <li>Découvrir vos intérêts professionnels, motivation et vocation.</li>
+      <li>Identifier les métiers qui correspondent le plus à votre identité professionnelle.</li>
+    </ol>
+    </div>
+    <div class="item"   *ngIf="processValide"  id="process">
+      <div class="button-container">
+        <h2 >Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>PRAICO se compose en 4 parties indépendantes évaluant vos intérêts professionnels,
+        vos motivations et votre personnalité.</p>
+
+      <h4><b>Questionnaire n°1</b> – Comment vous décririez-vous ? (5 minutes)</h4>
+      <p>Trente propositions vont vous être présentées. Pour chacune d’entre elles, choisissez la réponse correspondante
+        le plus à votre état d’esprit. Répondez de manière rapide et spontanée. Il n’y a pas de bonnes ou de mauvaises réponses. </p>
+
+      <h4><b>Questionnaire n°2</b> – Quelles activités et environnements préférez-vous ? (7 minutes)</h4>
+      <p>Sélectionnez dans les différents tableaux qui suivent ce qui vous correspond le plus. Quel type d’environnement
+        de travail aimez-vous en particulier ?  Cochez la case « O»  pour oui, « N » pour non.</p>
+
+      <h4><b>Questionnaire n°3</b> – Quels sont vos loisirs ? (5 minutes)</h4>
+      <p>Sélectionnez dans les différents tableaux qui suivent les loisirs qui vous correspondent le plus.
+        Cochez la case « O»  pour oui, « N » pour non.</p>
+
+      <h4><b>Questionnaire n°4</b> – Quels métiers vous attirent ? (3 minutes)</h4>
+      <p>Parmi la liste des différents métiers présentés, cochez les 5 que vous pratiquez ou aimez.</p>
+      <p>Une fois que vous aurez répondu aux 4 parties du questionnaire vous accéderez à vos résultats et
+        à l’interprétation du test.</p>
+      <p>Une présentation des profils qui ressortiront du test vous sera présenté. Et en fonction de vos résultats,
+        vous identifierez les métiers qui correspondant à votre profil d’intérêt.</p>
+      <h3>Voici les cinq profils d’intérêt :</h3>
+      <p><b>Pratique -  Réfléchi – Actif – Inventif – Coopératif - Organisé </b></p>
+      <h5>PRESENTATION DES PROFILS</h5>
+
+     <div class="dimention">
+      <img [src]="globe" class="image1">
+      <h3 class="testSouligne">LE PROFIL PRATIQUE</h3>
+      <h3 class="testSouligne">Le profil Pratique, c’est quoi ?</h3>
+      <p>Pragmatique et concret, vous manifestez de l'intérêt pour la manipulation d'objets, d'outils ou de machines.</p>
+      <p>Vous aimez toucher, construire, assembler, réparer des structures. Vous préférez l'action à la discussion.</p>
+      <p><span class="testSouligne">Qualités qui vous caractérisent :</span> conformiste, concret, réservé, authentique, persévérant.</p>
+    </div>
+
+      <div class="dimention">
+      <img [src]="refexion" class="image1">
+      <h3 class="DimentionRefexion">LE PROFIL REFLEXION</h3>
+      <h3 class="DimentionRefexion">Le profil Réflexion c’est quoi ?</h3>
+      <p>Logique et curieux, vous aimez comprendre le monde qui vous entoure, poser des hypothèses et évaluer les
+        conséquences d’un événement, d’une action. Vous disposez d’une facilité de déduction, de capacités d’analyse. </p>
+      <p><span class="DimentionRefexion">Qualités qui vous caractérisent :</span>curieux, intellectuel, précis, rationnel, réservé.</p>
+      </div>
+
+      <div class="dimention">
+        <img [src]="invention" class="image1">
+        <h3 class="dimentionInvention">LE PROFIL INVENTIF</h3>
+        <h3 class="dimentionInvention">Le profil Inventif c’est quoi ?</h3>
+        <p>Ouvert, imaginatif, novateur, vous aimez les activités d’expression qui font appel à votre « feeling »,
+          vos émotions, votre intuition. Vous vous intéressé aux activités concrètes qui font appel à votre sens de
+          l’esthétique, et à votre goût pour la création d’objets, d’images ou d’environnements.</p>
+        <p><span class="dimentionInvention">Qualités qui vous caractérisent :</span>sensible, imaginatif, créatif, indépendant.</p>
+      </div>
+
+      <div class="dimention">
+        <img [src]="action" class="image1">
+        <h3 class="domentionAction">LE PROFIL ACTION</h3>
+        <h3 class="domentionAction">Le profil Action, c’est quoi</h3>
+        <p>Ambitieux et dynamique, vous aimez stimuler les autres par votre énergie. Vous disposez de capacité à mettre
+          en place des stratégies, de prendre des risques et des décisions rapides. Vous êtes doué pour la direction
+          d'équipe car vous savez déléguer et contrôler les résultats attendus. Vous êtes motivé par la compétition
+          et le challenge.</p>
+        <p><span class="domentionAction">Qualités qui vous caractérisent :</span>ambitieux, énergique, enthousiaste, optimiste, sociable.</p>
+      </div>
+
+      <div class="dimention">
+        <img [src]="organisation" class="image1">
+        <h3 class="dimentionAction">LE PROFIL ORGANISÉ</h3>
+        <h3 class="dimentionAction">Le profil Organisé, c’est quoi ?</h3>
+        <p>Organisé et conventionnel, vous aimez les environnements de travail bien structurés. Vous avez le souci
+          de l’ordre et de la méthode. Vous avez le sens de l’observation et de l’analyse. Vous êtes parfaitement à
+          l'aise dans des structures de type administratif. Vous ne recherchez pas le pouvoir et avez horreur de prendre
+          des risques inutiles. Vous n’aimez pas trop le changement. Vous êtes considéré comme une personne stable et
+          fiable dans une entreprise. </p>
+        <p><span class="dimentionAction">Qualités qui vous caractérisent :</span>: prudent, conformiste, consciencieux, efficace, organisé.</p>
+      </div>
+      <p><a routerLink="/bndream/praico" fragment="haut" >Haut de page</a></p>
+    </div>
+</div>
+  <div *ngIf="clientConnect">
+  <div *ngIf="!qcm4Valide">
+<div class="bouton">
+  <button *ngIf="!qcmRun&&!qcm1Valide&&autoPortraitValide" (click)="qcm()" mat-raised-button >Démarrez <mat-icon class="icon">send</mat-icon></button>
+</div>
+
+<div class="container">
+  <div *ngIf="(!qcm1ValideLocal||!qcm1Valide)&&qcmRun">
+  <h2>Questionnaire n°1 – Comment vous décririez-vous ? (5 minutes)</h2>
+  <p>Trente propositions vont vous être présentées. Pour chacune d’entre elles, choisissez la réponse correspondante
+    le plus à votre état d’esprit. Répondez de manière rapide et spontanée. Il n’y a pas de bonnes ou de mauvaises
+    réponses. </p>
+  <ul class="item select">
+    <li class="question">{{questionnaire1.question}}</li>
+    <li class="reponse" (click)="qcmClientChoix(questionnaire1.code1)" >{{questionnaire1.reponse1}}</li>
+    <li class="reponse" (click)="qcmClientChoix(questionnaire1.code2)" >{{questionnaire1.reponse2}}</li>
+  </ul>
+    <p class="numero" >{{qcm1Id}}/30</p>
+
+  </div>
+  <div *ngIf="(qcm1ValideLocal||qcm1Valide)&&!qcm2Valide">
+    <h2>Questionnaire n°2 – Quelles activités et environnements préférez-vous ? (7 minutes)</h2>
+    <p>Sélectionnez par oui ou par non ce qui vous correspond le plus. Quel type d’environnement de travail aimez-vous en particulier ?</p>
+    <ul class="item select">
+      <li class="question">{{questionnaire2.question}}</li>
+      <li class="reponse" (click)="qcmClientChoix(questionnaire2.profile)" >Oui</li>
+      <li class="reponse" (click)="qcm2ClientChoix()" >Non</li>
+    </ul>
+    <p class="numero" >{{qcm1Id}}/60</p>
+
+  </div>
+  <div *ngIf="(qcm2ValideLocal||qcm2Valide)&&!qcm3Valide">
+    <h2>Questionnaire n°3 – Quels sont vos loisirs ? (7 minutes)</h2>
+    <p>Sélectionnez par oui ou par non les loisirs qui vous correspondent le plus. ?</p>
+    <ul class="item select">
+      <li class="question">{{questionnaire2.question}}</li>
+      <li class="reponse" (click)="qcmClientChoix(questionnaire2.profile)" >Oui</li>
+      <li class="reponse" (click)="qcm3ClientChoix()" >Non</li>
+    </ul>
+    <p class="numero" >{{qcm1Id}}/60</p>
+
+  </div>
+  <div *ngIf="(qcm3ValideLocal||qcm3Valide)&&!qcm4Valide">
+    <h2>Questionnaire n°4 – Quels métiers vous attirent ? (3 minutes)</h2>
+    <p>Parmi la liste des différents métiers présentés, cochez les 5 que vous pratiquez ou aimez.</p>
+  <table class="table table-striped">
+
+    <thead>
+    <mat-checkbox [formControl]="initform"  (click)="init()" >Réinitialiser</mat-checkbox>
+    <mat-checkbox  class="valide" *ngIf="selection==5"  (change)="qcm4ClientChoix()">Valiser</mat-checkbox>
+    <tr>
+      <th>Métier</th>
+      <th>Selection</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let list of qucm4">
+    <tr *ngIf="list.metier">
+      <td>{{list.metier}}</td>
+      <td> <mat-checkbox [formControl]="form"  value="{{list.lettres}}"  (change)="onChange($event)"></mat-checkbox></td>
+
+    </tr>
+    </tbody>
+  </table>
+
+ <!--<form [formGroup]="formQcm4"  (ngSubmit)="onSaveQcm4()" >
+   <label>Metier</label>
+   <input formControlName="metier" class="form-control" type="text" >
+   <label>lettre 1</label>
+    <input formControlName="lettre1" class="form-control" type="text" >
+   <label>lettre 2</label>
+    <input formControlName="lettre2" class="form-control" type="text" >
+   <label>lettre 3</label>
+    <input formControlName="lettre3" class="form-control" type="text" ><br><br><br>
+
+    <button class="btn btn-success " type="submit">Je valide</button>
+  </form>-->
+  </div>
+</div>
+</div>
+<div *ngIf="qcm4Valide">
+  <h2>Résultat:</h2>
+  <p>Voici les profils qui vous correspondent le plus. Les lire vous permettra de mieux comprendre vos forces et les
+    métiers adaptés à votre personnalité. Pour un bilan plus détaillé, nous vous invitons à prendre contact avec nos
+    psychologues du travail. Ils sauront vous expliquer vos résultats et vous conseiller. Ils pourront également vous
+    donner des informations sur les autres profils. Une occasion rêvée pour trouver le métier de vos rêves !</p>
+  <h3>Pour avoir plus d'informations sur l'interprétation du test contacter votre coach.</h3>
+  <div>
+    <h2>Le cercle des compétences</h2>
+    <p>Ce schéma permet d’observer les proximités et les oppositions entre les différents profils.
+      Plus vos trois profils principaux sont proches et plus ils se renforcent entre eux.</p>
+    <h3>Vous êtes dans… </h3>
+    <div class="container">
+      <div class="image" >
+      <img  [src]="praico">
+      </div>
+      <div class="radar">
+        <canvas baseChart
+                [datasets]="radarChartData"
+                [options]="radarChartOptions"
+                [labels]="radarChartLabels"
+                [chartType]="radarChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
+
+<h4>Interprétations liées au test :</h4>
+<div class="pratique dim" *ngIf="list[0].name=='p'||list[1].name=='p'||list[2].name=='p'">
+  <div class="photo">
+  <img  [src]="globe">
+</div>
+  <h3>LE PROFIL PRATIQUE </h3>
+<p>D’après vos résultats, vous correspondez plus à un profil de type « Pratique ». Ce type de profil est plus orienté
+  sur des activités dites « tangibles », avec l’utilisation d’outils et de machine.
+  Vous semblez être moins attiré.e par les activités basées sur les relations humaines, telles que l’enseignement ou
+  encore les soins. Vous vous sentez bien plus à l’aise dans l’action immédiate plutôt que dans la conversation.
+  Par ailleurs, les échanges sociaux ne sont pas vraiment votre centre d’intérêt principal. D’ordre général, les
+  autres personnes vous juge comme sincère. Vous êtes vu.e comme une personne sérieuse, pragmatique et appréciant
+  les résultats directs sur vos actions. Il est important à vos yeux que votre travail soit récompensé à sa juste valeur.
+  Vous appréciez la liberté d’action, faites preuve d'ambition et de contrôle sur soi.
+</p>
+
+</div>
+<div class="reflexion dim" *ngIf="list[0].name=='r'||list[1].name=='r'||list[2].name=='r'">
+<div class="photo">
+  <img  [src]="refexion">
+</div>
+<h3>LE PROFIL RÉFLEXION</h3>
+<p>D’après vos résultats, vous correspondez plus au profil « Réflexion », cela signifie que vous aimez donner du sens à
+  votre environnement. Vous avez un goût certain pour la recherche et vous préférez vous orienter vers des activités
+  formatrices dans lesquelles vous avez l’occasion et la possibilité d’observer des phénomènes divers et d’apprendre
+  de nouvelles choses. Vous avez de bonnes compétences dans les sciences ou les mathématiques. Vous aimez avoir
+  la possibilité de chercher des solutions à des problèmes par déduction ou en utilisant des stratégies.
+  Vous êtes attiré.e par les tâches complexes faisant appel à la créativité et vous aimez explorer le champ des possibles.
+  Savoir comment et pourquoi vous faites les choses est pour vous primordial dans la réalisation d’une tâche.  Les tâches
+  administratives ou hiérarchiques ne vous passionnent donc que très peu. Vous aimez les situations laissant place à votre
+  créativité, votre liberté et votre imagination.
+  On dit de vous que vous êtes : analytique, complexe, critique, curieux.se, indépendant.e, intellectuel.le, précis.e,
+  réservé.e, réfléchi.e, inventif.ve.
+</p>
+</div>
+<div class="invention dim" *ngIf="list[0].name=='i'||list[1].name=='i'||list[2].name=='i'">
+  <div class="photo">
+    <img  [src]="invention">
+  </div>
+  <h3>LE PROFIL INVENTION</h3>
+  <p>D’après vos résultats, vous correspondez à un profil « Invention ». Vous préférez les activités créatives, avec une
+    grande marge de liberté dans la manière de faire. On peut vous décrire comme étant non-conformiste, ouvert.e,
+    expressif.ve, introspectif.ve. Vous êtes plutôt doué.e pour tout ce qui est  artistique, qui fait appel au
+    « feeling » et à l'émotion. Les activités répétitives telles que les tâches administratives vous repoussent.
+    Professionnellement comme personnellement, vous êtes attiré.e par des domaines vous permettant de vous exprimer et
+    de manifester vos valeurs esthétiques. Les préoccupations matérielles et financières sont plutôt secondaires à vos
+    yeux. Vous êtes déterminé.e et courageux.se quand il s’agit d’atteindre votre objectif. Il se peut que vous ayez très
+    tôt une vocation définie. Autrement, vous trouverez votre voie au travers des expériences que vous vivrez.
+  </p>
+</div>
+<div class="cooperation dim" *ngIf="list[0].name=='c'||list[1].name=='c'||list[2].name=='c'">
+  <div class="photo">
+    <img  [src]="cooperation">
+  </div>
+  <h3>LE PROFIL COOPÉRATION</h3>
+  <p>Les résultats indiquent que vous avez un profil “coopération” ; c’est-à-dire que vous avez un fort intérêt pour autrui.
+    Vous êtes attiré.e par les activités d'accompagnement et d’aide à la personne. Vous voyez facilement les qualités de
+    chacun. Au sein d’un groupe, vous privilégiez la communication et êtes capable de régler les problèmes par le dialogue.
+    Vous avez besoin de vous sentir accepté.e par les autres et prêtez donc beaucoup d’attention à ce que l’on pense de
+    vous ; comme vous voyez le meilleur de chacun, vous aspirer à toujours renvoyer la meilleure image de vous.
+    Communiquer, enseigner, aider, développer et animer sont des actions pour lesquelles vous avez envie de vous investir.
+    A contrario, les activités mettant en œuvre l’utilisation de matériaux, d'outils, de machines ou d'objets vous ennuient.
+    De même, vous êtes bien plus attiré.e par la pratique que par la théorie ; vous avez envie de concret.
+    Les principaux traits de personnalité du profil “coopération” sont : agréable, empathique, sociable, amical.e,
+    généreux.se, idéaliste, patient.e, compréhensif.ve, persuasif.ve, responsable, plein de tact, chaleureux.se.
+  </p>
+</div>
+<div class="action dim" *ngIf="list[0].name=='a'||list[1].name=='a'||list[2].name=='a'">
+  <div class="photo">
+    <img  [src]="action">
+  </div>
+  <h3>LE PROFIL ACTION</h3>
+  <p>D’après vos résultats, vous correspondez plus au profil « Action ». Vous êtes un catalyseur pour les personnes qui
+    vous entourent. Vous faites également preuve de rapidité dans la prise de décision, même si celle-ci se montre être
+    risquée. Vous êtes un leader naturel, tant par votre capacité à diriger mais également à déléguer les tâches quand
+    cela est nécessaire, tout en fournissant un feedback et une vérification des résultats. Vous êtes une personne de
+    défi, montrant un intérêt pour les avantages matériels, la reconnaissance de vos actes et votre statue. Être payé
+    en fonction de votre productivité est quelque chose qui peut vous motiver.
+    Cependant, si vous ne trouvez plus de stimulation importante au sein de votre entreprise, vous êtes alors capable de
+    vous désolidariser de celle-ci.
+    Les activités intellectuelles ou systématiques vous rebutent souvent. La précision et les activités d'observation
+    vous ennuient rapidement. Différents traits de personnalité ressortent de votre profil.
+  </p>
+</div>
+<div class="organisation dim" *ngIf="list[0].name=='o'||list[1].name=='o'||list[2].name=='o'">
+<div class="photo">
+  <img  [src]="organisation">
+</div>
+<h3>LE PROFIL ORGANISATION</h3>
+<p>D’après vos résultats, vous correspondez plus au profil « Organisation ». Vous êtes une personne qui aimez davantage
+  les environnements de travail structurés, avec des règles et des objectifs clairs. Vous acceptez d’être dirigé.e par
+  d’autres personnes et aimez avoir un retour sur votre travail. Vous semblez à l’aise avec les activités de type gestion
+  et administration et exercer dans de grandes structures/organisations (compagnies d'assurance, banque, fonction publique...)
+  vous correspond. Vous n’aimez pas prendre des risques et pensez que l’application de règles est la meilleure façon de
+  faire les choses. Les activités répétitives ne vous font pas peur. Vous cherchez toujours à faire les choses au mieux
+  et de façon organisée. Votre entourage à tendance à vous décrire comme quelqu’un de stable, permanent et fiable.
+  Rigoureux.se, organisé.e, pratique, conformiste, consciencieux.se et efficace sont les principaux traits qui décrivent
+  ce profil.
+</p>
+</div>
+</div>
+  </div>

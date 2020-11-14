@@ -1,0 +1,130 @@
+<h1 class="titre" id="haut">Héros Héroïne</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+  <div class="container" >
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+      <div class="button-container">
+        <h2  >Contexte</h2 >
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p><b>Quel héro, quelle héroïne êtes-vous ?</b></p>
+
+      <p>La connaissance de soi est la base de votre démarche d’orientation. Explorer qui vous êtes, c’est apprendre à
+        considérer toutes les facettes de votre personnalité dans le but de choisir les meilleures options possibles pour
+        vous. La connaissance de soi, c’est aussi aller vers une meilleure compréhension de soi. Elle peut vous aider à
+        comprendre davantage ce qui vous motive, pourquoi vous agissez de telle ou telle façon. Ainsi, la connaissance
+        de soi vous permet de donner une direction plus précise à votre vie.</p>
+      <p>Pour bien se connaître, il est essentiel de savoir ce qui est important pour vous dans la vie. Les valeurs
+        donnent un sens à ce que l’on fait ; elles proviennent des croyances les plus fondamentales.</p>
+      <p>Cette étape va pour permettre de découvrir vos valeurs, celles qui vous donnent envies de vous lever tous les
+        matins et qui vous font vibrer !</p>
+
+    </div>
+
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+      <div class="button-container">
+        <h2  >Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <ul class="liObjectif">
+        <li>Discerner les valeurs que l’on trouve importantes d’actualiser dans sa vie personnelle et professionnelle.</li>
+        <li>Etablir des priorités, fixer des objectifs, déterminer des buts individuels et orienter son projet de vie.</li>
+        <li>Mieux comprendre et entreprendre les bonnes actions en lien avec vos valeurs.</li>
+      </ul>
+    </div>
+    <div class="item"   *ngIf="processValide"  id="process">
+      <div class="button-container">
+        <h2 >Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+
+      <p><b>1ère phase : AUTOPORTRAIT</b></p>
+      <p><b>Dans un premier temps</b>, vous allez définir le héros ou l’héroïne que vous souhaiteriez être.  Vous pourrez vous
+        inspirer de personnalités qui ont marqué l’histoire de l’humanité, de personnages de films, de dessins animés,
+        de mangas, de jeux vidéos… Alors qui est-ce que vous admirez ?</p>
+
+      <p><b>Dans un second temps</b>, vous allez identifier les trois valeurs qui ont motivées le choix de ce héros / cette héroïne
+        et identifier ce qui vous semble important voire essentielle pour votre équilibre de vie.</p>
+      <p>Quelles sont les valeurs qui ont motivées ce choix ? Qu’est ce qui est important pour vous dans la vie ?</p>
+      <p>Vous allez pouvoir vous inspirer au travers d’une liste de valeurs que vous pourrez sélectionner
+        (sagesse, loyauté, bienveillance…).</p>
+      <p><b>Dans un troisième temps</b>, écrivez l’histoire que vous voulez vivre en étant le personnage principal de
+        l’histoire. Installez vous dans un endroit calme et prenez le temps à la réflexion.</p>
+      <p>Posez-vous la question : Quelle réalité voulez-vous créer ?</p>
+
+      <p>Indiquez tous les détails possibles. Ecrivez vos buts et objectifs pour améliorer votre quotidien. Mettez en
+        musique votre réalité actuelle de manière différente de façon qu’elle soit meilleur et convienne à votre souhait
+        d’évolution.</p>
+
+      <p>Vous avez toujours désiré être le héros ou l’héroïne de votre vie, alors qu’attendez-vous ?
+        C’est partie !</p>
+      <p><b>Il était une fois…</b></p>
+
+      <p><a routerLink="/bndream/heros" fragment="haut" >Haut de page</a></p>
+    </div>
+  </div>
+<div *ngIf="clientConnect">
+<div *ngIf="!heroValide">
+<div class="bouton">
+  <button mat-raised-button *ngIf="qcm4Valide&&!hero" (click)="heroStart()">Démarrez <mat-icon class="icon">send</mat-icon></button>
+</div>
+  <div *ngIf="hero">
+<h2>HEROS/HEROÏNE</h2>
+<p>Découvrez vos valeurs, celles qui vous donnent envies de vous lever tous les matins et qui vous font vibrer !</p>
+
+<div class="container">
+  <img [src]="photoHero">
+</div>
+<p>Et si vous étiez un héros / une héroïne, qui seriez-vous ? Vous pouvez vous inspirez de personnages de films,
+  de livres, de mangas…</p>
+<div class="container">
+  <p  [formGroup]="formHero" >
+       <label class="motHero">Héros-Héroîne</label>
+      <input matInput type="text" formControlName="hero" class="form-control" placeholder="Qui seriez-vous ? ">
+  </p>
+</div>
+  <P>Quelles sont les 3 valeurs qui ont motivées ce choix ?Qu’est ce qui est important pour vous dans le vie ?</P>
+<div class="container">
+  <mat-radio-group aria-label="Select an option" *ngFor="let valeurs of listValeurHero">
+    <mat-checkbox value="{{valeurs.valeur}}"  (change)="onChange($event)" >{{valeurs.valeur}}</mat-checkbox>
+  </mat-radio-group>
+</div>
+    <div class="bouton" >
+    <button class="btn btn-success" (click)="saveHero()" *ngIf="nbValeur==3">Valider</button>
+    <p>{{message}}</p>
+    </div>
+</div>
+</div>
+<div *ngIf="heroValide" class="resultaHero">
+
+  <p> Vous avez choisi:&nbsp;<b class="motHero">{{resultatHero.choixHero}}</b></p>
+  <p>Liste de valeurs qui ont motivées ce choix:</p>
+  <ul *ngFor="let valeur of resultatHero.valeur">
+    <li class="motHero">{{valeur}}</li>
+  </ul>
+
+<h1>MES FELICITATIONS !</h1>
+<h1>VOUS AVEZ REUSSI LA 1ère ETAPE DE WATT </h1>
+<h1>B’NDREAM VOUS A PERMIS DE MIEUX VOUS CONNAITRE ET</h1>
+<h1>D’IDENTIFIER DES PISTES DE METIERS </h1>
+<h1>YES YOU WILL BE !</h1>
+<h1>MAINTENANT DECOUVREZ QUELS SONT VOS TALENTS AVEC LE </h1>
+<h1>GO’N BELIEVE ET CONSOLIDEZ VOTRE PROJET PROFESSIONNEL </h1>
+<h1>YES YOU CAN !</h1>
+<button class="btn btn-success" routerLink="/gonBelieve" fragment= "haut" >GO'n Believe</button>
+</div>
+</div>

@@ -1,0 +1,243 @@
+<h1 class="titre" id="haut">Roue de la vie</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+  <div class="container" id="contexte" >
+    <div class="item" *ngIf="contexteValide"  >
+      <div class="button-container">
+        <h2  >Contexte</h2 >
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>La <b>roue de la vie</b> est la roue de l’équilibre de vie. C’est un moyen efficace et très instructif sur soi pour faire
+        un premier bilan sur les différentes sphères qui composent notre vie.</p><p> Elle permet de prendre conscience des zones
+      de notre vie qui nous rendent heureux et d’autres qui ne nous satisfont pas.</p><p> Cette prise de conscience va nous
+        permettre de nous projeter et nous amener à une réflexion sur ce que l’on souhaite <b>VRAIMENT</b> et qui soit <b>JUSTE</b>
+        pour soi à la fois au niveau de sa vie professionnelle que de sa vie personnelle.</p>
+    </div>
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+      <div class="button-container">
+        <h2  >Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>La <b>roue de la vie</b> est un outil pratique pour évaluer la quantité de vos ressources, telles que le temps,
+        l'attention ou l'énergie, que vous attribuez à chaque domaine de votre <b>vie</b>.</p>
+      <p><b>Cet outil d’introspection va vous aider à concilier</b> tous les aspects de votre existence et d’œuvrer pour une vie
+        riche et harmonieuse. </p>
+      <p>Et surtout NE PLUS PASSER A COTE DE SA VIE !</p>
+    </div>
+    <div class="item"   *ngIf="processValide"  id="process">
+      <div class="button-container">
+        <h2  >Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>Complétez la roue de la vie pour gagner en «mieux-être» :</p>
+      <p>Prenez au moins 10 minutes environ pour faire cet exercice.</p>
+      <p>Installez-vous dans un endroit calme, détendez-vous et surtout, soyez honnête avec vous-même et laissez-vous
+        aller à la spontanéité.</p>
+      <p>Vous allez vous évaluer sur cinq domaines de vie et vous projeter sur la manière dont vous appréhender votre
+        vision de l’avenir ?</p>
+      <ol class="olDomaine">
+        <li><P class="domaine">La vie personnelle</P>Echanges, lecture, cercle d’amis, développement personnel …</li>
+        <li><P class="domaine">La santé</P>Comment je prends soin de moi : sports, soins psychiques et physiques</li>
+        <li><P class="domaine">La famille</P>Gérer la vie commune, relation aux enfants, être capable d’intimité, aider les membres de la
+          famille à être eux-mêmes…</li>
+        <li><P class="domaine">Le professionnel</P>Compatibilité avec les valeurs personnelles, sentiment d’être utile, feed back positifs,
+          niveau d’enthousiasme…</li>
+        <li><P class="domaine">Le social</P>Dans la cité, appartenance à différents réseaux, œuvre pour des associations caritatives
+          (orphelinat…)</li>
+      </ol>
+      <h4>1ère étape : Votre roue de la vie actuelle :</h4>
+      <p>Pour chacun des cinq thèmes proposés, nous vous proposons d’évaluer votre niveau de satisfaction de 0
+        (pas du tout satisfait) à 10 (très satisfait) concernant votre vie actuelle.</p>
+      <h4>2ème étape : Votre roue de la vie désirée :</h4>
+      <p>Imaginons, maintenant que vous ayez le pouvoir d’améliorer certains des secteurs de votre roue. Sur la 2ème roue,
+        pour chacun des domaines, indiquez un score entre 0 et 10 dans chacune des catégories qui correspondraient à votre
+        indice de satisfaction que vous aimeriez atteindre pour mieux équilibrer votre vie. </p>
+      <div class="etape3">
+        <h4>3ème étape : Faire le point</h4>
+        <img  class="image" [src]="roue">
+        <p>Prenez ensuite conscience de vos résultats, les bons comme les moins bons. Les écarts sont-ils surprenants ?</p>
+        <p>Si vos niveaux de satisfaction sur les différents points évalués sont tous positifs, alors bravo ! Vous êtes
+          vraiment épanoui dans tous les domaines de la vie. </p>
+        <p>Si vos niveaux de satisfaction sont plutôt faibles, alors il va falloir mettre en place des actions pour effectuer
+          quelques changements dans votre vie. </p>
+        <p>Déterminez ce que vous voulez changer pour booster votre niveau de bonheur en reprenant chaque thématique.</p>
+      </div>
+      <h4>4ème étape : Réfléchissez et agissez</h4>
+      <p>Face à ce diagnostic, identifiez trois domaines de votre vie qui vous semblent PRIORITAIRES et pour lesquels vous
+        désirez vous fixer des objectifs pour arriver à un meilleur équilibre dans votre vie :</p>
+      <ol>
+        <p>Ce qu’il faudrait modifier:</p>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+      </ol>
+      <ol>
+        <p>Ce qu’il faudrait arrêter :</p>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+      </ol>
+      <ol>
+        <p>Ce qu’il faudrait prioriser :</p>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+        <li>)-----------------------------------------------</li>
+      </ol>
+      <p><b class="domaine">MAINTENANT</b>, <b>identifiez la toute première action</b> que vous pourriez mettre en œuvre pour réaliser chacun de vos objectifs.</p>
+      <p><b>Step by step</b>, avancez à votre rythme vers un équilibre de vie qui vous ressemble dans une logique de contribution harmonieuse.</p>
+      <p><b class="domaine">NB</b> : nous n’avons pas tous les mêmes priorités dans la vie : par exemple ce n’est pas négatif en soi d’avoir une
+        note de 4/10 au niveau de votre vie professionnelle. Pour vous cela signifiera que cette sphère de votre vie ne
+        constitue pas une priorité pour vous et que vous préférerez largement vous consacrer à d’autres sphères qui vous
+        permettent de vous épanouir davantage. Tout est relatif d’une personne à l’autre ! C’est votre <b>EQUILIBRE A VOUS</b>!</p>
+
+      <p><a routerLink="/bndream/roue-de-la-vie" fragment="haut" >Haut de page</a></p>
+    </div>
+  </div>
+<div *ngIf="clientConnect">
+<div class="bouton">
+  <button mat-raised-button (click)="rouedelavieStart()" *ngIf="photolangage&&!roueVieStart&&clientConnect&&!roueVie"
+  >Démarrez <mat-icon class="icon">send</mat-icon></button>
+</div>
+
+  <div *ngIf="photolangage &&roueVieStart">
+    <form  [formGroup]="formRoueDeLAvie" >
+      <div *ngIf="!roueVie1" >
+        <h2>1ère étape : Votre roue de la vie actuelle </h2>
+
+        <p> La roue de la vie est un outil pratique pour évaluer la quantité de vos ressources, telles que le temps,
+          l'attention ou l'énergie, que vous attribuez à chaque domaine de votre vie.</p>
+        <p>Cet outil d’introspection va vous aider à concilier tous les aspects de votre existence et à œuvrer pour une vie harmonieuse.
+          Et surtout NE PLUS PASSER A COTE DE SA VIE !</p>
+        <P>Vous allez vous évaluer sur 5 domaines de votre vie et vous projeter sur la manière dont vous appréhendez votre
+          vision de l’avenir pour gagner en mieux-être.</P>
+        <p>Installez-vous dans un endroit calme, détendez-vous et surtout, soyez honnête avec vous-même et laissez-vous
+          aller à la spontanéité.</p>
+        <p>Pour chacun des cinq thèmes proposés (vie personnelle, vie professionnelle, santé, famille, social), nous vous
+          proposons d’évaluer votre niveau de satisfaction de 0 (pas du tout satisfait) à 10 (très satisfait) concernant
+          votre vie actuelle.</p>
+
+      </div>
+      <div *ngIf="roueVie1 &&!roueVie2" >
+        <h2 id="rouedelavie2">2ème étape : Votre roue de la vie souhaitée :</h2>
+        <p>Imaginons, maintenant que vous ayez le pouvoir d’améliorer certains des domaines de votre roue de la vie.
+          Sur cette 2ème roue, pour chacun des domaines, indiquez un score entre 0 et 10 dans chacune des catégories qui
+          correspondraient à votre indice de satisfaction que vous aimeriez atteindre pour mieux équilibrer votre vie.</p>
+      </div>
+
+      <div class="container diagramme" *ngIf="!roueVie2">
+        <div class="chart">
+          <canvas baseChart
+                  [datasets]="pieChartData"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"
+                  [options]="pieChartOptions"
+                  [plugins]="pieChartPlugins"
+                  [colors]="pieChartColors"
+                  [legend]="pieChartLegend">
+          </canvas>
+        </div>
+
+        <div class="formulaire" >
+          <div *ngIf="!roueVie1" >
+            <label>La vie personnelle </label>
+            <input id="personnelle" formControlName="personnelle" class="form-control" type="number" required min="0" max="10" (change)="onChange('personnelle',$event.target.value) " >
+
+            <label>La santé</label>
+            <input id="sante" formControlName="sante" class="form-control" type="number" required min="0" max="10"(change)="onChange('sante',$event.target.value)">
+            <label>La famille</label>
+            <input  id="famille" formControlName="famille" class="form-control" type="number" required min="0" max="10" (change)="onChange('famille',$event.target.value)">
+            <label>Le professionnel </label>
+            <input id="professionne" formControlName="professionne" class="form-control" type="number" required min="0" max="10"(change)="onChange('professionne',$event.target.value)">
+            <label>Le social</label>
+            <input  id="social1" formControlName="social1" class="form-control" type="number" required min="0" max="10" (change)="onChange('social',$event.target.value)">
+            <p class="message">{{message}}</p>
+            <button mat-stroked-button color="primary"  (click)=" init()" >Enregistrer</button>
+          </div>
+
+          <div *ngIf="roueVie1" >
+            <label>La vie personnelle </label>
+            <input id="personnelle2" formControlName="personnelle2" class="form-control" type="number" required min="0" max="10" (change)="onChange('personnelle',$event.target.value) " >
+            <label>La santé</label>
+            <input id="sante2" formControlName="sante2" class="form-control" type="number" required min="0" max="10" (change)="onChange('sante',$event.target.value)">
+            <label>La famille</label>
+            <input  id="famille2" formControlName="famille2" class="form-control" type="number" required min="0" max="10" (change)="onChange('famille',$event.target.value)">
+            <label>Le professionnel </label>
+            <input id="professionne2" formControlName="professionne2" class="form-control" type="number" required min="0" max="10"(change)="onChange('professionne',$event.target.value)">
+            <label>Le social</label>
+            <input  id="social2" formControlName="social2" class="form-control" type="number" required min="0" max="10" (change)="onChange('social',$event.target.value)">
+            <p class="message">{{message}}</p>
+            <button mat-stroked-button color="primary"  (click)="roueDeLaVie2()" >Enregistrer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container editor"  *ngIf="roueVie2">
+        <h2 id="Autodiagnostic">Autodiagnostic : Réfléchissez et agissez. </h2>
+        <h3>« La différence entre le possible et l'impossible réside dans la détermination » GANDHI</h3>
+        <img [src]="guandhi" class="image">
+        <P>Face à ce diagnostic, vous pouvez agir pour arriver à un meilleur équilibre dans votre vie :</P>
+
+        <div  class="contenu" >
+          <P  *ngIf="!texte1Valide">1 - Ce qu’il faudrait <span style="color:#3498db ">modifier</span> :</P>
+          <app-ardoise *ngIf="!texte1Valide" (pick)="getTexte1($event)"></app-ardoise>
+          <P *ngIf="!texte2Valide && texte1Valide ">2 - Ce qu’il faudrait <span style="color: #6441A5">arrêter</span> :</P>
+          <app-ardoise *ngIf="!texte2Valide && texte1Valide" (pick)="getTexte2($event)"></app-ardoise>
+          <P *ngIf="!texte3Valide&&texte2Valide">3 - Ce qu’il faudrait <span style="color: green">prioriser</span> :</P>
+          <app-ardoise *ngIf="!texte3Valide&&texte2Valide" (pick)="getTexte3($event)"></app-ardoise>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+<div  *ngIf="roueVie">
+  <h2>Votre roue de la vie actuelle :</h2>
+  <div class="container diagramme" >
+    <div class="chart">
+      <canvas baseChart
+              [datasets]="pieChartData1"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [colors]="pieChartColors"
+              [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+  <h2>Votre roue de la vie souhaitée :</h2>
+  <div class="container diagramme" >
+    <div class="chart">
+      <canvas baseChart
+              [datasets]="pieChartData2"
+              [labels]="pieChartLabels"
+              [chartType]="pieChartType"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              [colors]="pieChartColors"
+              [legend]="pieChartLegend">
+      </canvas>
+    </div>
+  </div>
+  <div class="container choix">
+    <div class="item"><p>Ce qu’il faudrait <span style="color:#3498db ">modifier</span> :</p><p [innerHTML]="roueDeLaVie.qcm1" ></p> </div>
+    <div class="item"><p>Ce qu’il faudrait <span style="color: #6441A5">arrêter</span> :</p><p [innerHTML]="roueDeLaVie.qcm2" ></p> </div>
+    <div class="item"><p>Ce qu’il faudrait <span style="color: green">prioriser</span> :</p><p [innerHTML]="roueDeLaVie.qcm3"></p></div>
+  </div>
+</div>
+</div>
+

@@ -1,0 +1,54 @@
+  <div class="container"  fxLayout="row wrap">
+    <img class="imageBlock" [src]="photoblock3" fxHide.lt-sm>
+    <div class="blockText">
+      <div class="blockChiffre" fxHide.lt-sm>
+        <b>1</b>
+      </div>
+      <mat-icon class="blockIcon">fingerprint</mat-icon>
+      <div class="text">
+      <h2>B'n Dream: Votre ADN Vocationnel</h2>
+      <P>Des tests d’évaluation, des outils de développement personnel, du coaching pour découvrir votre
+        ADN Vocationnel, vos forces et vos limites
+      </P>
+        <button mat-raised-button  [routerLink]="['/bndream']">Découvrir<mat-icon class="iconDecouvrir">send</mat-icon></button>
+    </div>
+    </div>
+  </div>
+  <div class="container"  fxLayout="row wrap-reverse">
+    <div class="blockText blockText2">
+      <div class="blockChiffre2" fxHide.lt-sm>
+        <b>2</b>
+      </div>
+      <mat-icon class="blockIcon Icon2">my_location</mat-icon>
+      <div class="text2">
+        <h2>Go'n Believe: Vos talents</h2>
+        <P>BDécouvrir pour quel métier vous êtes fait, identifier vos compétences et vos soft skills, trouver la
+          formation qui vous aidera à réaliser votre projet.
+        </P>
+        <button mat-raised-button  [routerLink]="['/gonBelieve']">Découvrir<mat-icon class="iconDecouvrir" >send</mat-icon> </button>
+      </div>
+    </div>
+    <img  [src]="photoblock2" class="imageBlock img2" fxHide.lt-sm>
+  </div>
+
+  <div class="container" fxLayout="row wrap">
+    <img  [src]="photoblock1" class="imageBlock" fxHide.lt-sm>
+    <div class="blockText">
+      <div class="blockChiffre" fxHide.lt-sm>
+        <b>3</b>
+      </div>
+      <mat-icon class="blockIcon">thumb_up_alt</mat-icon>
+      <div class="text">
+        <h2>Go'n Become : Votre projet en action </h2>
+        <P>Construire vos outils de recherche d’emploi : CV, lettre de motivation, se préparer à un entretien d’embauche,
+          se fixer un plan d’actions pour réaliser projet.
+        </P>
+        <button mat-raised-button  [routerLink]="['/gonbecome']">Découvrir<mat-icon class="iconDecouvrir">send</mat-icon></button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <video width="500" height="300" controls>
+      <source [src]="presentation" type="video/mp4">
+    </video>
+  </div>

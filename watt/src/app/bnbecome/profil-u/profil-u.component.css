@@ -1,0 +1,272 @@
+.questionnaire{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profiU{
+  margin-bottom: 50px;
+}
+.mat-radio-button ~ .mat-radio-button {
+   margin-left: 16px;
+ }
+p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.numero{
+  border-radius: 25px;
+  background-color:#134a6b;
+  width:100px;
+  height:30px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  float: left;
+  margin: 10px;
+  padding-top: 5px;
+}
+
+@media (max-width: 500px) {
+  .responsive-table-line td:before { content: attr(data-title); }
+  .responsive-table-line table,
+  .responsive-table-line thead,
+  .responsive-table-line tbody,
+  .responsive-table-line th,
+  .responsive-table-line td,
+  .responsive-table-line tr {
+    display: block;
+  }
+
+  .responsive-table-line thead tr {
+    display:none;
+  }
+  .responsive-table-line td {
+    position: relative;
+    border: 0px solid transparent;
+    padding-left: 50% !important;
+    white-space: normal;
+    text-align:right;
+  }
+
+  .responsive-table-line td:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 45%;
+    padding-right: 15px;
+    height:100%;
+    white-space: nowrap;
+    text-overflow: ellipsis !important;
+    overflow:hidden !important;
+    text-align:left;
+    background-color:#f8f8f8;
+  }
+}
+
+.user-row {
+  margin-bottom: 14px;
+}
+
+.user-row:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-user {
+  margin: 13px 0;
+  padding: 5px;
+  height: 100%;
+}
+
+.dropdown-user:hover {
+  cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+  border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+  border-top: 0;
+}
+.toppad
+{margin-top:10px;
+}
+
+.table-ligne1 {
+
+  background-color: blue;
+}
+.table-ligne2 {
+
+  background-color: #A7CFD3;
+}
+.table-ligne3 {
+
+  background-color: #c1b4aa;
+}
+.table-ligne4 {
+
+  background-color: #c17c24;
+  color: white;
+}
+.table-ligne5 {
+  background-color: #1f46c1;
+  color: white;
+}
+
+.table-ligne12 {
+
+  background-color: #d35943;
+}
+
+.table-ligne14 {
+
+  background-color: #c17c24;
+  color: white;
+}
+.table-ligne15 {
+  background-color: #c1260e;
+  color: white;
+}
+
+.btn{
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+.resultat{
+  margin: 50px
+}
+
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+h5{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  text-align: center;
+  color: #134a6b;
+}
+
+.bndream{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.label{
+  display: flex;
+  flex-direction: column;
+}
+
+.imgcontexte{
+  float: left;
+  height: 20%;
+}
+
+
+.bndream p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.liObjectif ul{
+  list-style-type: disc;
+
+}
+
+.liObjectif li{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  line-height: 2em;
+  margin-left: 30px;
+}
+.bndream h4{
+  text-align: center;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin: 30px 50px;}
+
+.para{
+  color: #b65010;
+
+}
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/

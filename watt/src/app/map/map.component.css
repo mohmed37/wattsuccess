@@ -1,0 +1,67 @@
+.map-warpper{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+
+}
+.map-border{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 5px solid orange;
+  height: 100%;
+  width: 100%;
+}
+#map{
+  height: 50%;
+  width: 40%;
+  border-top-color: white;
+  border-style: solid solid solid solid;
+  border-right-color: orange;
+  border-left-color: white;
+  border-bottom-color: orange;
+
+}
+#mapGuadeloupe{
+  height: 50%;
+  width: 40%;
+
+}
+#mapMayotte{
+  height: 50%;
+  width: 20%;
+  border-top-color: white;
+  border-style: solid solid solid solid;
+  border-right-color: white;
+  border-left-color: orange;
+  border-bottom-color: orange;
+}
+
+#mapGuyane{
+  height: 50%;
+  width: 40%;
+}
+
+#mapReunion{
+  height: 50%;
+  width: 40%;
+  border-top-color: orange;
+  border-style: solid solid solid solid;
+  border-right-color: orange;
+  border-left-color: orange;
+  border-bottom-color: white;
+}
+
+#mapMartinique{
+  height: 50%;
+  width: 20%;
+ /* border-top-width: 5px;
+  border-top-color: orange;*/
+}
+
+
+

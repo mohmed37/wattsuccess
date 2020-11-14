@@ -1,0 +1,192 @@
+<h1 class="titre" id="haut">Auto-Portrait</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+
+  <div class="container body" >
+    <div class="item cont" *ngIf="contexteValide"  id="contexte">
+      <div class="button-container">
+        <h2>Contexte</h2>
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p><b>Bienvenue dans Praico et découvrez votre ADN Vocationnel</b></p>
+
+      <p>L’autoportrait permet d’évaluer vos traits de personnalité, aptitudes et comportements grâce à une liste prédéfinie.</p>
+      <p> Le but de cette évaluation est d’une part de se positionner à partir d’une liste de qualificatifs et d’autre part,
+        de mettre à contribution votre entourage (amis, famille, collègues).</p><p> Vous bénéficierez de leurs points de vue et
+        ainsi mettrez en exergue les divergences de perception entre ce que votre entourage pense de vous et la façon
+        dont vous percevez.
+      </p>
+    </div>
+
+
+    <div class="item cont" *ngIf="objectifValide"  id="objectif">
+      <div class="button-container">
+        <h2 >Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+
+      <ul class="liObjectif">
+        <li>Identifier vos principaux traits de caractères,</li>
+        <li>Cerner vos points forts et vos points faibles,</li>
+        <li>Mieux vous connaître,</li>
+        <li>Identifier les axes d’amélioration en vue de mettre en place un plan d’actions pour améliorer votre
+          quotidien et votre relation à l’autre.</li>
+      </ul>
+    </div>
+    <div class="item cont"   *ngIf="processValide"  id="process">
+
+      <div class="button-container">
+        <h2>Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <h4><b>1ère phase : AUTOPORTRAIT</b></h4>
+      <p>Une liste de qualificatifs vous est proposée. Vous allez sélectionner les cinq traits de personnalité qui vous
+        correspondent le plus.</p>
+      <p>Parmi ces cinq choix, vous choisirez les trois qui vous rendent le ou la plus fier / fière et deux autres qui
+        vous desservent et sur lesquels vous dites qu’il est important que je travaille dessus pour faciliter votre quotidien.</p>
+
+      <h4><b>2ème phase : DECOUVREZ CE QUE LES AUTRES PENSENT DE VOUS </b></h4>
+      <p><b>Vous croyez vous connaître, mais qu’en pensent vos proches ?</b></p>
+      <p>Vous allez demander à trois de vos proches (amis, famille) de citer trois qualités qu’ils apprécient chez vous
+        puis les deux points qui pourraient vous desservir dans votre quotidien ou dans la relation à l’autre.</p>
+      <p><b>Deux moyens d’avoir ces retours d’image :</b></p>
+      <p><b>a/</b> Demandez à trois de vos proches de définir les trois qualités qu’ils apprécient chez vous et les deux
+        qualités qu’ils apprécient un peu moins chez vous.</p>
+      <p><b>b/ Accepter le défi suivant :</b> Passez une soirée entre amis et <b>profitez de l’occasion pour leur demander
+        ce qu’ils pensent de vous.</b>  Vous pouvez vous aider de la grille de qualificatifs pour les aider dans leur réflexion.</p>
+      <h4><b>3ème phase : EXERCICE DE REFLEXION / PRISE DE HAUTEUR </b></h4>
+      <p>Nous vous proposons une phase d’autoanalyse pour identifier si vos proches ont la même image de vous que vous-même
+        ou s’il y a des divergences de points de vue. C’est l’occasion de prendre du recul sur l’image que chacun renvoie
+        et réfléchir aux axes d’amélioration sur lesquels vous aimeriez travailler et comment.</p>
+
+      <p><a routerLink="/bndream/autoportrait" fragment="haut" >Haut de page</a></p>
+    </div>
+  </div>
+<div *ngIf="clientConnect">
+<div *ngIf="!autoPortraitValide" >
+<div class="bouton">
+  <button *ngIf="!testAutoPortrait &&roueDeLaVieValide&&!autoPortraitValide" mat-raised-button (click)="clicTestAutoPortrait()">Démarrez <mat-icon class="icon">send</mat-icon></button>
+</div>
+<div  *ngIf="testAutoPortrait">
+  <h2>Qui suis-je vraiment ?</h2>
+  <p>Il est temps de mieux vous connaître en identifiant vos qualités ! </p>
+  <p  *ngIf="!list1">1ère phase : Selectionnez les 5 traits de personnalité qui vous correspondent le plus.</p>
+  <p *ngIf="list1&&!list2" id="etape2">2ème phase : Passez une soirée entre amis et profitez de l’occasion pour leur demander
+    ce qu’ils pensent de vous.</p>
+  <div class="container">
+    <div class="item image" *ngIf="!list1">
+      <div  class="photo2">
+  <img  [src]="photo">
+      </div>
+      <p>Comment vous voyez-vous ?</p>
+    </div>
+    <div class="item image" *ngIf="list1&&!list2">
+      <div class="photo2">
+  <img  [src]="photo2" >
+      </div>
+      <p>Comment les autres vous perçoivent-ils ?</p>
+    </div>
+</div>
+</div>
+</div>
+  <div *ngIf="list2||autoPortraitValide">
+  <p *ngIf="!resultAutoPortrait">3ème phase : EXERCICE DE REFLEXION</p>
+<div class="container" >
+    <ol class="item resultat">
+      <p class="constat">Comment vous vous voyez:</p>
+      <img [src]="photo" class="photo">
+      <div *ngIf="!autoPortraitValide ">
+      <li>{{resultAutoPortrait.list1[0]}}</li>
+      <li>{{resultAutoPortrait.list1[1]}}</li>
+      <li>{{resultAutoPortrait.list1[2]}}</li>
+      <li>{{resultAutoPortrait.list1[3]}}</li>
+      <li>{{resultAutoPortrait.list1[4]}}</li>
+      </div>
+      <div *ngIf="autoPortraitValide">
+        <li>{{resultAutoPortrait.list1[0]}}</li>
+        <li>{{resultAutoPortrait.list1[1]}}</li>
+        <li>{{resultAutoPortrait.list1[2]}}</li>
+        <li>{{resultAutoPortrait.list1[3]}}</li>
+        <li>{{resultAutoPortrait.list1[4]}}</li>
+      </div>
+    </ol>
+    <ol class="item resultat">
+      <P class="constat">Comment vous êtes perçu:</P>
+      <img [src]="photo2" class="photo">
+      <div *ngIf="!autoPortraitValide">
+      <li>{{resultAutoPortrait.list2[0]}}</li>
+      <li>{{resultAutoPortrait.list2[1]}}</li>
+      <li>{{resultAutoPortrait.list2[2]}}</li>
+      <li>{{resultAutoPortrait.list2[3]}}</li>
+      <li>{{resultAutoPortrait.list2[4]}}</li>
+      </div>
+      <div *ngIf="autoPortraitValide">
+        <li>{{resultAutoPortrait.list2[0]}}</li>
+        <li>{{resultAutoPortrait.list2[1]}}</li>
+        <li>{{resultAutoPortrait.list2[2]}}</li>
+        <li>{{resultAutoPortrait.list2[3]}}</li>
+        <li>{{resultAutoPortrait.list2[4]}}</li>
+      </div>
+    </ol>
+</div>
+    <div *ngIf="autoPortraitValide" class="contenu">
+      <p>Votre constat:</p>
+      <p [innerHTML]="resultAutoPortrait.reflexion"></p>
+    </div>
+    <div *ngIf="!autoPortraitValide">
+  <p id="constat">Que constatez-vous ? Votre entourage vous perçoit-il comme vous vous percevez ? Avez-vous été surpris par certaines
+    réponses ?</p>
+      <app-ardoise [texte2]="newTexte" (pick)="save($event)"></app-ardoise>
+    </div>
+  </div>
+
+<div class="container" *ngIf="!autoPortraitValide && testAutoPortrait">
+
+  <ul class="item select" *ngIf="!list2">
+
+   <li *ngIf="traitId1<=1" disabled="disabled"><mat-icon>close</mat-icon></li>
+    <li *ngIf="traitId1>1" (click)="getTraitList(0) "><mat-icon class="icon">keyboard_arrow_up</mat-icon></li>
+  <li  (click)="autoPortraitClientChoix(autoPortrait1)"  >{{autoPortrait1}}</li>
+  <li (click)="autoPortraitClientChoix(autoPortrait2)" >{{autoPortrait2}}</li>
+  <li (click)="autoPortraitClientChoix(autoPortrait3)" >{{autoPortrait3}}</li>
+  <li (click)="autoPortraitClientChoix(autoPortrait4)">{{autoPortrait4}}</li>
+  <li (click)="autoPortraitClientChoix(autoPortrait5)">{{autoPortrait5}}</li>
+    <li *ngIf="traitId5>=50" disabled="disabled"><mat-icon>close</mat-icon></li>
+    <li *ngIf="traitId5<50" (click)="getTraitList(1) "><mat-icon class="icon">keyboard_arrow_down</mat-icon></li>
+  </ul>
+<ul class="item selection" *ngIf="!list1">
+  <li (click)="delete(0,1)">{{resultAutoPortrait.list1[0]}}</li>
+  <li (click)="delete(1,1)">{{resultAutoPortrait.list1[1]}}</li>
+  <li (click)="delete(2,1)">{{resultAutoPortrait.list1[2]}}</li>
+  <li (click)="delete(3,1)">{{resultAutoPortrait.list1[3]}}</li>
+  <li (click)="delete(4,1)">{{resultAutoPortrait.list1[4]}}</li>
+  <li class="valide" *ngIf="!list1&&choixList1==5" (click)="resultList('list1')">Valider</li>
+  <li disabled="disabled" class="invalide" *ngIf="!list1&&choixList1<5" >{{choixList1}}</li>
+</ul>
+<ul class="item selection" *ngIf="list1&&!list2">
+  <li (click)="delete(0,2)">{{resultAutoPortrait.list2[0]}}</li>
+  <li (click)="delete(1,2)">{{resultAutoPortrait.list2[1]}}</li>
+  <li (click)="delete(2,2)">{{resultAutoPortrait.list2[2]}}</li>
+  <li (click)="delete(3,2)">{{resultAutoPortrait.list2[3]}}</li>
+  <li (click)="delete(4,2)" >{{resultAutoPortrait.list2[4]}}</li>
+  <li  class="valide" *ngIf="list1&&!list2&&choixList2==5" (click)="resultList('list2')">Valider</li>
+  <li  class="invalide" *ngIf="list1&&!list2&&choixList2<5" >{{choixList2}}</li>
+
+</ul>
+</div>
+
+</div>

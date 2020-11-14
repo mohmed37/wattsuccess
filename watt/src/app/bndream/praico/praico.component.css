@@ -1,0 +1,237 @@
+.titre{
+  margin: 50px;
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-family: Uberhand pro, serif;
+  text-decoration-style: double;
+  text-decoration-line: underline;
+  text-decoration: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+
+
+.bouton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+button{
+  background-color: #f8c620;
+  color: white;
+  font-size: 20px;
+}
+.icon{
+  margin-left: 20px;
+  color: white;
+}
+.select{
+  background-color: #dfd5ce;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 50px;
+
+}
+
+.item .question,.reponse{
+  border: 1px solid #134a6b;
+  text-align: center;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: Uberhand pro, serif;
+  border-radius: 20px;
+}
+.item .reponse:hover{
+  background-color: #134a6b;
+  color: white;
+  cursor: pointer;
+}
+
+.question{
+  background-color: green;
+  color: white;
+}
+.numero{
+  border-radius: 25px;
+  background-color:#134a6b;
+  width: 100px;
+  height:50px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  float: left;
+  padding-top: 15px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+.valide{
+  margin-left: 10px;
+  color: green;
+}
+mat-checkbox{
+  color:#134a6b;
+}
+.radar{
+  width: 60%;
+  height: auto;
+
+}
+
+p{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top:30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.image{
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+h3{
+  color: #b65010;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.photo{
+  float: left;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+h4{
+  margin-left: 50px;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  margin-top: 30px;
+}
+ul{
+  list-style-type: none;
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+}
+.lettrePraico{
+  color:  #134a6b;
+}
+ol{
+  font-family: Uberhand pro, serif;
+  font-size: 20px;
+  line-height: 2em;
+}
+h5{
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+.testSouligne{
+  text-decoration: underline darkviolet;
+  color: darkviolet;
+}
+.image1{
+  float: right;
+}
+.dimentionRefexion{
+  text-decoration: underline green;
+  color: green;
+}
+.dimention{
+  margin-top: 50px;
+}
+.dimentionInvention{
+  text-decoration: underline #f8c620;
+  color: #f8c620;
+}
+.dimentionCooperation{
+  text-decoration: underline darkviolet;
+  color: darkviolet;
+}
+
+.dimentionAction{
+  text-decoration: underline gray;
+  color:gray;
+}
+
+.dimentionOrganisation{
+  text-decoration: underline brown;
+  color:brown;
+}
+
+.dim{
+  margin-top: 50px;
+}
+
+/*contexte/objectifs/process*/
+h2{
+  text-align: center;
+}
+.item{
+  border: solid 1px #b65010;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;}
+
+.button-container{
+  font-family: Uberhand pro, serif;
+  font-size: 30px;
+  background-color: #134a6b;
+  color: white;
+  padding: 10px 50px 10px 10px;
+}
+.button-container button{
+  float: right;
+  margin-top: -50px;
+}
+.selection{
+  background: #134a6b;
+  border: solid #134a6b;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.contexte{
+  background: #f8c620;
+  color: #134a6b;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.objectif{
+  background: #60cfbe;
+  color: white;
+  margin-top: 10px;
+  margin-right: 50px;
+  width: 110px;
+}
+.process{
+  background: #b65010;
+  color: black;
+  margin-top: 10px;
+  width: 110px;
+}
+.clic{
+  float: right;
+  margin-right: 50px;
+}
+/*contexte/objectifs/process*/

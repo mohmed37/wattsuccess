@@ -1,0 +1,119 @@
+<h1 class="titre" id="haut">Organiser sereinement sa recherche d’emploi</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+
+<div class="bndream" >
+
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoNormal"><b>Structurer sa recherche d&#8217;emploi est une mission&#10;essentielle&#160;pour garder
+        le cap et acc&#233;der &#224; l&#8217;emploi qui n&#8217;attend que vous&#160;!</b></p>&#10;&#10;
+      <p class="MsoNormal">Vous allez cibler les entreprises pour lesquelles vous&#10;envisagez de postuler. Pour optimiser
+        et y voir clair dans vos d&#233;marches, il&#10;est imp&#233;ratif de cr&#233;er un carnet de bord qui va vous permettre d&#8217;
+        organiser vos&#10;recherches de mani&#232;re structur&#233;e.</p>&#10;&#10;<p class="MsoNormal">Ce tableau de bord vous aidera &#224;
+      trier les offres d&#8217;emploi, les&#10;candidatures spontan&#233;es, animer votre r&#233;seau pour favoriser les cooptations et
+      &#224;&#10;r&#233;aliser le suivi de vos diff&#233;rentes d&#233;marches.</p>&#10;&#10;<p class="MsoNormal">En un clin d&#8217;&#339;
+      il, vous visualiserez o&#249; en sont toutes vos&#10;candidatures et les d&#233;marches qu&#8217;il vous reste &#224; r&#233;aliser
+      pour atteindre vos&#10;objectifs et acc&#233;der &#224; votre prochain emploi.</p>
+    </div>
+  </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoListParagraphCxSpFirst">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+        <b>Structurer sa recherche d&#8217;emploi de mani&#232;re&#10;efficace.</b></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">
+      -<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span><b>S&#8217;inscrire dans une dynamique de
+      recherche&#10;d&#8217;emploi en y incluant des objectifs r&#233;alistes et atteignables.</b></p>&#10;&#10;
+      <p class="MsoListParagraphCxSpMiddle">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+        <b>D&#233;velopper et animer son r&#233;seau pour acc&#233;der&#10;&#224; plus d&#8217;opportunit&#233;s d&#8217;emploi.
+        </b></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;
+    </span><b>Obtenir plus rapidement des entretiens&#10;d&#8217;embauche.</b></p>&#10;&#10;<p class="MsoListParagraphCxSpLast">
+      -<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span><b>Eviter de s&#8217;&#233;parpiller et s&#8217;
+      inscrire dans une&#10;logique de r&#233;sultat.</b></p>
+
+    </div>
+  </div>
+
+  <div class="item"   *ngIf="processValide"  id="process">
+
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoNormal"><b><span>Au travers de la vid&#233;o que nous vous proposons,&#10;vous allez pouvoir acc&#233;
+        der &#224; toutes les cl&#233;s pour organiser efficacement votre&#10;recherche d&#8217;emploi.</span></b></p>
+      <p class="MsoNormal"><b><span>Une fois que vous aurez pris connaissance de&#10;tous ces conseils, vous allez pouvoir &#234;
+        tre en mesure de cr&#233;er votre propre&#10;tableau de bord.</span></b></p><p class="MsoNormal"><b>Quelques</b><b>
+      <span> conseils pour&#160;organiser au mieux&#10;votre recherche d'emploi&#160;:</span></b></p><p class="MsoNormal">
+      <span>&#160;</span></p><ol start="1" type="1">&#10; <li class="MsoNormal"><span>Am&#233;nagez-vous&#10; un <b>endroit tranquille</b>
+      avec bureau, ordinateur, agenda, bloc note.</span></li>&#10;</ol><p class="MsoNormal"><span>&#160;</span></p><ol start="2" type="1">&#10;
+      <li class="MsoNormal"><span>Optimiser&#10; votre <b>gestion&#160;du&#160;temps&#160;</b>: la recherche d&#8217;emploi est&#10; un emploi &#224;
+        temps plein. Octroyez-vous un <b>temps pour vos loisirs, vos&#10; amis et votre vie de famille</b>, essentiel &#224; votre <b>&#233;
+          quilibre psychique&#10; et physique&#160;</b>!</span></li>&#10;</ol><p class="MsoListParagraph"><span>&#160;</span></p>
+      <p class="MsoNormal"><span>&#160;</span></p><ol start="3" type="1">&#10; <li class="MsoNormal"><b><span>Mettez&#10; &#224;
+      jour votre CV et adaptez votre lettre de motivat</span></b><span>ion en fonction du poste sur&#10; lequel vous postulez.
+      Vous aurez plus de chance d&#8217;&#234;tre en phase avec les&#10; attentes de votre futur employeur.</span></li>&#10;</ol>
+      <p class="MsoNormal"><span>&#160;</span></p><ol start="4" type="1">&#10; <li class="MsoNormal"><span>Identifiez&#10; les <b>bons</b>
+      <b>sites</b>&#160;<b>emploi pour obtenir des postes&#10; int&#233;ressants&#160;:</b> cr&#233;er vous des <b>alertes &#171;&#160;emploi&#160;&#187;
+      </b>ou&#10; des <b>abonnements &#224; des newsletters </b>pour pouvoir recevoir un maximum <b>d&#8217;opportunit&#233;s</b>.</span></li>&#10;</ol>
+      <p class="MsoListParagraph"><span>&#160;</span></p><p class="MsoNormal"><span>&#160;</span></p><ol start="5" type="1">&#10; <li class="MsoNormal">
+      <span>N&#8217;oubliez&#10; pas de consulter les annonces le matin&#160;et&#160;le soir pour pouvoir &#234;tre&#10; r&#233;actif et y r&#233;pondre d&#232;
+        s que possible et v&#233;rifier votre bo&#238;te mail. </span></li>&#10;</ol><p class="MsoNormal"><span>&#160;</span></p><ol start="6" type="1">&#10;
+      <li class="MsoNormal"><span>Effectuez&#10; une <b>veille sur l&#8217;activit&#233; des entreprises </b>via les journaux, sites&#10; d&#233;di&#233;s &#224;
+        l&#8217;&#233;conomie&#8230;</span></li>&#10;</ol><p class="MsoListParagraph"><span>&#160;</span></p><p class="MsoNormal"><span>&#160;</span>
+    </p><ol start="7" type="1">&#10; <li class="MsoNormal"><span>Cr&#233;ez&#10; le <b>tableau de bord de vos candidatures&#160;</b>et effectuez un
+      <b>suivi&#10; efficace&#160;</b>: </span><span>r&#233;alisez un suivi de vos candidatures dans&#10; un tableau Excel avec les dates d'envoi, les
+      entreprises sollicit&#233;es, les&#10; postes pourvues et les retours obtenus. Ce tableau devra &#234;tre <b>mis &#224;&#10; jour quotidiennement
+      </b>et vous motivera pour atteindre vos objectifs.</span><span></span></li>&#10;</ol><p class="MsoNormal"><span>&#160;</span></p>
+      <p class="MsoNormal">&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;
+        &#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;<span>D&#233;veloppez votre <b>r&#233;seau&#10;
+          professionnel en mobilisant votre r&#233;seau personnel&#160;</b>: famille, amis, ex&#10;camarades de promo&#8230;
+          Le <b>march&#233; cach&#233; </b>est un moyen efficace d&#8217;acc&#233;der plus&#10;rapidement &#224; l&#8217;emploi.
+          <b>OSEZ&#160;!&#160;</b></span><br></p><ol start="8" type="1">&#10;</ol>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="clientConnect">
+<div class="text">
+  <p>Bien organiser sa recherche d’emploi, c’est essentiel !</p>
+  <p>De la recherche d’informations pour se positionner efficacement sur le marché du travail à l’étape ultime
+    «être retenu.e sur le poste de ses rêves », il est IMPORTANT d’organiser sereinement vos recherches.</p>
+  <p>L’idée est de ne pas s’éparpiller, de construire un tableau de bord avec des actions à réaliser et des objectifs
+    à tenir jour après jour.</p>
+  <p>N’oubliez pas, rechercher votre futur emploi est un emploi à temps plein qui demande beaucoup d’énergie et
+    d’enthousiasme parce qu’il faut toujours y croire. Il y a toujours quelqu’un qui nous attend quelque part !
+    Encore faut-il le chercher pour le trouver !  </p>
+  <p>Et il y a toujours un temps pour tout : un temps pour le travail et un temps pour soi alors dans cette organisation
+    octroyez vous un temps pour vous faire du bien.</p>
+</div>
+<h4>VIDEO ORGANISER SEREINEMENT SA RECHERCHE D’EMPLOI</h4>
+<div class="container">
+  <video width="500" height="300" controls>
+    <source [src]="organisation" type="video/mp4">
+  </video>
+</div>
+</div>

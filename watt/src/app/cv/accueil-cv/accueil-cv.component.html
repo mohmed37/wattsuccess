@@ -1,0 +1,187 @@
+<h1 class="titre" id="haut">Réalisez votre CV et votre lettre de motivation</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+
+<div class="bndream" >
+
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><span>A&#10;quoi sert un <b>CV</b> ou <span class="Aucun"><b><i>Curriculum Vitae</i></b>
+      </span>&#160;</span><span lang="ZH-TW">?</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span lang="IT">Il s</span>
+      <span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>
+        &#8217;</span><span>agit&#10;d</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+        <span dir="RTL"></span>&#8217;</span><span>un&#10;document qui regroupe <b>votre parcours professionnelle, vos comp&#233;tences</b>&#10;et&#160;
+        <b>vos exp&#233;riences</b> que vous aurez&#10;acquis au fur et &#224; mesure de votre vie. </span><span></span></p>&#10;&#10;<p class="Pardfaut">
+      <span>ce&#10;document est <b>essentiel</b> pour pouvoir <b>postuler</b> aux diff&#233;rentes&#10;offres qui se pr&#233;sentent &#224; vous. Et ainsi pouvoir
+        <b>trouver le m&#233;tier de vos&#10;r&#234;ves</b>&#160;</span><span lang="RU">!</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>Votre&#10;CV doit donc
+      <b>&#234;tre clair</b> et <b>donner envie</b> <b>au recruteur de vous&#10;rencontrer</b> pour ainsi avoir une chance d</span><span dir="RTL"></span><span dir="RTL"></span>
+      <span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><b><span lang="IT">acc</span></b><b><span>&#233;</span></b><b><span lang="DE">der </span>
+      </b><b><span>&#224; un entretien.</span></b></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><span>A&#10;quoi sert une lettre de motivation&#160;:</span>
+    </b></p>&#10;&#10;<p class="Pardfaut"><span>Apr</span><span lang="IT">&#232;</span><span>s avoir finalis&#233; votre CV, vous pouvez&#10;vous attaquer &#224; l&#8217;
+      &#233;laboration de votre lettre de motivation. Mais c</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span><span>est&#10;quoi la lettre de motivation&#160;</span><span lang="ZH-TW">?</span><span></span></p>&#10;&#10;<p class="Pardfaut">
+      <span>Elle&#10;va vous permettre de <b>compl&#233;ter votre CV</b> et convaincre votre futur&#10;employeur que vous &#234;tes le candidat qu&#8217;il recherche. </span>
+    </p>&#10;&#10;<p class="Pardfaut"><b><span style="color: #c1260e">ATTENTION</span></b><span>&#160;: elle ne doit &#234;tre en aucun cas&#10;une redite de votre CV.&#160; Votre lettre de&#10;motivation va devoir
+      <b>&#234;</b></span><b><span lang="DA">tre synth</span></b><b><span>&#233;tique</span></b><span>,&#10;15 &#224; 20 lignes suffiront (1 page).</span>
+    </p>&#10;&#10;<span lang="EN-US">L&#8217;objectif de la lettre de motivation est de pouvoir <b>d&#233;velopper ce&#10;que vous avez pu marquer dans votre cv et surtout de montrer votre motivation&#10;
+      et pourquoi vous voulez ce poste.</b></span>
+    </div>
+  </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Mettre en valeur son parcours,
+        ses&#10;atouts, sa motivation et sa disponibilit&#233;</span></p>&#10;&#10;<p class="Pardfaut"><span>-
+      <span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Augmenter vos chances d&#8217;obtenir une&#10;entrevue avec un recruteur
+    </span></p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>&#202;tre rep&#233;r&#233;
+      .e et trouver l&#8217;emploi de&#10;vos r&#234;ves&#160;</span></p>
+
+    </div>
+  </div>
+
+  <div class="item"   *ngIf="processValide"  id="process">
+
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="Pardfaut"><b><span>POUR&#10;REALISER VOTRE CV&#160;:</span></b></p>&#10;&#10;<p class="Pardfaut">
+      <span>Pour se faire, nous allons vous donnez&#10;quelques conseils&#160;:</span><span></span></p>&#10;&#10;
+      <p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Corps"><span>1.<span>&#160;&#160;&#160; </span></span>
+      <span>Indiquez le poste vis&#233;,&#10;votre projet professionnel</span></p>&#10;&#10;<p class="Corps"><span>&#160;</span></p>
+      &#10;&#10;<p class="Corps"><span>2.<span>&#160;&#160;&#160; </span></span><span>Renseignez vos&#10;informations personnelles
+      (contact, &#226;ge, etc.)</span></p>&#10;&#10;<p class="Corps"><span>&#160;</span></p>&#10;&#10;<p class="Corps">
+      <span>3.<span>&#160;&#160;&#160; </span></span><span>Indiquez vos&#10;formations (dipl&#244;mes obtenus du plus r&#233;cents au plus anciens)</span></p>
+      &#10;&#10;<p class="MsoListParagraph"><span lang="EN-US">&#160;</span></p>&#10;&#10;<p class="Corps"><span>4.<span>&#160;&#160;&#160; </span></span>
+      <span>Indiquer vos&#10;comp&#233;tences linguistiques et informatique (logiciels, langages&#8230;)</span></p>&#10;&#10;<p class="Corps"><span>&#160;</span></p>
+      &#10;&#10;<p class="Corps"><span>5.<span>&#160;&#160;&#160; </span></span><span>Pr&#233;sentez</span><span lang="ES-TRAD"> vos exp&#233;riences </span>
+      <span>(du plus r&#233;cent au plus ancien)</span><span lang="ES-TRAD"> et d&#233;taillez vos comp</span><span>&#233;tences
+        (hard skills* &amp; softs&#10;skills**,*comp&#233;tences techniques. **comp&#233;tences comportementales,&#10;r&#233;sultats&#160;:
+        indiquer le CA atteints ou le nombre de collaborateurs que&#10;vous avez manag&#233;s.</span></p>&#10;&#10;<p class="Corps"><span>&#160;</span>
+    </p>&#10;&#10;<p class="Corps"><span>6.<span>&#160;&#160;&#160; </span></span><span>&#201;noncez</span><span lang="PT"> vos centres </span><span>d&#8217;
+      int&#233;r&#234;ts&#10;et</span><span lang="ES-TRAD"> vos activit</span><span>&#233;s extra professionnelles</span></p>&#10;&#10;<p class="Pardfaut"><i><span>&#160;</span>
+    </i></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>*N</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL">
+      <span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>oubliez&#10;pas que votre CV doit &#234;tre attractif pour que le recruteur retienne votre&#10;candidature&#160;</span>
+      <span lang="RU">! </span></p>&#10;&#10;<p class="Pardfaut"><span lang="RU">&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>Nous&#10;mettons &#224; dispositif gratuitement un
+      <b>g&#233;n&#233;rateur de CV</b> o&#249; vous pourrez&#10;int&#233;grer vos informations. En cliquant sur &#171;&#160;Faire votre CV&#160;&#187;, vous&#10;acc&#233;derez &#224;
+      une base de CV et vous int&#233;grerez toutes vos informations en y&#10;adaptant les couleurs.</span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut">
+      <span>Pour&#10;tou.te.s celles et ceux qui ont l&#8217;&#226;me voyageur, nous avons &#233;galement pensez &#224;&#10;vous en vous mettant &#224; disposition une information
+        sur les CV pour&#10;l&#8217;international. </span></p>&#10;&#10;<p class="Pardfaut"><span>Vous&#10;trouverez des exemples de CV hispanique (Colombie) et anglophone (Canada et&#10;USA).
+    </span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><u><span>POUR&#10;
+      REDIGER VOTRE LETTRE DE MOTIVATION&#160;:</span></u></b><b><u><span></span></u></b></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut">
+      <span>Veillez&#10;&#224; respecter l</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span>
+      <span>ensemble&#10;des champs dit &#171;&#160;obligatoire&#160;&#187;, c</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span><span>est-&#224;-dire&#160;:</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+      <b><span>Votre identit&#233; &#224; gauche</span></b><span>&#160;:&#10;nom, pr&#233;</span><span lang="DA">nom, adresse, num</span><span>&#233;</span><span lang="PT">ro de t</span>
+      <span>&#233;l&#233;phone et adresse mail&#10;(s&#233;rieuse&#160;: ex&#160;: sarah.gandhi@gmail.com).</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-
+      <span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span><b><span>L</span></b><span dir="RTL"></span><span dir="RTL"></span><b><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span></b><b><span lang="IT">identit</span></b><b><span>&#233;&#10;de votre interlocuteur </span></b><span>(Responsable RH, recruteur&#8230;)&#160;
+      sera&#10;&#224; droite&#160;: son nom, son pr&#233;nom, le nom de l</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>
+      &#8217;</span><span>entreprise pour laquelle vous&#10;postulez, son adresse.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+      <span>N</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>oubliez pas le <b>Lieu </b>et la
+        <b>date&#10;de r&#233;daction</b>&#160;de votre lettre.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span class="Aucun"><span>&#160;</span></span></p>&#10;&#10;<p class="Pardfaut"><span>
+      -<span>&#160;&#160;&#160;&#160;&#160; </span></span><span class="Aucun"><b><span>L</span></b></span><span dir="RTL"></span><span dir="RTL"></span><span class="Aucun"><b><span lang="AR-SA" dir="RTL">
+      <span dir="RTL"></span><span dir="RTL"></span>&#8217;</span></b></span><span class="Aucun"><b><span lang="PT">objet</span></b></span><span class="Aucun"><span>&#160;:&#160; &#233;crivez l</span>
+    </span><span dir="RTL"></span><span dir="RTL"></span><span class="Aucun"><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span></span><span class="Aucun">
+      <span>intitul&#233; du poste pour lequel vous postulez </span></span><i><span>(par&#10;exemple&#160;: &#171;&#160;Candidature spontan&#233;e pour un poste de &#8230;&#160;&#187; ou
+      bien&#10;&#171;&#160;</span></i><i><span lang="DE">Recherche d</span></i><span dir="RTL"></span><span dir="RTL"></span><i><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span></i><i><span>un&#10;contrat d</span></i><span dir="RTL"></span><span dir="RTL"></span><i><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span></i><i><span>alternance&#10;en &#8230;&#160;&#187;)</span></i><i><span></span></i></p>&#10;&#10;<p class="MsoListParagraph"><i><span lang="EN-US">&#160;</span>
+    </i></p>&#10;&#10;<p class="Pardfaut"><span>-<span>&#160;&#160;&#160;&#160;&#160;&#10;</span></span><i><span>V</span></i><span>ous commencerez ensuite par <b>la&#10;formule d</b></span>
+      <span dir="RTL"></span><span dir="RTL"></span><b><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span></b><b><span>appel</span></b>
+      <span>&#160;:&#10;&#171;&#160;Madame, Monsieur&#160;&#187;</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><u>
+      <span>La&#10;structure de votre lettre de motivation&#160;: </span></u></b><b><u><span></span></u></b></p>&#10;&#10;<p class="Pardfaut"><b><span>&#160;</span></b></p>&#10;&#10;<p class="Pardfaut"><b>
+      <span>3&#10;parties se distinguent&#160;:</span></b><b><span></span></b></p>&#10;&#10;<p class="Pardfaut"><span>-&#171;&#160;<b>Vous</b></span><span lang="RU">&#160;&#187;&#160;</span>
+      <span>: Cette partie vise &#224; montrer que vous&#10;avez compris les besoins de l</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+        <span dir="RTL"></span>&#8217;</span><span>entreprise&#10;et que vous avez pris connaissance de l</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL">
+        <span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>entreprise.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>-&#171;&#160;<b>Moi</b></span><span lang="RU">
+      &#160;&#187;&#160;</span><span>: Montrer au recruteur que par le&#10;biais de vos exp&#233;riences et vos comp&#233;tences vous correspondez &#224; ces attentes.</span><span></span>
+    </p>&#10;&#10;<p class="Pardfaut"><span>-&#171;&#160;Nous</span><span lang="RU">&#160;&#187;&#160;</span><span>: Expliquez les <b>b&#233;n&#233;fices mutuels</b>&#10;que vous et l</span>
+      <span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>entreprise&#10;pouvez tirer de cette collaboration et faites
+        <b>une demande de rendez-vous</b>&#10;en lui proposant de vous recevoir dans le cadre d&#8217;un entretien de recrutement.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span>
+    </p>&#10;&#10;<p class="Pardfaut"><span>Vous&#10;pourrez finir votre lettre de motivation par une <b>formule de politesse</b>,&#10;comme&#160;:</span><span></span></p>&#10;&#10;<p class="Pardfaut">
+      <span>&#216;<span>&#160;&#10;</span></span><span>Dans la perspective</span><span lang="IT"> d</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span><span>une&#10;r&#233;ponse de votre part, je vous prie d</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span>
+      <span dir="RTL"></span>&#8217;</span><span>agr&#233;er,&#10;madame, l</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>
+      &#8217;</span><span>expression&#10;de mes salutations distingu&#233;es.</span><span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#216;<span>&#160;&#10;</span></span><span>Dans la perspective
+      d&#8217;un prochain&#10;entretien &#224; votre gr&#233;, je vous prie, madame, de bien vouloir recevoir mes plus&#10;respectueuses</span><span lang="IT"> salutations.</span><span></span></p>&#10;&#10;
+      <p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><span>Puis,&#10;<b>signez votre lettre</b> en bas &#224; droite avec votre <b>Nom et pr&#233;nom.</b></span><b><span></span></b>
+    </p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><u><span style="color: #b65010">Quelques conseils&#10;suppl&#233;mentaires&#160;:</span></u></b><b><u><span></span></u></b></p>&#10;&#10;
+      <p class="Pardfaut"><span>&#216;<span>&#160;&#10;</span></span><span>N</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;
+      </span><span>oubliez pas d</span><span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>expliquer et d</span>
+        <span dir="RTL"></span><span dir="RTL"></span><span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>illustrer vos affirmations&#160;</span><span></span>
+      </p>&#10;&#10;<p class="Pardfaut"><span>&#216;<span>&#160;&#10;</span></span><span>Soyez poli.e et ne faites pas de faute&#10;d</span><span dir="RTL"></span><span dir="RTL"></span>
+      <span lang="AR-SA" dir="RTL"><span dir="RTL"></span><span dir="RTL"></span>&#8217;</span><span>orthographe.&#10;Rien ne vous emp&#234;che de vous faire relire par une personne de votre entourage.</span>
+      <span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#216;<span>&#160;&#10;</span></span><span>Soigner votre pr&#233;sentation en optant&#10;pour une police ni trop petite, ni trop grande. </span>
+      <span></span></p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<p class="Pardfaut"><b><span>Portefolio</span></b><b><span></span></b></p>&#10;&#10;<p class="Pardfaut">
+      <span>Tableau&#10;pour faciliter votre cr&#233;ation de lettre de motivation (r&#233;f&#233;rez-vous &#224; votre <b>portefolio</b>&#10;r&#233;alis&#233; lors de la phase <b>Go&#8217;n Believe</b>)</span>
+    </p>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>&#10;&#10;<table class="TableNormal" border="1" cellspacing="0" cellpadding="0" width="627">&#10; <tbody><tr>&#10; <td width="209" valign="top">
+      &#10; <p class="Styledetableau2">Vous</p>&#10; </td>&#10; <td width="209" valign="top">&#10; <p class="Styledetableau2">Moi</p>&#10; </td>&#10; <td width="209" valign="top">&#10;
+      <p class="Styledetableau2">Nous</p>&#10; </td>&#10; </tr>&#10; <tr>&#10; <td width="209" valign="top">&#10; <p class="MsoNormal"><span lang="EN-US">&#160;</span></p>&#10; </td>&#10;
+      <td width="209" valign="top">&#10; <p class="MsoNormal"><span lang="EN-US">&#160;</span></p>&#10; </td>&#10; <td width="209" valign="top">&#10; <p class="MsoNormal">
+        <span lang="EN-US">&#160;</span></p>&#10; </td>&#10; </tr>&#10;</tbody></table>&#10;&#10;<p class="Pardfaut"><span>&#160;</span></p>
+    </div>
+  </div>
+
+</div>
+
+<div *ngIf="clientConnect">
+<div class="text">
+  <p>Le CV est comme une publicité de vous-même et de votre parcours professionnel et scolaire.</p>
+  <p>L’objectif du Cv est de vous mettre en lumière en mettant en avant votre parcours, vos compétences, qualités et
+    bien d’autres atouts.</p>
+  <p>La lettre de motivation accompagne votre CV dans le cadre de vos candidatures. Elle va mettre en valeur vos
+    aptitudes, capacités, compétences, qualités et motivations en lien avec le poste visé.</p>
+
+  <p>Votre lettre de motivation reflète qui vous êtes et comment vous vous projeter dans le poste et plus largement
+    dans l’entreprise pour laquelle vous postulez.</p>
+
+  <p>Ce sont deux outils incontournables pour vous faire connaître auprès de votre futur employeur ou pour postuler
+    auprès d’une école.</p>
+  <p>Découvrez les 2 vidéos ci-dessous et suivez la méthode pas à pas pour créer votre CV professionnel et votre lettre
+    de motivation.</p>
+</div>
+<div class="container">
+  <div class="videoCV">
+  <h4>VIDEO COMMENT CREER SON CV</h4>
+    <video width="500" height="300" controls>
+      <source [src]="cv" type="video/mp4">
+    </video>
+  </div>
+  <div class="videoCV">
+  <h4>VIDEO LETTRE DE MOTIVATION</h4>
+  <video width="500" height="300" controls>
+    <source [src]="motivation" type="video/mp4">
+  </video>
+  </div>
+</div>
+
+<h4>Deux modèles Simple, facile et rapide</h4>
+<div class="container">
+<button class="btn btn-success" routerLink="/newCv/monCv">CREER SON CV</button>
+  <button class="btn btn-success" >EXEMPLES DE LETTRES DE MOTIVATION</button>
+
+</div>
+</div>

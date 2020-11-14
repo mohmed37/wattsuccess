@@ -1,0 +1,43 @@
+<div class="container from" id="haut">
+  <form  (ngSubmit)="modifPassword()">
+
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Entrer votre mot de passe</mat-label>
+        <input matInput [formControl]="password"  [type]="hide ? 'password' : 'text'" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%=:\?]).{8,12})">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint>Mot de passe</mat-hint>
+      </mat-form-field>
+      <span style="color: #c1260e" >{{message}}</span>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Entrer votre nouveau mot de passe</mat-label>
+        <input matInput [formControl]="newPassword"  [type]="hide3 ? 'password' : 'text'" pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%=:\?]).{8,12})">
+        <button mat-icon-button matSuffix (click)="hide3 = !hide3" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide3">
+          <mat-icon>{{hide3 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint>Nouveau mot de passe</mat-hint>
+      </mat-form-field>
+
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Entrer à nouveau votre mot de passe</mat-label>
+
+        <input matInput [formControl]="matchingPassword"   [type]="hide2 ? 'password' : 'text'" >
+        <button mat-icon-button matSuffix (click)="hide2 = !hide2" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide2">
+          <mat-icon>{{hide2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint>Confirmation du nouveau mot de passe</mat-hint>
+      </mat-form-field>
+
+    </p>
+
+    <button class="btn btn-success" type="submit">Valider</button>
+
+  </form>
+</div>
+

@@ -1,0 +1,20 @@
+.codisplay{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+ margin-top: 20px;
+}
+h2{
+  background-color:#134a6b;
+  color: white;
+}
+
+h1{
+  color: #b65010;
+}
+
+.texte{
+  margin: 50px 5%;
+  font-family: Uberhand pro, serif;
+}

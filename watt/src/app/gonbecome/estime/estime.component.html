@@ -1,0 +1,133 @@
+<h1 class="titre" id="haut">Boostez son estime de soi</h1>
+<div class="selection">
+<div class="clic" fxHide.lt-sm>
+  <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+  <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+  <button class="process" mat-button (click)="process()">Process</button>
+</div>
+</div>
+  <div class="bndream" >
+
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+
+      <div class="button-container">
+        <h2>Contexte</h2>
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <div class="texte">
+        <p class="MsoNormal"><b>L&#8217;estime de soi </b>est l&#8217;une des <b>sources essentielles</b>&#10;<b>de votre joie de vivre</b>.
+          Elle permet de <b>s&#8217;accepter</b>, de <b>s&#8217;aimer</b>&#10;et de pouvoir <b>aimer les autres</b>.</p>&#10;&#10;
+        <p class="MsoNormal">Elle peut &#234;tre d&#233;velopp&#233;e tout au long de la vie. </p>&#10;&#10;<p class="MsoNormal"><b>
+        <u>Une petite d&#233;finition&#160;</u></b>: </p>&#10;&#10;<p class="MsoNormal">L&#8217;estime de soi est le r&#233;sultat du regard
+        qu&#8217;une personne&#10;porte sur elle-m&#234;me&#160;: sur son apparence physique, sur ses comp&#233;tences, sur&#10;ses r&#233;
+        ussites professionnelles et personnelles, sur la richesse de sa vie&#10;affective. </p>&#10;&#10;<p class="MsoNormal">La r&#233;ussite
+        de l&#8217;un ou plusieurs de ces domaines ne garantit&#10;pas l&#8217;estime de soi. Elle est le r&#233;sultat d&#8217;un <b>&#233;
+          quilibre entre ces&#10;diff&#233;rents aspects</b>. L&#8217;estime de soi est une <b>valeur fragile et changeante</b>,&#10;qui augment
+        lorsque nous vivons en respectant nos propres valeurs et qui&#10;diminue chaque fois que notre comportement n&#8217;est pas coh&#233;
+        rent avec elles.</p>&#10;&#10;<p class="MsoNormal">&#160;</p>&#10;&#10;<p class="MsoNormal">Certains auteurs ont r&#233;sum&#233;
+        ce qu&#8217;est <b>l&#8217;estime de soi en&#10;2 grands points&#160;</b>: </p>&#10;&#10;<p class="MsoListParagraphCxSpFirst">-
+        <span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>La <b>perception d&#8217;une comp&#233;tence personnelle</b>
+        ,</p>&#10;&#10;<p class="MsoListParagraphCxSpLast">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>La
+        <b>conviction intime d&#8217;avoir de la valeur </b>en&#10;tant que personne.</p>&#10;&#10;<p class="MsoNormal"><b><u>La diff&#233;
+        rence entre estime de soi et confiance en&#10;soi&#160;</u></b>:</p>&#10;&#10;<p class="MsoNormal"><b>L&#8217;estime de soi </b>
+        est li&#233;e &#224; notre <b>valeur&#10;intrins&#232;que </b>(qualit&#233;s ou d&#233;fauts per&#231;us en nous, croyances sur soi)
+      </p>&#10;&#10;<p class="MsoNormal"><b>La confiance en soi </b>est li&#233;e &#224; notre <b>valeur&#10;extrins&#232;que </b>(comp&#233;
+        tences ou comportements dans tel domaine).</p>
+      </div>
+    </div>
+
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+
+      <div class="button-container">
+        <h2>Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <div class="texte">
+        <p class="MsoListParagraphCxSpFirst">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>
+          G&#233;rer ses &#233;motions</p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>S&#8217;accepter soi-m&#234;me tel que l&#8217;
+        on est</p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;
+      </span>N&#233;gocier avec les autres,</p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>S&#8217;affirmer face aux autres,
+      </p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;
+      </span>Faire face aux conflits,</p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle">-<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;
+      </span>Accepter ce qui est (la r&#233;alit&#233;)</p>&#10;&#10;<p class="MsoListParagraphCxSpLast">-<span>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span>Se faire confiance&#160;</p>
+      </div>
+    </div>
+
+    <div class="item"   *ngIf="processValide"  id="process">
+
+      <div class="button-container">
+        <h2>Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <div class="texte">
+        <p class="MsoNormal">Nous vous proposons de visionner cette petite vid&#233;o qui va&#10;vous proposer
+          <b>quelques exercices </b>&#224; pratiquer r&#233;guli&#232;rement pour <b>contribuer&#10;&#224;
+            d&#233;velopper et &#224; maintenir une bonne estime de soi-m&#234;me </b>et avoir une <b>attitude&#10;
+            plus constructive</b> &#224; l&#8217;&#233;gard de soi.</p><p class="MsoNormal"><br></p>&#10;&#10;
+        <p class="MsoNormal">Mais d&#8217;abord, quelle place occupe l&#8217;estime de soi dans votre&#10;&#233;chelle de valeur&#160;?</p>
+        <p class="MsoNormal"><br></p>&#10;&#10;<p class="MsoNormal">Vous allez passer un <b>test</b> pour <b>d&#233;couvrir votre&#10;
+        niveau d&#8217;estime de soi.</b></p>&#10;&#10;<p class="MsoNormal">&#160;</p>&#10;&#10;<p class="MsoNormal">L&#8217;estime de soi se
+        construit avec le temps et l&#8217;effort.</p><p class="MsoNormal"><br></p>&#10;&#10;<p class="MsoNormal"><b>Soyez fier de vous-m&#234;
+        me, de vos comp&#233;tences, de vos&#10;r&#233;alisations mais aussi de votre potentiel et de vos capacit&#233;s&#160;:&#10;apprendre,
+        comprendre et entreprendre pour s&#8217;&#233;lever&#160;!</b></p><p class="MsoNormal"><b><br></b></p>&#10;&#10;
+        <p class="MsoNormal" align="right">Je compte sur vous pour&#10;croire en vous&#160;!</p>
+      </div>
+    </div>
+
+  </div>
+
+
+<div *ngIf="clientConnect">
+<div class="text">
+  <p>L’estime de soi est l’une des sources essentielles de la joie de vivre, elle permet de s’accepter, de s’aimer et de
+    pouvoir aimer les autres. Elle peut être développée tout au long de la vie. C’est pourquoi nous vous proposons de
+    commencer tout de suite.</p>
+  <p>Vous êtes un humain au milieu de milliards d’autres ! La seule chose dont vous êtes sûre est que vous êtes unique
+    et irremplaçable ! </p>
+  <p>Pour pouvoir être tout ce que vous êtes et devenir la meilleure version de vous-même, vous devez bénéficier d’une
+    bonne estime de vous-même</p>
+  <p style="text-align: center">Je recommande à tous le succès !</p>
+  <p>C’est pour vous aider à développer cette estime de soi si essentielle que nous vous invitons à découvrir nos
+    conseils sur « Comment booster son estime de soi ». Faites les exercices proposés et SURTOUT, ayez du plaisir,
+    voilà notre souhait !</p>
+</div >
+  <h4>VIDEO ESTIME DE SOI</h4>
+  <div class="container">
+    <video width="500" height="300" controls>
+      <source [src]="estime" type="video/mp4">
+    </video>
+  </div>
+<h3>Test niveau d'estime</h3>
+<div *ngIf="!finTest" class="texteQCM">
+<h4>Quel niveau d’estime avez-vous Quel niveau d’estime avez-vous de vous-même ?</h4>
+<p class="question" >{{questions[numero].numero}}. {{questions[numero].question}}</p>
+<div class="container" >
+  <section class="example-section">
+    <mat-radio-group (change)="onChange($event)">
+      <div *ngIf="on">
+      <mat-radio-button class="example-margin" value="0">jamais</mat-radio-button>
+      <mat-radio-button class="example-margin" value="1" >parfois</mat-radio-button>
+      <mat-radio-button class="example-margin" value="2" >souvent</mat-radio-button>
+      <mat-radio-button class="example-margin" value="3" >toujours</mat-radio-button>
+      </div>
+      <div *ngIf="!on">
+      <mat-radio-button class="example-margin" value="0">jamais</mat-radio-button>
+      <mat-radio-button class="example-margin" value="1" >parfois</mat-radio-button>
+      <mat-radio-button class="example-margin" value="2" >souvent</mat-radio-button>
+      <mat-radio-button class="example-margin" value="3" >toujours</mat-radio-button>
+      </div>
+    </mat-radio-group>
+  </section>
+  </div>
+</div>
+<p class="score" *ngIf="finTest" >Votre niveau: {{resultat}} </p>
+</div>

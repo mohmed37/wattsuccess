@@ -1,0 +1,61 @@
+<h1 class="titre" id="haut">Fiches métiers</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+<div class= etiquettes>
+  <div  *ngFor="let m of listImage">
+    <div class="our-team-main">
+      <div class="team-front">
+        <div class="imageN">
+          <img [src]="m.photo" (click)="clic(m.id)" />
+        </div>
+        <div class="projet">
+          <a class="titreProjet"  (click)="clic(m.id)">{{m.metier}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="selecMetier">
+  <table class="table table-hover" id="select" >
+    <thead>
+    <tr>
+      <th>Métier</th>
+      <a (click)="close()">X</a>
+    </tr>
+    </thead>
+    <tbody *ngFor="let m of ficheCaroussel"  >
+    <tr >
+      <td (click)="selectFicheMetier(m.id)">{{m.metier}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+  <div class="container" *ngIf="fichedetail"  >
+    <div class="item photo" id="ficheMetier">
+      <img class="photoFicheMetier" [src]="photoCarrousel">
+    <h1 class="metier">{{FicheMetier.metier}}</h1>
+    </div>
+    <div class="item texte">
+      <p>{{FicheMetier.texte}}</p>
+    </div>
+
+    <div class="item">
+      <h2>Compétences requises :</h2>
+      <ul *ngFor="let c of competences " >
+        <li >{{c}}</li>
+      </ul>
+    </div>
+
+   <div class="item">
+      <h2>Eléments de personnalité :</h2>
+  <ul *ngFor="let q of qualites ">
+        <li  >{{q}}</li>
+      </ul>
+    </div>
+
+</div>

@@ -1,0 +1,160 @@
+<h1 class="titre" id="haut">HandiWatt</h1>
+<div class="selection">
+  <div class="clic2" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div >
+<div *ngIf="profolioUvalide &&clientConnect" >
+<div class="texte">
+<h1><b>Première étape: Mister HandiWATT</b></h1>
+<p>Repérer vos forces et vos limites grâce à Mister WATT :</p>
+<ul>
+  <li><span style="color: green">En vert</span> : les zones qui sont à 100% de leur capacité.</li>
+  <li><span style="color: orange">En orange</span> : les zones qui vous vont souffrir mais qui peuvent être réparées grâce à une opération ou avec le temps.</li>
+  <li><span style="color: red">En rouge</span> : les zones que vous ne pouvez plus du tout utiliser.</li>
+</ul>
+</div>
+<div class="arPlan"  [style.background]="fond">
+  <div class="plan">
+    <div class="etat">
+    <p>Soutien</p>
+    <mat-chip-list aria-label="Fish selection" [selectable]="true" [multiple]="true">
+      <mat-chip (click)="clic('bon')" >Bon</mat-chip>
+      <mat-chip  (click)="clic('moyen')" >Moyen</mat-chip>
+      <mat-chip  (click)="clic('mauvais')" >Mauvais</mat-chip>
+      <div class="face">
+      <mat-chip *ngIf="!face" (click)="clic('face')" >De face</mat-chip>
+      <mat-chip   *ngIf="face" (click)="clic('face')" >De dos</mat-chip>
+    </div>
+    </mat-chip-list>
+    </div>
+    <div *ngIf="!face">
+
+    <div class="chapeauHaut clic" [style.backgroundColor]="couleur[0].color" (click)="changeColor('colorchapeau')"
+         style="font-family: comic sans ms,sans-serif;" title="L'humeur."></div>
+
+    <div class="tete" >
+      <div class="visage ">
+        <div class="chapeau clic" [style.backgroundColor]="couleur[0].color" (click)="changeColor('colorchapeau')"></div>
+      <div class="oeilD clic"  [style.backgroundColor]="couleur[1].color" (click)="changeColor('oeilDroit')" style="font-family: comic sans ms,sans-serif;" title="L'oeil droit."></div>
+      <div class="oeilG clic"   [style.backgroundColor]="couleur[2].color" (click)="changeColor('oeilGauche') "style="font-family: comic sans ms,sans-serif;" title="L'oeil Gauche."></div>
+      <div class="nez"></div>
+      <div class="bouche clic" [style.backgroundColor]="couleur[3].color" (click)="changeColor('bouche')" style="font-family: comic sans ms,sans-serif;" title="Langage."></div>
+      </div>
+      <div class="oreilleG clic" [style.backgroundColor]="couleur[4].color" (click)="changeColor('oreilleGauche')" style="font-family: comic sans ms,sans-serif;" title="L'oreille gauche."></div>
+      <div class="oreilleD clic" [style.backgroundColor]="couleur[5].color" (click)="changeColor('oreilleDroite')" style="font-family: comic sans ms,sans-serif;" title="l'oreille droite."></div>
+    </div>
+    <div class="cou" [style.backgroundColor]="couleur[6].color" (click)="changeColor('cou')" style="font-family: comic sans ms,sans-serif;" title="Le cou."></div>
+
+
+    <div class="thorax clic" [style.backgroundColor]="couleur[7].color" (click)="changeColor('thorax')" style="font-family: comic sans ms,sans-serif;" title="Le thorax."></div>
+      <div class="epauleG clic"  [style.backgroundColor]="couleur[13].color" (click)="changeColor('epauleGauche')" style="font-family: comic sans ms,sans-serif;" title="L'épaule gauche."></div>
+      <div class="brasG clic" [style.backgroundColor]="couleur[14].color" (click)="changeColor('brasGauche')" style="font-family: comic sans ms,sans-serif;" title="Le bras gauche."></div>
+      <div class="coudeG clic" [style.backgroundColor]="couleur[15].color" (click)="changeColor('CoudeGauche')" style="font-family: comic sans ms,sans-serif;" title="Le coude gauche."></div>
+      <div class="avantBrasG clic" [style.backgroundColor]="couleur[16].color" (click)="changeColor('avantBrasGauche')" style="font-family: comic sans ms,sans-serif;" title="L'avant bras gauche."></div>
+      <div class="mainG clic" [style.backgroundColor]="couleur[17].color" (click)="changeColor('mainGauche')" style="font-family: comic sans ms,sans-serif;" title="La main gauche."></div>
+    <div class="epauleD clic" [style.backgroundColor]="couleur[8].color" (click)="changeColor('epauleDroit')" style="font-family: comic sans ms,sans-serif;" title="L'épaule droite."></div>
+    <div class="brasD clic" [style.backgroundColor]="couleur[9].color" (click)="changeColor('brasDroit')" style="font-family: comic sans ms,sans-serif;" title="Le bras droit."></div>
+    <div class="coudeD clic" [style.backgroundColor]="couleur[10].color" (click)="changeColor('CoudeDroit')" style="font-family: comic sans ms,sans-serif;" title="Le coude gauche."></div>
+    <div class="avantBrasD clic " [style.backgroundColor]="couleur[11].color" (click)="changeColor('avantBrasDroit')"style="font-family: comic sans ms,sans-serif;" title="L'avant bras droit." ></div>
+    <div class="mainD clic" [style.backgroundColor]="couleur[12].color" (click)="changeColor('mainDroit')" style="font-family: comic sans ms,sans-serif;" title="La main droite."></div>
+
+
+
+    <div class="thorax1 clic" [style.backgroundColor]="couleur[7].color" (click)="changeColor('thorax')" style="font-family: comic sans ms,sans-serif;" title="Le thorax."> </div>
+    <div class="ventre clic" [style.backgroundColor]="couleur[18].color" (click)="changeColor('ventre')" style="font-family: comic sans ms,sans-serif;" title="Le ventre."> </div>
+   <div class="hanche clic " [style.backgroundColor]="couleur[19].color" (click)="changeColor('hanche')" style="font-family: comic sans ms,sans-serif;" title="Les hanches."> </div>
+    <div class="cuisseDroit clic" [style.backgroundColor]="couleur[20].color" (click)="changeColor('cuisseDroit')" style="font-family: comic sans ms,sans-serif;" title="La cuisse droite."> </div>
+    <div class="genouD clic" [style.backgroundColor]="couleur[21].color" (click)="changeColor('genouDroit')" style="font-family: comic sans ms,sans-serif;" title="Le genou droit."> </div>
+    <div class="jambeD clic" [style.backgroundColor]="couleur[22].color" (click)="changeColor('jambeDroit') " style="font-family: comic sans ms,sans-serif;" title="La jambe droite."> </div>
+   <div class="chevilleD clic" [style.backgroundColor]="couleur[29].color" (click)="changeColor('chevilleDroite')" style="font-family: comic sans ms,sans-serif;" title="Le cheville droite."> </div>
+    <div class="cuisseG clic" [style.backgroundColor]="couleur[23].color" (click)="changeColor('cuisseGauche')" style="font-family: comic sans ms,sans-serif;" title="La cuisse gauche."> </div>
+    <div class="genouG clic" [style.backgroundColor]="couleur[24].color" (click)="changeColor('genouGauche')" style="font-family: comic sans ms,sans-serif;" title="Le genou gauche."> </div>
+    <div class="jambeG clic" [style.backgroundColor]="couleur[25].color" (click)="changeColor('jambeGauche')" style="font-family: comic sans ms,sans-serif;" title="La jambe gauche."> </div>
+     <div class="chevilleG clic" [style.backgroundColor]="couleur[30].color" (click)="changeColor('chevilleGauche')" style="font-family: comic sans ms,sans-serif;" title="Le cheville gauche."> </div>
+    </div>
+    <div *ngIf="face">
+
+      <div class="chapeauHaut clic" [style.backgroundColor]="couleur[0].color" (click)="changeColor('colorchapeau')"
+           style="font-family: comic sans ms,sans-serif;" title="L'humeur."></div>
+
+      <div class="tete" >
+        <div class="visage ">
+          <div class="chapeau clic" [style.backgroundColor]="couleur[0].color" (click)="changeColor('colorchapeau')"></div>
+        </div>
+        <div class="oreilleG clic" [style.backgroundColor]="couleur[5].color" (click)="changeColor('oreilleDroite')" style="font-family: comic sans ms,sans-serif;" title="l'oreille droite."></div>
+        <div class="oreilleD clic" [style.backgroundColor]="couleur[4].color" (click)="changeColor('oreilleGauche')" style="font-family: comic sans ms,sans-serif;" title="L'oreille gauche."></div>
+      </div>
+      <div class="cou" [style.backgroundColor]="couleur[26].color" (click)="changeColor('nuque')" style="font-family: comic sans ms,sans-serif;" title="La nuque."></div>
+
+
+      <div class="thorax clic" [style.backgroundColor]="couleur[27].color" (click)="changeColor('dos')" style="font-family: comic sans ms,sans-serif;" title="Le thorax."></div>
+      <div class="epauleG clic" [style.backgroundColor]="couleur[8].color" (click)="changeColor('epauleDroit')" style="font-family: comic sans ms,sans-serif;" title="L'épaule droite."  ></div>
+      <div class="brasG clic"  [style.backgroundColor]="couleur[9].color" (click)="changeColor('brasDroit')" style="font-family: comic sans ms,sans-serif;" title="Le bras droit." ></div>
+      <div class="coudeG clic" [style.backgroundColor]="couleur[10].color" (click)="changeColor('CoudeDroit')" style="font-family: comic sans ms,sans-serif;" title="Le coude droit." ></div>
+      <div class="avantBrasG clic"  [style.backgroundColor]="couleur[11].color" (click)="changeColor('avantBrasDroit')"style="font-family: comic sans ms,sans-serif;" title="L'avant bras droit."></div>
+      <div class="mainG clic" [style.backgroundColor]="couleur[12].color" (click)="changeColor('mainDroit')" style="font-family: comic sans ms,sans-serif;" title="La main droite."></div>
+      <div class="epauleD clic" [style.backgroundColor]="couleur[13].color" (click)="changeColor('epauleGauche')" style="font-family: comic sans ms,sans-serif;" title="L'épaule gauche."></div>
+      <div class="brasD clic" [style.backgroundColor]="couleur[14].color" (click)="changeColor('brasGauche')" style="font-family: comic sans ms,sans-serif;" title="Le bras gauche."></div>
+      <div class="coudeD clic" [style.backgroundColor]="couleur[15].color" (click)="changeColor('CoudeGauche')" style="font-family: comic sans ms,sans-serif;" title="Le coude gauche."></div>
+      <div class="avantBrasD clic " [style.backgroundColor]="couleur[16].color" (click)="changeColor('avantBrasGauche')" style="font-family: comic sans ms,sans-serif;" title="L'avant bras gauche." ></div>
+      <div class="mainD clic" [style.backgroundColor]="couleur[17].color" (click)="changeColor('mainGauche')" style="font-family: comic sans ms,sans-serif;" title="La main gauche." ></div>
+
+
+
+      <div class="thorax1 clic" [style.backgroundColor]="couleur[27].color" (click)="changeColor('dos')" style="font-family: comic sans ms,sans-serif;" title="Le dos."> </div>
+      <div class="ventre clic" [style.backgroundColor]="couleur[27].color" (click)="changeColor('dos')" style="font-family: comic sans ms,sans-serif;" title="Le dos."> </div>
+      <div class="hanche clic " [style.backgroundColor]="couleur[28].color" (click)="changeColor('basDos')" style="font-family: comic sans ms,sans-serif;" title="Le bas du dos."> </div>
+      <div class="cuisseDroit clic" [style.backgroundColor]="couleur[23].color" (click)="changeColor('cuisseGauche')" style="font-family: comic sans ms,sans-serif;" title="La cuisse gauche."></div>
+      <div class="genouD clic" [style.backgroundColor]="couleur[24].color" (click)="changeColor('genouGauche')" style="font-family: comic sans ms,sans-serif;" title="Le genou gauche."> </div>
+      <div class="jambeD clic"  [style.backgroundColor]="couleur[25].color" (click)="changeColor('jambeGauche')" style="font-family: comic sans ms,sans-serif;" title="La jambe gauche."></div>
+      <div class="chevilleG clic" [style.backgroundColor]="couleur[29].color" (click)="changeColor('chevilleGauche')" style="font-family: comic sans ms,sans-serif;" title="Le cheville gauche."> </div>
+      <div class="cuisseG clic" [style.backgroundColor]="couleur[20].color" (click)="changeColor('cuisseDroit')" style="font-family: comic sans ms,sans-serif;" title="La cuisse droite."></div>
+      <div class="genouG clic" [style.backgroundColor]="couleur[21].color" (click)="changeColor('genouDroit')" style="font-family: comic sans ms,sans-serif;" title="Le genou droit." ></div>
+      <div class="jambeG clic" [style.backgroundColor]="couleur[22].color" (click)="changeColor('jambeDroit') " style="font-family: comic sans ms,sans-serif;" title="La jambe droite."></div>
+      <div class="chevilleD clic" [style.backgroundColor]="couleur[30].color" (click)="changeColor('chevilleDroite')" style="font-family: comic sans ms,sans-serif;" title="Le cheville droite."> </div>
+
+       </div>
+  </div>
+</div>
+<div class="texte">
+  <h1><b>Deuxième étape : Potentiel HandiWATT</b></h1>
+  <p>Handi WATT a besoin de connaître plus précisément l’origine de vos problèmes.
+    Vous allez évaluer vos capacités fonctionnelles et aptitudes sur <b>3 niveaux</b></p>
+  <ol>
+    <li  style="color: green">Je me sens capable de le faire sans difficulté</li>
+    <li style="color: orange">Je me sens capable de le faire de temps en temps</li>
+    <li style="color: red">Je ne me sens plus capable de le faire.</li>
+  </ol>
+</div>
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th scope="col">Capacités fonctionnelle</th>
+    <th scope="col">Sans difficulté</th>
+    <th scope="col">De temps en temps</th>
+    <th scope="col">Je ne me sens plus capable de le faire</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let qcm of dataSource">
+    <td *ngIf="qcm.etat==true" class="element1">{{qcm.question}}</td>
+    <td *ngIf="qcm.etat==false" class="element2">{{qcm.question}}</td>
+    <td *ngIf="qcm.etat==null" class="element3">{{qcm.question}}</td>
+    <td [style.backgroundColor]="qcm.reponse1" (click)="save(qcm.question,1,qcm.reponse1)"></td>
+    <td [style.backgroundColor]="qcm.reponse2" (click)="save(qcm.question,2,qcm.reponse2)"></td>
+    <td [style.backgroundColor]="qcm.reponse3" (click)="save(qcm.question,3,qcm.reponse3)"></td>
+  </tr>
+  </tbody>
+</table>
+
+<button class="btn btn-success " (click)="saveHandiWatt()">Sauvegarder</button>
+<p  class="message">{{message}}</p>
+<div class="texte">
+<p><b>Qu’est ce qu’on mesure</b> : On cherche à mesurer avec précision l’ensemble des actions que vous pouvez réaliser. </p>
+<p><b>Résultats</b> : Vous pourrez construire un projet professionnel adapté à votre profil général en tenant compte de vos
+  contre indications médicales et envisager des solutions en termes d’aménagement de poste si besoin pour rendre viable votre projet (aménagement de véhicule, du poste de travail, de l’environnement de travail…).</p>
+</div>
+</div>

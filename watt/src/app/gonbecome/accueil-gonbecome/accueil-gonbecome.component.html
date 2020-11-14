@@ -1,0 +1,141 @@
+<h1 class="titre" id="haut">Go'n Become</h1>
+<div class="selection">
+  <!--<div *ngIf="questionnaires">
+    <div class="pourcent0">
+      <p>0%</p>
+    </div>
+    <mat-progress-bar class="newProgressBar"  mode="determinate" value="{{progression}}"></mat-progress-bar>
+    <div class="pourcent100">
+      <p>100%</p>
+    </div>
+  </div>-->
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+<div class="bndream" >
+
+  <div class="item" *ngIf="contexteValide"  id="contexte">
+
+    <div class="button-container">
+      <h2>Contexte</h2>
+      <button mat-mini-fab color="warn" (click)="contexte()" >
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+    <p class="MsoNormal"><b><span>Mettez&#10;vos projets en action&#160;!</span></b></p>&#10;&#10;<p class="MsoNormal"><b><span>Go&#8217;N Become</span>
+  </b><span> est une &#233;tape incontournable qui fait suite &#224; l&#8217;&#233;tape <b>B&#8217;n&#10;Dream</b> et <b>Go&#8217;N Believe</b>.
+  </span></p>&#10;&#10;<p class="MsoNormal"><span>Gr&#226;ce &#224; la phase <b>B&#8217;N Dream </b>et <b>Go&#8217;N Belieave</b>,&#10;vous avez pu d&#233;finir un
+    <b>projet r&#233;aliste et r&#233;alisable. </b>Maintenant, vous&#10;allez passer &#224; l&#8217;&#233;tape suivante&#160;: <b>faire vivre votre projet et le mettre&#10;en mouvement.</b>
+  </span></p>&#10;&#10;<p class="MsoNormal"><span>Cette phase va donc vous aider &#224; <b>d&#233;velopper vos outils de&#10;recherche d&#8217;emploi et de formation
+  </b>pour vous donner toutes les <b>chances</b>&#10;de voir aboutir votre projet professionnel. </span></p>&#10;&#10;<p class="MsoNormal">
+  </div>
+  </div>
+
+  <div class="item" *ngIf="objectifValide"  id="objectif">
+
+    <div class="button-container">
+      <h2>Objectifs</h2>
+      <button mat-mini-fab color="warn" (click)="objectif()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+ <p class="MsoListParagraphCxSpFirst"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>R&#233;aliser votre CV</span>
+  </p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>R&#233;diger votre lettre de motivation</span>
+  </p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span>
+    <span>Se pr&#233;parer efficacement &#224; en&#10;entretien de recrutement</span></p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>&#183;
+    <span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Organiser sereinement sa recherche&#10;d&#8217;emploi</span></p>&#10;&#10;
+    <p class="MsoListParagraphCxSpMiddle"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>Construire son r&#233;seau</span>
+    </p>&#10;&#10;<p class="MsoListParagraphCxSpMiddle"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>D&#233;velopper son estime de soi</span>
+  </p>&#10;&#10;<p class="MsoListParagraphCxSpLast"><span>&#183;<span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#10;</span></span><span>R&#233;
+    aliser son projet professionnel ou&#10;de formation&#160;</span></p>
+    </div>
+  </div>
+
+  <div class="item"   *ngIf="processValide"  id="process">
+
+    <div class="button-container">
+      <h2>Process</h2>
+      <button mat-mini-fab color="warn" (click)="process()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+    </div>
+    <div class="texte">
+      <p class="MsoNormal"><span>Durant cette &#233;tape <b>Go&#8217;N Become, </b>vous allez passer par <b>diff&#233;rentes&#10;&#233;tapes</b>&#160;:</span>
+      </p>&#10;&#10;<p class="MsoNormal"><b><span>1<sup>&#232;re</sup> &#233;tape</span></b><span>&#160;: r&#233;aliser votre <b>CV</b> et votre <b>lettre des&#10;motivations</b>.
+      Vous allez b&#233;n&#233;ficier de conseils sur mesure et d&#8217;un <b>g&#233;n&#233;rateur&#10;automatique de CV.</b></span></p>&#10;&#10;
+      <p class="Normal1"><b>2<sup>&#232;me</sup> &#233;tape</b>&#160;:&#10;Se pr&#233;parer efficacement &#224; un<b> entretien d&#8217;embauche</b>.
+        Des conseils et un&#10;guide pour se sentir pr&#234;t.e pour vos prochains entretiens.<b><span></span></b></p>&#10;&#10;<p class="Normal1">
+      <span>&#160;</span></p>&#10;&#10;<p class="Normal1"><b><span>3<sup>&#232;me</sup> &#233;tape</span></b><span>&#160;: &#160;<b>Organiser votre&#10;recherche d&#8217;emploi.
+    </b>Cette &#233;tape est tr&#232;s importante pour vous aider &#224; <b>structurer&#10;de mani&#232;re professionnelle </b>toutes vos d&#233;marches de recherche d&#8217;emploi
+      et rester&#10;toujours alerte.</span></p>&#10;&#10;<p class="MsoNormal"><b><span>&#160;</span></b></p>&#10;&#10;<p><b>4<sup>&#232;me</sup> &#233;tape</b>&#160;: <b>Construire&#10;son r&#233;seau.
+    </b>Nous vous guidons &#224; cr&#233;er un r&#233;seau efficace pour pouvoir vous&#10;positionner sur le <b>march&#233; cach&#233;
+    </b>et diminuer votre temps de recherche&#10;d&#8217;emploi de mani&#232;re significative.</p>&#10;&#10;<p>&#160;</p>&#10;&#10;<p>
+      <b>5<sup>&#232;me</sup> &#233;tape&#160;: D&#233;velopper&#10;son estime de soi</b>. D&#233;couvrez <b>quelques astuces </b>pour d&#233;velopper votre&#10;estime de soi et
+      <b>atteindre vos objectifs.</b><span></span></p>&#10;&#10;<p><span>&#160;</span></p>&#10;&#10;<p><span>Cette&#10;derni&#232;re &#233;tape de </span><b><span>Go&#8217;N Become</span>
+    </b><span> va vous&#10;permettre d&#8217;avoir tous les </span><b><span>conseils</span></b><span> et </span><b><span>outils de recherche d&#8217;emploi</span></b><span>
+      afin de vous aider &#224; mettre tout en&#10;&#339;uvre pour enfin </span><b><span>r&#233;aliser votre projet professionnel.&#160;</span></b></p>
+    </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class= "etiquettes">
+  <div class="imageN">
+    <img class="imgProjet" routerLink="/gonbecome/newCv" fragment="haut" [src]="cvImg"/>
+
+    <div class="projet cv">
+      <p>CV et lettre</p>
+    </div>
+  </div>
+
+       <div class="imageN">
+        <img class="imgProjet" routerLink="/gonbecome/entretien" fragment="haut" [src]="entretienImg"/>
+
+      <div class="projet entretien">
+          <p >Réussir un entretien</p>
+        <p >d’embauche</p>
+        </div>
+       </div>
+  <div class="imageN">
+    <img class="imgProjet" routerLink="/gonbecome/reseau" fragment="haut" [src]="reseauImg"/>
+
+    <div class="projet">
+      <p >Créer son réseau</p>
+    </div>
+  </div>
+  <div class="imageN">
+    <img class="imgProjet" routerLink="/gonbecome/organisation" fragment="haut" [src]="organisationImg"/>
+
+    <div class="projet organiser ">
+      <p >S’organiser</p>
+    </div>
+  </div>
+  <div class="imageN">
+    <img class="imgProjet" routerLink="/gonbecome/estime" fragment="haut" [src]="estimeImg"/>
+
+    <div class="projet estime">
+      <p >Estime de soi</p>
+    </div>
+  </div>
+
+  <div class="imageN">
+    <img class="imgProjet" routerLink="/gonbecome/formation" fragment="haut" [src]="formationImg"/>
+
+    <div class="projet">
+      <p >Offre de formations</p>
+    </div>
+  </div>
+
+
+  </div>
+
+

@@ -1,0 +1,112 @@
+<div class = "container row">
+  <div class = "col-md-12">
+    <h1> Charger une image pour photolangage </h1>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-6">
+    <input type="file" (change)="onFileChanged($event)">
+  </div>
+  <div class="col-md-6">
+    <input type="button" (click)="onUpload()" value="upload">
+  </div>
+</div>
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=message>{{message}}</div>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-6">
+    <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+           name="name" />
+  </div>
+  <div class="col-md-6">
+    <input type="button" (click)="getImage()" value="Get Image">
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=retrievedImage>
+      <img [src]="retrievedImage">
+    </div>
+  </div>
+</div>
+
+<div class = "container row">
+  <div class = "col-md-12">
+    <h1> Charger une image pour fiche métier</h1>
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-6">
+    <input type="file" (change)="onFileChanged($event)">
+  </div>
+  <div class="col-md-6">
+    <input type="button" (click)="onUploadFicheMetier()" value="upload">
+  </div>
+</div>
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=message>{{message}}</div>
+  </div>
+
+</div>
+<div class="container row">
+  <div class="col-md-6">
+    <input type="text" class="form-control" id="nameFicheMetier" placeholder="image name" [(ngModel)]="imageName"
+           name="nameFicheMetier" />
+  </div>
+  <div class="col-md-6">
+    <input type="button" (click)="getImageFicheMeier()" value="Get Image">
+  </div>
+</div>
+<div class="container row">
+  <div class="col-md-12">
+    <div *ngIf=retrievedImageFicheMetier>
+      <img [src]="retrievedImageFicheMetier">
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-6 col-sm-9 col col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Fiche métier <P class="message">{{message}}</P></div>
+      <div class="panel-body" >
+        <form [formGroup]="formFicheMetier"  (ngSubmit)="onSaveFicheMetier()">
+          <div class="form-group">
+            <label class="control-label">Métier</label>
+            <input formControlName="metier" class="form-control" type="text" >
+          </div>
+          <div class="form-group">
+            <label class="control-label">Texte</label>
+            <textarea  formControlName="texte" class="form-control" type="text"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Compétences</label>
+            <textarea  formControlName="competence" class="form-control" type="text"  ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Qualités</label>
+            <textarea formControlName="qualite" class="form-control" type="text" ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Code</label>
+            <input formControlName="code" class="form-control" type="text"  >
+          </div>
+          <label>Catégorie Métier</label>
+          <select formControlName="photo" class="form-control">
+            <option>Selectionner la Photo</option>
+            <option *ngFor="let c of allPhotoFicheMetier" [ngValue]="c">{{c.name}}</option>
+          </select>
+          <button class="btn btn-success" type="submit">Enregistrer</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="blackboard">
+    <p>Exprimez-vous.</p>
+    <form [formGroup]="fronArdoise" (ngSubmit)="onSaveTexte()">
+        <textarea formControlName="texte" class="form-control" type="text" ></textarea>
+      <div class="wipeout">
+        <button class="btn" type="submit">Valider</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

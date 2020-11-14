@@ -1,0 +1,711 @@
+<h1 class="titre" id="haut">Profil-U</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+  <div class="bndream" >
+    <div class="item" *ngIf="contexteValide"  id="contexte">
+      <div class="button-container">
+        <h2>Contexte</h2>
+        <button mat-mini-fab color="warn" (click)="contexte()" >
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p>Le test Profil-U évalue deux aspects de vous : <b>votre personnalité</b> et <b>vos valeurs professionnelles.</b> </p>
+
+      <p>Ces <b>2 aspects</b> sont composés chacun de <b>sept dimensions.</b></p>
+      <h5>DIMENSIONS EVALUANT LA PERSONNALITE & LES VALEURS PROFESSIONNELLES</h5>
+      <p  style="text-decoration: underline"><b >7 facteurs de personnalité et comportements professionnels sont évalués :</b></p>
+      <p><b>Définition de la personnalité</b> : La personnalité rend compte de ce qui caractérise nos comportements habituels,
+        ce qui nous distingue des autres et qui nous confère notre singularité, notre individualité. Et ces caractéristiques
+        vont avoir des répercussions sur notre comportement et notre entourage.  Au niveau professionnel, l’ensemble des
+        dimensions de notre personnalité va contribuer à notre performance professionnelle. </p>
+      <ul class="liObjectif">
+        <li style="color: #007bb6">DIMENSION 1 : POUVOIR DE PERSUASION Authenticité vs stratégie</li>
+        <li style="color: green">DIMENSION 2 : AGREABILITE (Ténacité vs Flexibilité)</li>
+        <li style="color: #00a478">DIMENSION 3 : GESTION DES EMOTIONS (Réactivité vs Stabilité)</li>
+        <li style="color: palevioletred">DIMENSION 4 : SOCIABILITE (Introversion / extraversion) </li>
+        <li style="color: #6441A5">DIMENSION 5 : CONSCIENCE (Méthode vs Improvisation)</li>
+        <li style="color: #c1260e">DIMENSION 6 : SENSIBILITE (Intuition vs Rationalisme)</li>
+        <li style="color: #3B5998">DIMENSION 7 : CONVENTIONNEL (Non conformisme vs Droiture)</li>
+      </ul>
+
+      <p style="color: #007bb6">DIMENSION 1 : POUVOIR DE PERSUASION (Authenticité vs stratégie)</p>
+      <p><span style="color: #007bb6">Définition :</span> La « volonté de persuasion » désigne la facilité avec laquelle une personne arrive à convaincre
+        et à influencer les autres en utilisant le tact et en adaptant son discours à son auditoire. Le « besoin
+        d’objectivité » renvoie à la tendance à faire preuve d’authenticité et de transparence dans sa façon
+        de communiquer. </p>
+
+      <p style="color: green">DIMENSION 2 : AGREABILITE (Ténacité vs Flexibilité)</p>
+      <p><span style="color: green">Définition :</span>La « flexibilité » est définie comme la propension d’un individu
+        à considérer les points de vue d’autrui et de chercher le consensus et ce, afin d’éviter les conflits.
+        La « fermeté » renvoie à la tendance à affirmer son point de vue avec détermination et à maintenir rigoureusement
+        ses positions dans ses échanges avec les autres. </p>
+
+      <p style="color: #00a478">DIMENSION 3 GESTION DES EMOTIONS (Réactivité vs Stabilité)</p>
+      <p><span style="color: #00a478">Définition :</span>La « distance émotionnelle » est définie comme la tendance à
+        rester calme, détaché et à garde son sang-froid, même dans les situations stressantes ou déconcertantes.
+        La « sensibilité émotionnelle » est la tendance à prendre les choses à cœur, à exprimer facilement son ressenti
+        et à être réactif à la pression et au stress.</p>
+
+      <p style="color: palevioletred">DIMENSION 4 SOCIABILITE (Introversion vs extraversion)</p>
+      <p><span style="color: palevioletred">Définition :</span>L’ « extraversion » est définie comme la tendance à être
+        ouvert, plein d’entrain et à chercher à développer de nombreux contacts amicaux. L’ « introversion » renvoie
+        à la tendance à être réservé et formel, préférant s’investir dans des relations peu nombreuses mais proches.</p>
+
+      <p style="color: #6441A5">DIMENSION 5 CONSCIENCE (Méthode vs Improvisation)</p>
+      <p><span style="color: #6441A5">Définition :</span>L’ « improvisation » est définie comme le fait d’être spontané,
+        d’avancer sans avoir besoin de plan précis et d’être à l’aise pour gérer les imprévus. L’ « organisation »
+        renvoie à la préférence à organiser ses activités de façon méthodique et à recourir à des procédures claires
+        pour mener ses actions.</p>
+
+      <p style="color: #c1260e">DIMENSION 6 SENSIBILITE (Intuition vs Rationalisme)</p>
+      <p><span style="color: #c1260e">Définition :</span>La dimension « rationalisme » correspond à la tendance à être
+        objectif, logique, analytique et centré sur les faits lors de l’évaluation des informations et de la prise de
+        décisions alors que le pôle « intuition » renvoie à la tendance à appréhender les situations de façon globale,
+        et à faire des choix en se référant à son ressenti, son instinct, ses impressions et ses expériences.</p>
+
+      <p style="color: #3B5998">DIMENSION 7 : CONVENTIONNEL (Non conformisme vs Droiture)</p>
+      <p><span style="color: #3B5998">Définition :</span>Le « respect des règles » est la tendance à adhérer et à faire
+        avec les directives et   les standards établis par la société alors que « libre pensée » représente la propension
+        à poser un regard critique sur les règles établies, de façon à les modifier ou à en créer de nouvelles si elles
+        sont perçues comme désuètes ou inefficace.</p>
+
+      <p  style="text-decoration: underline"><b >6 facteurs de valeurs professionnelles, motivations et aspirations
+        sont évalués :</b></p>
+      <p  style="text-decoration: underline"><b >Valeurs professionnelles :</b></p>
+      <p><b>Définition des valeurs professionnelles :</b> les valeurs sont le résultat de notre culture</p>
+      <ul class="liObjectif">
+        <li style="color:green ">DIMENSION 1 : ENGAGEMENT AU TRAVAIL (Equilibre vie personnelle vs vie professionnelle) </li>
+        <li style="color: #007bb6">DIMENSION 2 : ENCADREMENT (Directive vs Pouvoir)</li>
+        <li style="color: #a58e6f">DIMENSION 3 DYNAMISME (Réflexion vs action)</li>
+        <li style="color:grey">DIMENSION 4 : AMBITION (Prudence vs compétition)</li>
+        <li style="color: chocolate ">DIMENSION 5 :  INDEPENDANCE (Grégarité vs Autonomie) </li>
+        <li style="color: grey">DIMENSION 6 : ALTRUISME (Individualisme vs altruisme)</li>
+        <li style="color: rosybrown">DIMENSION 7 : OUVERTURE A L’EXPERIENCE (Traditionnel vs Exploration)</li>
+      </ul>
+
+      <p style="color: green">DIMENSION 1 ENGAGEMENT AU TRAVAIL (Equilibre vie personnelle vs vie professionnelle)</p>
+      <p><span style="color: green">Définition :</span>L’ « implication au travail » renvoie à la forte importance que
+        l’on accorde au travail et au lien émotionnel que l’on noue avec son entreprise. L’ « équilibre personnel »
+        quant à lui renvoie à une volonté de séparer vie privée et vie professionnelle, trouvant un équilibre entre les deux. </p>
+
+      <p style="color: #007bb6">DIMENSION 2 ENCADREMENT (Directive vs Pouvoir)</p>
+      <p><span style="color: #007bb6">Définition :</span>La « volonté de pouvoir » est définie comme la tendance à
+        prendre en charge les solutions et à rechercher des rôles qui requièrent de prendre des décisions et de diriger
+        les autres. Le « besoin d’encadrement » quant à lui renvoie à une préférence à être supervisé, guidé, à recevoir
+        des directives claires et à rechercher des feedbacks sur son travail.</p>
+
+
+      <p style="color:#a58e6f">DIMENSION 3 DYNAMISME (Réflexion vs action)</p>
+      <p><span style="color: #a58e6f">Définition :</span>Les personnes ayant un « besoin d’action », sont des personnes
+        dynamiques qui aiment d’avantage les projets à court-terme et qui produisent des résultats concrets et immédiats.
+        A l’inverse, les personnes ayant un « besoin de réflexion », sont des personnes patientes qui préfèrent d’avantage
+        conceptualiser et s’investir dans des projets à long-terme, qui nécessitent de la stratégie et de la réflexion.</p>
+
+
+      <p style="color: grey">DIMENSION 4 AMBITION (Prudence vs compétition)</p>
+      <p><span style="color: grey">Définition :</span>Les personnes ayant un profil « ambitieux », sont des personnes
+        qui ont un esprit de compétition et qui font tout pour réussir leur carrière professionnelle. Au contraire,
+        les personnes ayant un profil « modestie » sont des personnes qui recherchent une certaine stabilité professionnelle
+        et qui ne sont pas du tout axées sur la compétition. </p>
+
+      <p style="color: chocolate">DIMENSION 5   INDEPENDANCE (Grégarité vs Autonomie)</p>
+      <p><span style="color: chocolate">Définition :</span>Le « besoin d’autonomie » est défini comme la préférence pour
+        la liberté et l’indépendance dans l’exécution de son travail alors que le « sens du groupe » renvoie à une tendance
+        vers la coopération et la solidarité et à une préférence à effectuer les tâches en groupe. </p>
+
+      <p style="color: grey">DIMENSION 6 ALTRUISME (Individualisme vs altruisme)</p>
+      <p><span style="color: grey">Définition :</span>L’ « altruisme » est défini comme la tendance à se préoccuper des
+        autres, à donner de son temps et de son énergie dans le but de contribuer à l’intérêt général. L’ « individualisme »
+        renvoie au fait d’être pragmatique, centré sur ses propres objectifs.</p>
+
+      <p style="color: grey">DIMENSION 7 OUVERTURE A L’EXPERIENCE (Traditionnel vs Exploration)</p>
+      <p><span style="color: grey">Définition :</span>La « recherche de nouveauté » est définie comme le fait d’être
+        curieux et enclin à explorer, tester ou définir de nouvelles façons de faire. La « recherche de familiarité »
+        renvoie au fait d’être plus à l’aise avec ses habitudes, d’avoir ses repères établis et de suivre les méthodes éprouvées.
+      </p>
+    </div>
+    <div class="item" *ngIf="objectifValide"  id="objectif">
+      <div class="button-container">
+        <h2>Objectifs</h2>
+        <button mat-mini-fab color="warn" (click)="objectif()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <ul class="liObjectif">
+        <li>Découvrir vos traits de personnalité et les confronter à votre projet professionnel</li>
+        <li>Cerner votre comportement professionnel, vos motivations et aspirations et vérifier la pertinence
+          de vos pistes professionnelles </li>
+        <li>Identifier vos valeurs et construire votre projet en cohérence avec soi</li>
+        <li>Prendre conscience de vos atouts, de vos axes de progrès et de vos limites pour trouver des solutions
+          alternatives et s’inscrire dans une dynamique d’amélioration continue</li>
+      </ul>
+    </div>
+
+    <div class="item"   *ngIf="processValide"  id="process">
+      <div class="button-container">
+        <h2>Process</h2>
+        <button mat-mini-fab color="warn" (click)="process()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+
+      <p><b>Ce questionnaire de personnalité vous permettra de mieux cerner votre personnalité, votre comportement au
+        travail, vos aspirations, motivations et valeurs.</b></p>
+
+      <p>Pour chacune des affirmations suivantes, indiquez à quel point chacune est vraie pour vous en cochant le chiffre
+        approprié. Ce test est composé de 140 affirmations et vous n’avez pas besoin d’une compétence particulière pour y
+        répondre.</p>
+
+      <p>Pour chaque affirmation, sur une échelle de 1 à 5, indiquez :</p>
+
+      <ol class="liObjectif">
+        <li>Si vous êtes entièrement en désaccord</li>
+        <li>Si vous êtes plutôt en désaccord</li>
+        <li>Si vous n’êtes ni en accord ni en désaccord</li>
+        <li>Si vous êtes plutôt d’accord</li>
+        <li>Si vous êtes totalement en accord. </li>
+      </ol>
+
+      <p>Il n’y a pas de bonnes réponses ou de mauvaises réponses. Soyez le ou la plus spontané(e) possible pour obtenir
+        des résultats qui correspondent à qui vous êtes. Vous allez donc évaluer dans quelle mesure ces affirmations vous
+        correspondent à l'heure actuelle, et non à la personne que vous voudriez être dans le futur.</p>
+
+      <p>Vous disposez de 15 min pour passer l’intégralité de ce test.* </p>
+      <p>*Bien qu'il n'y ait pas de limite de temps, nous vous conseillons tout de même d'avancer assez vite et de ne pas
+        vous arrêter trop longtemps sur certaines affirmations. Votre première réponse est souvent celle qui correspond
+        le mieux à la réalité et davantage représentative de votre personnalité.</p>
+
+      <p><b>LET’S GO !</b></p>
+    </div>
+  </div>
+
+<div *ngIf="clientConnect">
+<div class="questionnaire" *ngIf="!profilUvalide&&porteFolio">
+   <div class="question">
+  <p>{{question}}</p>
+   </div>
+   <div class="question" >
+  <mat-radio-group aria-label="Select an option" (change)="clic($event)" >
+    <mat-radio-button value="1" *ngIf="validebutton" >1</mat-radio-button>
+    <mat-radio-button value="2" *ngIf="validebutton">2</mat-radio-button>
+    <mat-radio-button value="3" *ngIf="validebutton">3</mat-radio-button>
+    <mat-radio-button value="4" *ngIf="validebutton">4</mat-radio-button>
+    <mat-radio-button value="5" *ngIf="validebutton">5</mat-radio-button>
+    <mat-radio-button value="10" *ngIf="!validebutton">1</mat-radio-button>
+    <mat-radio-button value="20" *ngIf="!validebutton">2</mat-radio-button>
+    <mat-radio-button value="30" *ngIf="!validebutton">3</mat-radio-button>
+    <mat-radio-button value="40" *ngIf="!validebutton">4</mat-radio-button>
+    <mat-radio-button value="50" *ngIf="!validebutton">5</mat-radio-button>
+  </mat-radio-group>
+   </div>
+   <div class="question">
+     <p class="numero" >{{numeroQcm+1}}/140</p>
+   </div>
+ </div>
+ <button *ngIf="!resulta&&profilUvalide " class="btn btn-success" (click)="getResultatProfilU()">DECOUVRIR VOS RESULTATS</button>
+
+
+ <div *ngIf="resulta&&profilUvalide " class="resultat">
+   <div class="responsive-table-line">
+     <div class="table-ligne5">
+       <p class="text-center">Personnalité et comportement professionnel
+     </div>
+     <table class="table table-bordered table-condensed table-body-center">
+       <thead class="table-ligne4">
+       <tr>
+         <th >Facteur opposé</th>
+         <th>1</th>
+         <th>2</th>
+         <th>3</th>
+         <th>4</th>
+         <th>5</th>
+         <th>6</th>
+         <th>7</th>
+         <th>8</th>
+         <th>9</th>
+         <th>10</th>
+         <th>Facteur principal</th>
+         <th>Restitution</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td class="table-ligne2" data-title="Droit"><strong>Besoin d’authenticité</strong>
+           Sincère, objectif, transparent
+         </td>
+
+         <td *ngIf="getResulta.authenticite>=0" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.authenticite<1" class="table-ligne2"></td>
+         <td  *ngIf="getResulta.authenticite>=2" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<2" class="table-ligne2"></td>
+         <td *ngIf="getResulta.authenticite>=3" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.authenticite<3" class="table-ligne2"></td>
+         <td  *ngIf="getResulta.authenticite>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<4" class="table-ligne3"></td>
+         <td  *ngIf="getResulta.authenticite>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<5" class="table-ligne3"></td>
+         <td  *ngIf="getResulta.authenticite>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<6" class="table-ligne3"></td>
+         <td  *ngIf="getResulta.authenticite>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<7" class="table-ligne3"></td>
+         <td  *ngIf="getResulta.authenticite>=8" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<8" class="table-ligne2"></td>
+         <td  *ngIf="getResulta.authenticite>=9" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<9" class="table-ligne2"></td>
+         <td  *ngIf="getResulta.authenticite>=10" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td  *ngIf="getResulta.authenticite<10" class="table-ligne2"></td>
+
+         <td  class="table-ligne2" data-title="Valeur binaire"><strong>Capacités stratégiques</strong>
+           Convaincant, influent, persuasion
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+             <button mat-raised-button (click)="openDialog('authenticite') " >Détail</button>
+         </td>
+       <tr>
+         <td  data-title="Droit"><strong>Tenace</strong>
+           Décidé, exigeant, ferme
+         </td>
+         <td *ngIf="getResulta.tenacite>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<1"></td>
+         <td *ngIf="getResulta.tenacite>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<2"></td>
+         <td *ngIf="getResulta.tenacite>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<3"></td>
+         <td *ngIf="getResulta.tenacite>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<4" class="table-ligne3"></td >
+         <td *ngIf="getResulta.tenacite>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.tenacite>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<6" class="table-ligne3"> </td>
+         <td *ngIf="getResulta.tenacite>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.tenacite>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<8"></td>
+         <td *ngIf="getResulta.tenacite>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<9"></td>
+         <td *ngIf="getResulta.tenacite>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.tenacite<10"></td>
+         <td data-title="Valeur binaire"><strong>Accomodant</strong>
+           Conciliant, à l’écoute d’autrui, diplomate
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Ténacité') " >Détail</button>
+          </td>
+       <tr>
+         <td class="table-ligne2" data-title="Droit"><strong>Réactivité émotionnelle</strong>
+           Passionné, expressif, réactif
+         </td>
+         <td *ngIf="getResulta.reactivite>=0" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<1" class="table-ligne2"></td>
+         <td *ngIf="getResulta.reactivite>=2" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<2" class="table-ligne2"></td>
+         <td *ngIf="getResulta.reactivite>=3" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<3" class="table-ligne2"></td>
+         <td *ngIf="getResulta.reactivite>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reactivite>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reactivite>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reactivite>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reactivite>=8" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<8" class="table-ligne2"></td>
+         <td *ngIf="getResulta.reactivite>=9" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<9" class="table-ligne2"></td>
+         <td *ngIf="getResulta.reactivite>=10" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reactivite<10" class="table-ligne2"></td>
+         <td class="table-ligne2" data-title="Valeur binaire"><strong>Stabilité émotionnelle</strong>
+           Calme, maître de soi, détaché
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Réactivité') " >Détail</button>
+         </td>
+       <tr>
+         <td data-title="Droit"><strong>Introversion</strong>
+           Réservé, discret, formel
+         </td>
+         <td *ngIf="getResulta.introversion>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<1"></td>
+         <td *ngIf="getResulta.introversion>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<2"></td>
+         <td *ngIf="getResulta.introversion>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<3"></td>
+         <td *ngIf="getResulta.introversion>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.introversion>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.introversion>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.introversion>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.introversion>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<8"></td>
+         <td *ngIf="getResulta.introversion>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<9"></td>
+         <td *ngIf="getResulta.introversion>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.introversion<10"></td>
+         <td data-title="Valeur binaire"><strong>Extraversion</strong>
+           Ouvert, sociable, enjoué
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Introversion') " >Détail</button>
+         </td>
+       <tr>
+         <td class="table-ligne2"
+             data-title="Droit"><strong>Méthodique</strong>
+           Organisé, planificateur, systématique
+         </td>
+         <td *ngIf="getResulta.methode>=0" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<1" class="table-ligne2"></td>
+         <td *ngIf="getResulta.methode>=2" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<2" class="table-ligne2"></td>
+         <td *ngIf="getResulta.methode>=3" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<3" class="table-ligne2"></td>
+         <td *ngIf="getResulta.methode>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.methode>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.methode>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.methode>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.methode>=8" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<8" class="table-ligne2"></td>
+         <td *ngIf="getResulta.methode>=9" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<9" class="table-ligne2"></td>
+         <td *ngIf="getResulta.methode>=10" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.methode<10" class="table-ligne2"></td>
+         <td class="table-ligne2" data-title="Valeur binaire"><strong>Capacités d’improvisation</strong>
+           Spontané, adaptable, à l’aise avec l’incertitude
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Méthode') " >Détail</button>
+         </td>
+       <tr>
+         <td data-title="Droit"><strong>Intuition</strong>
+           Instinct, vision globale, ressenti
+         </td>
+         <td *ngIf="getResulta.intuition>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<1"></td>
+         <td *ngIf="getResulta.intuition>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<2"></td>
+         <td *ngIf="getResulta.intuition>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<3"></td>
+         <td *ngIf="getResulta.intuition>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.intuition>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.intuition>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.intuition>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.intuition>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<8"></td>
+         <td *ngIf="getResulta.intuition>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<9"></td>
+         <td *ngIf="getResulta.intuition>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.intuition<10"></td>
+         <td data-title="Valeur binaire"><strong>Rationalisme</strong>
+           Centré sur les faits, logique, analytique
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Intuition') " >Détail</button>
+         </td>
+       <tr>
+         <td class="table-ligne2" data-title="Droit"><strong>Non conformiste</strong>
+           Libre pensée, définit ses propres standards, regard critique
+         </td>
+         <td *ngIf="getResulta.nonConformisme>=0" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<1" class="table-ligne2"></td>
+         <td *ngIf="getResulta.nonConformisme>=2" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<2" class="table-ligne2"></td>
+         <td *ngIf="getResulta.nonConformisme>=3" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<3" class="table-ligne2"></td>
+         <td *ngIf="getResulta.nonConformisme>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.nonConformisme>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.nonConformisme>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.nonConformisme>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.nonConformisme>=8" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<8" class="table-ligne2"></td>
+         <td *ngIf="getResulta.nonConformisme>=9" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<9" class="table-ligne2"></td>
+         <td *ngIf="getResulta.nonConformisme>=10" class="table-ligne2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.nonConformisme<10" class="table-ligne2"></td>
+         <td  class="table-ligne2" data-title="Valeur binaire"><strong>Droiture</strong>
+           Adhère aux standards, se conforme, suit les conventions
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Non conformisme') " >Détail</button>
+         </td>
+       </tbody>
+     </table>
+   </div><br>
+   <div class="responsive-table-line" >
+     <div class="table-ligne15">
+       <p class="text-center">Motivations, aspirations et valeurs
+     </div>
+     <table class="table table-bordered table-condensed table-body-center" >
+       <thead class="table-ligne14">
+       <tr>
+         <th >Facteur opposé</th>
+         <th>1</th>
+         <th>2</th>
+         <th>3</th>
+         <th>4</th>
+         <th>5</th>
+         <th>6</th>
+         <th>7</th>
+         <th>8</th>
+         <th>9</th>
+         <th>10</th>
+         <th>Facteur principal</th>
+         <th>Restitution</th>
+
+       </tr>
+       </thead>
+       <tbody>
+       <tr>
+         <td class="table-ligne12" data-title="Droit"><strong>Equilibre travail/vie privée</strong>
+           Equilibre personnel, déconnecte après le travail
+         </td>
+         <td *ngIf="getResulta.personnelle>=0" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<1" class="table-ligne12"></td>
+         <td *ngIf="getResulta.personnelle>=2" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<2" class="table-ligne12"></td>
+         <td *ngIf="getResulta.personnelle>=3" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<3" class="table-ligne12"></td>
+         <td *ngIf="getResulta.personnelle>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.personnelle>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.personnelle>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.personnelle>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.personnelle>=8" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<8" class="table-ligne12"></td>
+         <td *ngIf="getResulta.personnelle>=9" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<9" class="table-ligne12"></td>
+         <td *ngIf="getResulta.personnelle>=10" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.personnelle<10" class="table-ligne12"></td>
+         <td  class="table-ligne12" data-title="Valeur binaire"><strong>Engagement au travail</strong>
+           Dévoué, impliqué, bourreau de travail
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Equilibre vie personnelle') " >Détail</button>
+         </td>
+
+       <tr>
+         <td  data-title="Droit"><strong>Besoin de directives</strong>
+           Recherche les conseils, encadrement, apprécie d’être guidé
+         </td>
+         <td *ngIf="getResulta.directive>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<1"></td>
+         <td *ngIf="getResulta.directive>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<2"></td>
+         <td *ngIf="getResulta.directive>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<3"></td>
+         <td *ngIf="getResulta.directive>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.directive>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.directive>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.directive>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.directive>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<8"></td>
+         <td *ngIf="getResulta.directive>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<9"></td>
+         <td *ngIf="getResulta.directive>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.directive<10"></td>
+         <td data-title="Valeur binaire"><strong>Responsable</strong>
+           Prend les choses en main, autoritaire
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Directive') " >Détail</button>
+         </td>
+
+       <tr>
+         <td class="table-ligne12" data-title="Droit"><strong>Réfléchi</strong>
+           Patient, besoin de réflexion, aime conceptualiser
+         </td>
+         <td *ngIf="getResulta.reflexion>=0" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<1" class="table-ligne12"></td>
+         <td *ngIf="getResulta.reflexion>=2" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<2" class="table-ligne12"></td>
+         <td *ngIf="getResulta.reflexion>=3" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<3" class="table-ligne12"></td>
+         <td *ngIf="getResulta.reflexion>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reflexion>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reflexion>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reflexion>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.reflexion>=8" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<8" class="table-ligne12"></td>
+         <td *ngIf="getResulta.reflexion>=9" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<9" class="table-ligne12"></td>
+         <td *ngIf="getResulta.reflexion>=10" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.reflexion<10" class="table-ligne12"></td>
+         <td class="table-ligne12" data-title="Valeur binaire"><strong>Dynamique</strong>
+           Besoin d’action, prend des risques, résultat rapide
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Réflexion') " >Détail</button>
+         </td>
+       <tr>
+         <td data-title="Droit"><strong>Prudence</strong>
+           Satisfait(e), stable, modestie
+         </td>
+         <td *ngIf="getResulta.prudence>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<1"></td>
+         <td *ngIf="getResulta.prudence>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<2"></td>
+         <td *ngIf="getResulta.prudence>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<3"></td>
+         <td *ngIf="getResulta.prudence>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.prudence>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.prudence>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.prudence>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.prudence>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<8"></td>
+         <td *ngIf="getResulta.prudence>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<9"></td>
+         <td *ngIf="getResulta.prudence>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.prudence<10"></td>
+         <td data-title="Valeur binaire"><strong>Compétition</strong>
+           Compétitif, ambitieux, cherche la réussite
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Prudence') " >Détail</button>
+         </td>
+       <tr>
+         <td class="table-ligne12"
+             data-title="Droit"><strong>Grégaire</strong>
+           Coopératif, affiliation, orienté équipe
+         </td>
+         <td *ngIf="getResulta.gregarite>=0" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<1" class="table-ligne12"></td>
+         <td *ngIf="getResulta.gregarite>=2" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<2" class="table-ligne12"></td>
+         <td *ngIf="getResulta.gregarite>=3" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<3" class="table-ligne12"></td>
+         <td *ngIf="getResulta.gregarite>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.gregarite>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.gregarite>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.gregarite>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.gregarite>=8" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<8" class="table-ligne12"></td>
+         <td *ngIf="getResulta.gregarite>=9" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<9" class="table-ligne12"></td>
+         <td *ngIf="getResulta.gregarite>=10" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.gregarite<10" class="table-ligne12"></td>
+         <td class="table-ligne12" data-title="Valeur binaire"><strong>Autonome</strong>
+           Besoin d’autonomie, besoin d’indépendance
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Grégarité') " >Détail</button>
+         </td>
+       <tr>
+         <td data-title="Droit"><strong>Individualisme</strong>
+           Pragmatique, cherche à satisfaire ses intérêts
+         </td>
+         <td *ngIf="getResulta.individualisme>=0"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<1"></td>
+         <td *ngIf="getResulta.individualisme>=2"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<2"></td>
+         <td *ngIf="getResulta.individualisme>=3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<3"></td>
+         <td *ngIf="getResulta.individualisme>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.individualisme>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.individualisme>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.individualisme>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.individualisme>=8"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<8"></td>
+         <td *ngIf="getResulta.individualisme>=9"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<9"></td>
+         <td *ngIf="getResulta.individualisme>=10"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.individualisme<10"></td>
+         <td data-title="Valeur binaire"><strong>Altruisme</strong>
+           Serviable, généreux, soucieux du bien-être d’autrui
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Individualisme') " >Détail</button>
+         </td>
+       <tr>
+         <td class="table-ligne12" data-title="Droit"><strong>Traditionnel</strong>
+           Routine, conventionnel, recherche de familiarité
+         </td>
+         <td *ngIf="getResulta.traditionnel>=0" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<1" class="table-ligne12"></td>
+         <td *ngIf="getResulta.traditionnel>=2" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<2" class="table-ligne12"></td>
+         <td *ngIf="getResulta.traditionnel>=3" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<3" class="table-ligne12"></td>
+         <td *ngIf="getResulta.traditionnel>=4" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<4" class="table-ligne3"></td>
+         <td *ngIf="getResulta.traditionnel>=5" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<5" class="table-ligne3"></td>
+         <td *ngIf="getResulta.traditionnel>=6" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<6" class="table-ligne3"></td>
+         <td *ngIf="getResulta.traditionnel>=7" class="table-ligne3"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<7" class="table-ligne3"></td>
+         <td *ngIf="getResulta.traditionnel>=8" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<8" class="table-ligne12"></td>
+         <td *ngIf="getResulta.traditionnel>=9" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<9" class="table-ligne12"></td>
+         <td *ngIf="getResulta.traditionnel>=10" class="table-ligne12"><mat-icon>done_outline</mat-icon></td>
+         <td *ngIf="getResulta.traditionnel<10" class="table-ligne12"></td>
+         <td  class="table-ligne12" data-title="Valeur binaire"><strong>Attirance pour l’exploration</strong>
+           Curieux, créatif, aime expérimenter, la nouveauté
+         </td>
+         <td>
+           <!-- Button to Open the Modal -->
+           <button mat-raised-button (click)="openDialog('Traditionnel') " >Détail</button>
+         </td>
+       </tbody>
+     </table>
+
+   </div>
+ </div>
+</div>

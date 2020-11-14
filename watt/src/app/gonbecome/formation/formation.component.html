@@ -1,0 +1,11 @@
+<h1 class="titre" id="haut">Offre de formation</h1>
+<div class="selection">
+  <div class="clic" fxHide.lt-sm>
+    <button class="contexte" mat-button (click)="contexte()">Contexte</button>
+    <button class="objectif" mat-button (click)="objectif()">Objectifs</button>
+    <button class="process" mat-button (click)="process()">Process</button>
+  </div>
+</div>
+<div class="container" *ngIf="clientConnect">
+  <app-map></app-map>
+</div>

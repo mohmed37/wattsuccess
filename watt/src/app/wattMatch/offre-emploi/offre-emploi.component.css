@@ -1,0 +1,98 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.texte{
+  margin-top: 20px;
+  margin-left: 100px;
+  font-family: Uberhand pro, serif;
+}
+h1, h2{
+  color: #134a6b;
+}
+.competence{
+  background-color: #b65010;
+  color: white;
+
+}
+.item{
+  margin-top: 20px;
+  font-family: Uberhand pro, serif;
+  align-items: flex-start;
+  margin-left: 100px;
+}
+item2{
+  margin-top: 20px;
+  margin-left:10%;
+  font-family: Uberhand pro, serif;
+}
+.item3{
+  margin-top: 20px;
+  font-family: Uberhand pro, serif;
+  align-items: flex-start;
+  margin-left: 20%;
+}
+.input{
+  margin-top: 20px;
+  margin-left: 100px;
+}
+.table{
+  font-family: Uberhand pro, serif;
+}
+th{
+  background-color: #134a6b;
+  color: white;
+
+}
+.valideContact{
+  background-color: white;
+  color: #134a6b;
+  border: solid #134a6b;
+  margin-top: 20px;
+}
+.arrow{
+  margin-left: 50px;
+  color: #134a6b;
+  margin-bottom: 15px;
+  font-size:40px;
+
+}
+.valideRetour{
+  background-color: white;
+  color: #134a6b;
+  border: solid #134a6b;
+  margin-top: 20px;
+  padding-left: 0;
+  margin-right: 50px;
+
+}
+.Retour{
+  margin-right: 50px;
+  margin-left: 0;
+}
+.input, .objet{
+  width: 200px;
+}
+.message{
+  width: 500px;
+  height: 280px;
+}
+
+label{
+  color: #134a6b;
+}
+.validationComp{
+  align-items: center;
+}
+mat-radio-group{
+ margin-left: 50px;
+}
+.validationSavoir{
+  margin-left: 40%;
+
+}
+.form{
+  margin-bottom: 10px;
+}
