@@ -87,6 +87,7 @@
 <div *ngIf="clientConnect">
 <div class="bouton">
   <button *ngIf="!dicoMetiersValide&&heroValide&&!select" mat-raised-button (click)="listFicheMetierClient()">Démarrez <mat-icon class="icon">send</mat-icon></button>
+
 </div>
 
 <div class="explication" *ngIf="select||dicoMetiersValide">

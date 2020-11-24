@@ -1,5 +1,5 @@
-<div class="texte">
-<h1>Publier votre offre d’emploi</h1>
+<div class="texte" id="formulaire">
+<h1 id="haut">Publier votre offre d’emploi</h1>
 <p>Une offre bien renseignée et précise, c’est la garantie de trouver le talent qu’il vous faut ! Attirez les candidats
   en y mettant en valeur votre entreprise, votre logo et le lien vers votre site internet.</p>
 </div>
@@ -21,7 +21,7 @@
       <div *ngIf="f.descriptif.errors.required" style="color: #b65010">Descriptif obligatoire</div>
     </div>
   </div>
-  <button class="valideContact" mat-button (click)="onSubmit()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+  <button class="valideContact" mat-button (click)="onSubmit();" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
 
 </div>
   <div class="texte"  *ngIf="valide==1">
@@ -67,6 +67,7 @@
   </tbody>
 </table>
   </div>
+  <div *ngIf="valide==1">
     <div class="texte" >
     <p *ngIf="number<=5&&number>0">2- Vous pouvez ensuite ajouter 3 compétences que vous jugez importantes ou utiles pour le poste à pourvoir.</p>
     </div>
@@ -83,11 +84,11 @@
     </div>
     </div>
 
-    <div class="container" *ngIf="selectCompetence&&valide==1">
-   <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button *ngIf="number<=5&&number>0" class="valideContact" mat-button  (click)="validation('+')">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <div class="container" *ngIf="selectCompetence">
+   <button class="valideRetour" mat-button  (click)="validation('-') ;suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button *ngIf="number<=5&&number>0" class="valideContact" mat-button  (click)="validation('+');suite()">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
     </div>
-
+  </div>
 
 
   <div class="item" *ngIf="valide==2">
@@ -100,23 +101,23 @@
       <label>Permis</label>
       <input type="text" formControlName="permis" class="form-control objet"/>
     </div>
-    <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button class="valideContact" mat-button  (click)="validation('+')">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button class="valideContact" mat-button  (click)="validation('+');suite()">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
   </div>
   <div  *ngIf="valide==3">
     <div class="texte">
       <h2>Savoir-être professionnels (3 maximum)</h2>
       <p>Qualités professionnellesSélectionnez les savoir-être professionnels les plus importants pour votre poste.</p>
     </div>
-  <div class="item2" >
+  <div class="item" >
     <mat-radio-group aria-label="Select an option" *ngFor="let valeurs of savoirEtre">
       <mat-checkbox value="{{valeurs}}"  (change)="onChange($event)" >{{valeurs}}</mat-checkbox>
     </mat-radio-group>
   </div>
   </div>
   <div class="validationSavoir"  *ngIf="valide==3">
-    <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button *ngIf="number<=3&&number>0" class="valideContact" mat-button  (click)="validation('+')">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button *ngIf="number<=3&&number>0" class="valideContact" mat-button  (click)="validation('+');suite()">Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
   </div>
 
     <div class="texte" *ngIf="valide==4">
@@ -159,8 +160,8 @@
       </form>
   </div>
   <div class="validationSavoir" *ngIf="valide==4">
-    <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button *ngIf="selectedExpereince&&selectedQualification" class="valideContact" mat-button (click)="onSubmit2()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button *ngIf="selectedExpereince&&selectedQualification" class="valideContact" mat-button (click)="onSubmit2();suite()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
   </div>
 
   <div class="texte" *ngIf="valide==5">
@@ -169,7 +170,7 @@
   <div class="item" *ngIf="valide==5">
     <form class="form">
       <mat-form-field appearance="fill">
-        <mat-label>* Niveau de qualification</mat-label>
+        <mat-label>* Type de contrat</mat-label>
         <mat-select [(ngModel)]="selectedContrat" name="qualification">
           <mat-option *ngFor="let contrat of contratType" [value]="contrat" (click)="info()">
             {{contrat}}
@@ -226,8 +227,8 @@
     </mat-radio-group>
   </div>
   <div class="validationSavoir" *ngIf="valide==5">
-    <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button *ngIf="selectedContrat&&selectedDurreSalaire" class="valideContact" mat-button (click)="onSubmit3()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button *ngIf="selectedContrat&&selectedDurreSalaire" class="valideContact" mat-button (click)="onSubmit3();suite()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
   </div>
   <div class="item" *ngIf="valide==5">
     <h1>3. Modalités de recrutement</h1>
@@ -273,8 +274,89 @@
     </form>
   </div>
   <div class="validationSavoir"  *ngIf="valide==5">
-    <button class="valideRetour" mat-button  (click)="validation('-')"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
-    <button *ngIf="selectedMotifDiffusion&&selectedModeContact" class="valideContact" mat-button (click)="onSubmit3()" >valider mon offre<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+    <button *ngIf="selectedMotifDiffusion&&selectedModeContact" class="valideContact" mat-button (click)="onSubmit3();suite()" >Suite<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
   </div>
+  <div class="item" *ngIf="valide==6" >
+    <h1>4. À propos de vous</h1>
+
+  <div class="form-group">
+    <label>* Nom</label>
+    <input type="texte" formControlName="nomEmployeur" class="form-control objet" [ngClass]="{ 'is-invalid': submitted && f.nomEmployeur.errors }" />
+    <div *ngIf="submitted && f.nomEmployeur.errors" class="invalid-feedback">
+      <div *ngIf="f.nomEmployeur.errors.required" style="color: #b65010">Nom obligatoire</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>* Prénom</label>
+    <input type="texte" formControlName="prenomEmployeur" class="form-control objet"[ngClass]="{ 'is-invalid': submitted && f.prenomEmployeur.errors }" />
+    <div *ngIf="submitted && f.prenomEmployeur.errors" class="invalid-feedback">
+      <div *ngIf="f.prenomEmployeur.errors.required" style="color: #b65010">Prénom obligatoire</div>
+    </div>
+  </div>
+    <div class="form-group">
+      <label>* Téléphone</label>
+      <input type="texte" formControlName="telephoneEmployeur" class="form-control objet"[ngClass]="{ 'is-invalid': submitted && f.telephoneEmployeur.errors }"/>
+      <div *ngIf="submitted && f.telephoneEmployeur.errors" class="invalid-feedback">
+        <div *ngIf="f.telephoneEmployeur.errors.required" style="color: #b65010">Téléhone  obligatoire</div>
+      </div>
+    </div>
+    <h1>À propos de l'entreprise</h1>
+    <div class="form-group">
+      <label>*Dénomination</label>
+      <input type="texte" formControlName="denomination" class="form-control objet" [ngClass]="{ 'is-invalid': submitted && f.denomination.errors }" />
+      <div *ngIf="submitted && f.denomination.errors" class="invalid-feedback">
+        <div *ngIf="f.denomination.errors.required" style="color: #b65010">Dénomination obligatoire</div>
+      </div>
+    </div>
+    <p>Logo de l'entreprise</p>
+    <p>Merci de télécharger une image carrée.</p>
+    <p>La résolution minimale doit être de 120 x 120 pixels Formats valides : .jpg, .png, .gif</p>
+    <p>En téléchargeant cette image, vous déclarez en être propriétaire, disposer des droits d'usage pour pouvoir l’utiliser.</p>
+    <form>
+      <img [src]="cheminImage" class="portrait" alt=" " (click)="fileInput.click()" title="Cliquez ici pour selectionner votre logo">
+      <input style="display: none" type="file" #Image accept="image/*"  (change)="handleFinInput($event.target.files)" #fileInput >
+    </form>
+    <div class="form-group ">
+      <label style="font-size: 20px">Description de l'entreprise</label>
+      <p>Présentez votre entreprise aux candidats en quelques lignes</p>
+      <textarea type="text" formControlName="descriptifEntreprise" class="form-control message"></textarea>
+      </div>
+    <form class="form" style="margin-top: 20px ">
+      <mat-form-field appearance="fill">
+        <mat-label>Secteur</mat-label>
+        <mat-select [(ngModel)]="selectedSecteur" name="experience">
+          <mat-option *ngFor="let secteur of secteurActivite" [value]="secteur" (click)="info()">
+            {{secteur}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <form class="form" style="margin-top: 20px">
+      <mat-form-field appearance="fill">
+        <mat-label>Taille de votre entreprise (nombre de salariés)</mat-label>
+        <mat-select [(ngModel)]="selectedTailleEntreprise" name="experience">
+          <mat-option *ngFor="let taille of tailleEntreprise" [value]="taille" (click)="info()">
+            {{taille}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+    <P style="margin-top: 20px;font-size: 20px">Comment avez-vous entendu parler de nous ?</P>
+    <mat-radio-group aria-label="Select an option"  (change)="onChange2($event)">
+      <mat-radio-button value="Notre site Web" >Notre site Web</mat-radio-button>
+      <mat-radio-button value="Un moteur de recherche">Un moteur de recherche</mat-radio-button>
+      <mat-radio-button value="Une recommandation">Une recommandation</mat-radio-button>
+      <mat-radio-button value="Par les médias">Par les médias</mat-radio-button>
+      <mat-radio-button value="autre">Autre : </mat-radio-button>
+    </mat-radio-group>
+    <input *ngIf="autre" type="texte" formControlName="modeContact" class="form-control objet"/>
+
+    <div class="validationSavoir">
+      <button class="valideRetour" mat-button  (click)="validation('-');suite()"><mat-icon class="arrow Retour">keyboard_arrow_left</mat-icon>Retour</button>
+      <button *ngIf="selectedSecteur&&selectedTailleEntreprise" class="valideContact" mat-button (click)="onSubmit3();suite()" >valider mon offre<mat-icon class="arrow">keyboard_arrow_right</mat-icon></button>
+    </div>
+</div>
 
 </form>

@@ -1,0 +1,25 @@
+<h1 class="text-center">Signature</h1>
+<div class="container">
+<div class=" signature-pad">
+  <div class="signature-pad--body">
+    <canvas #sPad width="900" height="300" style="touch-action: none;"></canvas>
+  </div>
+</div>
+<br>
+<br>
+<section class="item">
+  <div class="row">
+    <div class="col-6">
+      <button class="btn btn-block btn-danger" (click)="clear()">Effacer</button>
+      <button class="btn btn-block btn-warning" (click)="undo()">Effacer pas à pas</button>
+      <button class="btn btn-block btn-success" (click)="savePNG()">Enregistrer</button>
+
+    </div>
+    <!--<div class="col-6">
+       <button class="btn btn-block btn-info" (click)="changeColor()">Change Color</button>
+      <button class="btn btn-block btn-primary" (click)="saveJPG()">JPG</button>
+      <button class="btn btn-block btn-secondary" (click)="saveSVG()">SVG</button>
+    </div>-->
+  </div>
+</section>
+</div>

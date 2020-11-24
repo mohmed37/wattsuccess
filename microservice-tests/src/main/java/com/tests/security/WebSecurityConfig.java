@@ -58,11 +58,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.csrf().disable()
 				.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-				.authorizeRequests().antMatchers("/api/watt/**").permitAll()
-                .antMatchers("/api/cgu/**").permitAll()
+				.authorizeRequests().antMatchers("/api/cgu/**").permitAll()
+                .antMatchers("/api/watt/**").authenticated()
 				.anyRequest().authenticated();
-
-
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
 }
