@@ -4,8 +4,6 @@ import {Bnbecome} from "../../services/bnbecome.service";
 import {MatRadioChange} from "@angular/material/radio";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {MatCheckboxChange} from "@angular/material/checkbox";
-import {FicheMetierService} from "src/app/services/fiche-metier.service";
-import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-offre-emploi',
@@ -20,8 +18,6 @@ export class OffreEmploiComponent implements OnInit {
   selectedDurreSalaire: string;
   selectedMotifDiffusion:string;
   selectedModeContact:string;
-  selectedSecteur: string;
-  selectedTailleEntreprise: string;
   public listCompetences:ListCompetencesModel[];
   public competenceSelected:ListCompetencesModel;
   public selectCompetence: boolean;
@@ -48,31 +44,15 @@ export class OffreEmploiComponent implements OnInit {
   public  motifDiffusion:string[]=["En préservant votre anonymat","En affichant uniquement votre enseigne","Avec vos coordonnées"];
   public  modeContact:string[]=["Par courrier électronique","Par téléphone","Par courrier postal","En se présentant dans" +
   " vos locaux","En postulant sur votre site internet"];
-  public tailleEntreprise:string[]=["entre 1 et 10","De 11 à 49","De 50 à 149","De 150 à 249","De 250 à 499","De 500 à 749","De 750 à 999","1000 et +"];
-  fileToUpload: File = null;
-  cheminImage: string = "/assets/img/logEmtreprise.jpg";
-  secteurActivite:string[]=[];
-  public allPhotoFicheMetier:any[]=[];
-  public metier:any=[];
-  autre: boolean;
-  public fragment: string;
 
 
-  constructor(private bnbecome:Bnbecome,private formBuilder: FormBuilder,private ficheMetierService:FicheMetierService, private router: Router,private route: ActivatedRoute) { }
+
+
+
+
+  constructor(private bnbecome:Bnbecome,private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-
-      this.ficheMetierService.ficheMetierAll()
-        .subscribe(
-          res => {
-            this.allPhotoFicheMetier=res;
-            this.allPhotoFicheMetier.forEach(secteur =>{
-            this.secteurActivite.push( secteur.name);
-            });
-          }
-        );
-
-
     this.registerForm = this.formBuilder.group({
       intitule: ['', Validators.required],
       descriptif: ['', Validators.required],
@@ -88,46 +68,14 @@ export class OffreEmploiComponent implements OnInit {
       competence1:[''],
       competence2:[''],
       competence3:[''],
-      nomEmployeur:['', Validators.required],
-      prenomEmployeur:['', Validators.required],
-      telephoneEmployeur:['', Validators.required],
-      descriptifEntreprise:[''],
-      modeContact:[''],
-      denomination:['', Validators.required],
     });
 
     this.getListCompetences();
   }
-  ngAfterViewInit() {
-    this.route.fragment.subscribe(fragment => {
-      this.fragment = fragment;
-      setTimeout(() => this.scrollToAnchor(), 10);
-    });
-  }
-
-  scrollToAnchor(): void {
-    try {
-      if (this.fragment) {
-        document.querySelector('#' + this.fragment).scrollIntoView();
-      }
-    } catch (e) { }
-  }
-
-
   // convenience getter for easy access to form fields
   get f() {
     return this.registerForm.controls;
   }
-  handleFinInput(file: FileList) {
-
-    this.fileToUpload = file.item(0);
-    var reader = new FileReader();
-    reader.onload = (ev: any) => {
-      this.cheminImage = ev.target.result;
-    };
-    reader.readAsDataURL(this.fileToUpload);
-  }
-
 
   clic(id: number) {
     this.bnbecome.getCompetenceById(id).subscribe(data=>{
@@ -170,7 +118,6 @@ export class OffreEmploiComponent implements OnInit {
   validation(s: string) {
 
     if (s=="+"){
-      this.router.navigate(['/wattMatch/offreEmploi'], { fragment: '' });
       this.valide=this.valide+1;
       if(this.valide>=6){
         this.valide=6;
@@ -178,7 +125,6 @@ export class OffreEmploiComponent implements OnInit {
       this.number=0;
     }
     if (s=="-"){
-      this.router.navigate(['/wattMatch/offreEmploi'], { fragment: 'formulaire' });
       this.valide=this.valide-1;
       if(this.valide<=0){
         this.valide=0;
@@ -203,18 +149,12 @@ export class OffreEmploiComponent implements OnInit {
     }
 
   }
-  suite(){
-
-
-  }
   onSubmit() {
-
     this.submitted = true;
     if (this.registerForm.controls.descriptif.errors!=null||this.registerForm.controls.intitule.errors!=null) {
       return;
     }
     else {
-      this.router.navigate(['/wattMatch/offreEmploi']);
     this.validation("+");}
   }
 
@@ -227,7 +167,6 @@ export class OffreEmploiComponent implements OnInit {
   }
 
   onSubmit3() {
-
     if (this.registerForm.controls.salaireMin.errors!=null||this.registerForm.controls.tempsTravail.errors!=null||
       this.registerForm.controls.prisePoste.errors!=null) {
 
@@ -257,13 +196,5 @@ export class OffreEmploiComponent implements OnInit {
   modalit($event: MatCheckboxChange) {
 
 
-  }
-
-  onChange2(event: MatRadioChange) {
-    this.autre=false;
-    if (event.value=="autre"){
-      this.autre=true;
-    }
-    console.log(event);
   }
 }

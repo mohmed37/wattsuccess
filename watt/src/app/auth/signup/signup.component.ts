@@ -9,7 +9,6 @@ import {DialogModalComponent} from "../../dialog-modal/dialog-modal.component";
 import {HttpClient} from "@angular/common/http";
 import {ApiService} from "../../services/api.service";
 import {MatCheckboxChange} from "@angular/material/checkbox";
-import {ContactModel} from "src/app/model/contact.model";
 
 @Component({
   selector: 'app-signup',
@@ -40,13 +39,11 @@ export class SignupComponent implements OnInit {
   public hostAuth: string;
   public etudiantImg:string="assets/img/etudiante.png";
   public JobseekerImg:string="assets/img/Jobseeker.png";
-  public contratValide: boolean=false;
-  public newsValide: boolean=false;
+  public contratValide: boolean;
+  public newsValide: boolean;
   public host: string;
-  registerForm: FormGroup;
-  submitted = false;
 
-  constructor(private formBuilder: FormBuilder,private clientService:ClientService, private router:Router,private activatedRoute:ActivatedRoute,
+  constructor(private clientService:ClientService, private router:Router,private activatedRoute:ActivatedRoute,
               private userConnect:AuthenticationService,private route: ActivatedRoute,public dialog: MatDialog, private hostTestService: ApiService) {
     this.userConnectClient=userConnect.isAuthenticated;
     this.hostUser = hostTestService.USERS_MICRO_APP;
@@ -59,37 +56,9 @@ export class SignupComponent implements OnInit {
       this.clientService.client();}
   }
   ngOnInit(): void {
-
-    this.registerForm = this.formBuilder.group({
-      nom: ['', Validators.required],
-      prenom: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email,Validators.pattern]],
-      phone: ['', [Validators.required, Validators.minLength(10),Validators.pattern]],
-      password: ['', [Validators.required,Validators.pattern]],
-      matchingPassword: ['', [Validators.required,Validators.pattern]],
-      date: ['', Validators.required],
-    });
+   /* this.onGetClient();*/
 
   }
-
-  // convenience getter for easy access to form fields
-  get f() { return this.registerForm.controls; }
-
-  onSubmit(){
-
-    this.submitted = false;
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      this.submitted = true;
-      return;
-    }
-    console.log("valide")
-    this.onFormSubmit();
-    // display form values on success
-    /* alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));*/
-  }
-
-
 
   ngAfterViewInit() {
     this.route.fragment.subscribe(fragment => {
@@ -106,12 +75,19 @@ export class SignupComponent implements OnInit {
     } catch (e) { }
   }
 
-
+  prenom=new FormControl('',Validators.required);
+  password=new FormControl('',Validators.required);
+  usernam=new FormControl('',Validators.required);
+  matchingPassword=new FormControl('',Validators.required);
+  phone=new FormControl('',Validators.required);
+  date=new FormControl('',Validators.required);
+  nom=new FormControl('',Validators.required);
+  email = new FormControl('', [Validators.required, Validators.email]);
   getErrorMessage() {
-    if (this.registerForm.value.email.hasError('required')) {
+    if (this.email.hasError('required')) {
       return 'Vous devez saisir une valeur';
     }
-    return this.registerForm.value.email.hasError('email') ? "Adresse mail n'est valide" : '';
+    return this.email.hasError('email') ? "Adresse mail n'est valide" : '';
   }
 
   openDialog(message:String): void {
@@ -146,19 +122,18 @@ export class SignupComponent implements OnInit {
   onFormSubmit() {
     this.passError="";
     this.message="";
-    if (this.registerForm.value.password!=this.registerForm.value.matchingPassword){
+    if (this.password.value!=this.matchingPassword.value){
       this.passError="Les mots de passe saisis ne sont pas identiques.";
-      console.log("identiques")
       return null;
     }
 
-    this.newClient.prenom=this.registerForm.value.prenom;
-    this.newClient.nom=this.registerForm.value.nom;
-    this.newClient.email=this.registerForm.value.email;
-    this.newClient.phone=this.registerForm.value.phone;
-    this.newClient.password=this.registerForm.value.password;
-    this.newClient.username=this.registerForm.value.email;
-    this.newClient.date=this.registerForm.value.date;
+    this.newClient.prenom=this.prenom.value;
+    this.newClient.nom=this.nom.value;
+    this.newClient.email=this.email.value;
+    this.newClient.phone=this.phone.value;
+    this.newClient.password=this.password.value;
+    this.newClient.username=this.usernam.value;
+    this.newClient.date=this.date.value;
     this.newClient.roles=[""];
     this.newClient.newsletter=this.newsValide;
     this.userConnect.saveResource(this.newClient)

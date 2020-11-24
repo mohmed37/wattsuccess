@@ -11,7 +11,6 @@ import {FicheMetier} from "../../model/ficheMetier.model";
 import {jsPDF} from "jspdf";
 import html2canvas from "html2canvas";
 import {Client} from "../../model/client.model";
-import {PdfService} from "src/app/services/pdf.service";
 
 
 
@@ -102,7 +101,7 @@ export class MonCvComponent implements OnInit {
 
 
   constructor(private http: HttpClient, private clientService: ClientService, private userConnect: AuthenticationService
-    , private bnbecome: Bnbecome,private pdfService: PdfService) {
+    , private bnbecome: Bnbecome) {
     if (userConnect.userAuthenticated) {
       this.userConnectClient = userConnect.isAuthenticated;
     }
@@ -361,27 +360,11 @@ export class MonCvComponent implements OnInit {
   }
 
 
-
-  captureScreen()
-  {
-    // parentdiv is the html element which has to be converted to PDF
-    html2canvas(document.querySelector("#htmlData")).then(canvas => {
-
-      var pdf = new jsPDF('p', 'pt', [canvas.width, canvas.height]);
-
-      var imgData  = canvas.toDataURL("image/jpeg", 1.0);
-      pdf.addImage(imgData,0,0,canvas.width, canvas.height);
-      pdf.save('converteddoc.pdf');
-
-    });
-
-  }
-
-
- /* captureScreen() {
+  captureScreen() {
 
     let element =document.getElementById('htmlData');
     html2canvas(element).then((canvas)=>{
+
       let ingdata=canvas.toDataURL('image/png');
       let doc =new jsPDF();
       let imgHeigth=canvas.height * 208 / canvas.width;
@@ -390,5 +373,5 @@ export class MonCvComponent implements OnInit {
 
 
     })
-  }*/
+  }
 }

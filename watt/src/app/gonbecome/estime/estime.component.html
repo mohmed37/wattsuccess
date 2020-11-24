@@ -100,6 +100,12 @@
     conseils sur « Comment booster son estime de soi ». Faites les exercices proposés et SURTOUT, ayez du plaisir,
     voilà notre souhait !</p>
 </div >
+  <h4>VIDEO ESTIME DE SOI</h4>
+  <div class="container">
+    <video width="500" height="300" controls>
+      <source [src]="estime" type="video/mp4">
+    </video>
+  </div>
 <h3>Test niveau d'estime</h3>
 <div *ngIf="!finTest" class="texteQCM">
 <h4>Quel niveau d’estime avez-vous Quel niveau d’estime avez-vous de vous-même ?</h4>
@@ -124,10 +130,4 @@
   </div>
 </div>
 <p class="score" *ngIf="finTest" >Votre niveau: {{resultat}} </p>
-</div>
-<h4>VIDEO ESTIME DE SOI</h4>
-<div class="container">
-  <video width="500" height="300" controls>
-    <source [src]="estime" type="video/mp4">
-  </video>
 </div>

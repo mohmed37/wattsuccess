@@ -4,9 +4,8 @@
     <div class="header-logo"><a ><img [src]="logo" alt=""></a></div>
     <nav class="header-menu">
       <a  routerLink="/admin" *ngIf="authService.isUserAdmin"  >Administrateur</a>
-      <a  routerLink="/signature" *ngIf="authService.isUserAdmin"  >signature</a>
       <a *ngIf="authService.isAuthenticated"  routerLink="/gonBelieve/fichesMetiers"  fragment="haut">Fiches métier</a>
-      <a  *ngIf="authService.isUserAdmin"  routerLink="/wattMatch"  fragment="haut">Watt Match </a>
+      <a *ngIf="authService.isAuthenticated"  routerLink="/wattMatch"  fragment="haut">Watt Match </a>
       <a routerLink="/">Accueil</a>
       <a (click)="onLogin()" *ngIf="!authService.isAuthenticated"><i class="fas fa-external-link-square-alt"></i> Connexion</a>
       <a *ngIf="authService.isAuthenticated"  (click)="onLogout()"><i class="fas fa-external-link-square-alt"></i> Déconnection</a>

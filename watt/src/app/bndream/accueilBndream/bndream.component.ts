@@ -4,7 +4,8 @@ import {ClientService} from "../../services/client.service";
 import {QuestionnairesModel} from "../../model/questionnaires.model";
 import {BndreamService} from "../../services/bndream.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {PdfService} from "src/app/services/pdf.service";
+
+
 @Component({
   selector: 'app-bndream',
   templateUrl: './bndream.component.html',
@@ -44,16 +45,11 @@ export class BndreamComponent implements OnInit {
   public colorNewQcm3: string="orange";
   public colorNewQcm4: string="orange";
   public clientConnect:boolean;
-  public cahier5: string = "assets/pdf/cleor.png";
 
   constructor(private clientService:ClientService,private bndreamService:BndreamService,private router:Router,
-              private route: ActivatedRoute, private userConnect:AuthenticationService,private pdfService: PdfService) {
+              private route: ActivatedRoute, private userConnect:AuthenticationService) {
     this.serviceClient=clientService;
     this.serviceBream=this.bndreamService;
-  }
-
-  generatePdf() {
-    this.pdfService.generatePdf();
   }
 
   ngOnInit(): void {
@@ -177,5 +173,8 @@ export class BndreamComponent implements OnInit {
       this.router.navigate(['/bndream'], { fragment: 'haut' });
     }
   }
+
+
+
 
 }

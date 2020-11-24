@@ -1,10 +1,10 @@
   <div class="container" id="haut"*ngIf="!initPassWord">
     <div class="mail">
        <form [formGroup]="form">
-         <label>Email</label>
+         <label>Identifiant</label>
          <p>
            <mat-form-field appearance="outline">
-             <mat-label>Entrer votre Email</mat-label>
+             <mat-label>Entrer votre identifiant</mat-label>
              <input matInput formControlName="username" class="form-control" >
              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
 
@@ -23,7 +23,6 @@
          </p>
          <button class="valideMail " mat-button  (click)="userConnect()">Valider<mat-icon class="arrow btnMail">keyboard_arrow_right</mat-icon></button>
        </form>
-      <p style="color: red">{{message}}</p>
       <a (click)="reInitPass()"><p>Réinitialisation de votre mot de passe</p></a>
     </div>
 

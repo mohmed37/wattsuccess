@@ -130,7 +130,7 @@ public class AuthController {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
                     .badRequest()
-                    .body(new MessageResponse("Error: cet email est utilisé par un autre utilisateur!"));
+                    .body(new MessageResponse("Error: cet identifiant est utilisé par un autre utilisateur!"));
         }
 
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {

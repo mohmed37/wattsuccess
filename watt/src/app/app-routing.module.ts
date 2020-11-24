@@ -10,7 +10,6 @@ import {AdministrateurComponent} from "./administrateur/administrateur.component
 import {ConfirmationComponent} from "./auth/confirmation/confirmation.component";
 import {LoginComponent} from "./login/login.component";
 import {CguWattComponent} from "./cgu-watt/cgu-watt.component";
-import {SignaturePadComponent} from "src/app/signature-pad/signature-pad.component";
 
 
 
@@ -32,10 +31,7 @@ const routes: Routes = [
     path: 'cgu',
     component: CguWattComponent
   },
-  {
-    path: 'signature',
-    component: SignaturePadComponent
-  },
+
 
   {
     path: '',
