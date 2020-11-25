@@ -173,13 +173,13 @@ console.log(error);
   }
 
 
-  termes( MatCheckboxChange) {
-    if(MatCheckboxChange.source.id=="mat-checkbox-2"){
-      this.contratValide = (MatCheckboxChange.source.checked == true);
-    }
-    if(MatCheckboxChange.source.id=="mat-checkbox-1"){
-      this.newsValide = (MatCheckboxChange.source.checked == true);
-
+  termes( clic:string) {
+    console.log(clic);
+    if(clic=="conditions"){
+      this.contratValide=!this.contratValide;
+     }
+    if(clic=="news"){
+      this.newsValide =!this.newsValide;
     }
   }
 

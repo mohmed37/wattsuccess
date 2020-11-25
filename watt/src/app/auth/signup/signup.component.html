@@ -78,8 +78,8 @@
 
 
     <section class="example-section">
-      <mat-checkbox class="example-margin" (change)="termes($event)">Je souhaite recevoir la newsletter de WATT Success</mat-checkbox><br>
-      <mat-checkbox class="example-margin"  (change)="termes($event)">J'accepte les termes des <a href="{{host}}/#/cgu#cgu" target="_blank">conditions générales d'utilisation</a></mat-checkbox>
+      <mat-checkbox class="example-margin" (click)="termes('news')">Je souhaite recevoir la newsletter de WATT Success</mat-checkbox><br>
+      <mat-checkbox class="example-margin"  (click)="termes('conditions')">J'accepte les termes des <a href="{{host}}/#/cgu#cgu" target="_blank">conditions générales d'utilisation</a></mat-checkbox>
     </section>
     <button class="valide" mat-button type="submit" *ngIf="contratValide">S'inscrire <mat-icon class="arrow ">keyboard_arrow_right</mat-icon></button>
     <span style="color: red">{{message}}</span>
