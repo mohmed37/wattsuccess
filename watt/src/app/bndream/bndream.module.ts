@@ -20,6 +20,7 @@ import {ArdoiseComponent} from "../ardoise/ardoise.component";
 import {LayoutModule} from "../share/layout/layout.module";
 
 
+
 @NgModule({
   declarations: [AutoportraitComponent,HeroComponent,PhotolangageComponent,PraicoComponent,RoueVieComponent,ArdoiseComponent],
   imports: [

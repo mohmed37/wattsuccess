@@ -149,13 +149,13 @@ split(phrase:string){
   }
 
   clic(idCarrousel: number) {
-    this.router.navigate(['/gonBelieve/fichesMetiers'], { fragment: 'select' });
+    this.router.navigate(['/gonBelieve/fichesMetiers']);
     this.ficheMetierService.ficheMetierByPhotoId(idCarrousel)
       .subscribe(
         res => {
           this.ficheCaroussel=res;
           this.selecMetier=true;
-
+          this.router.navigate(['/gonBelieve/fichesMetiers'], { fragment: 'select' });
         });
 
   }

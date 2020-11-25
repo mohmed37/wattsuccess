@@ -48,6 +48,7 @@ import { OffreEmploiComponent } from './wattMatch/offre-emploi/offre-emploi.comp
 import {MatSelectModule} from "@angular/material/select";
 import {CguWattComponent} from "./cgu-watt/cgu-watt.component";
 import {AngularEditorModule} from "@kolkov/angular-editor";
+import { SignaturePadComponent } from './signature-pad/signature-pad.component';
 
 
 
@@ -72,7 +73,8 @@ import {AngularEditorModule} from "@kolkov/angular-editor";
     ConfirmationComponent,
     WattMatchComponent,
     OffreEmploiComponent,
-    CguWattComponent
+    CguWattComponent,
+    SignaturePadComponent
 
 
   ],
