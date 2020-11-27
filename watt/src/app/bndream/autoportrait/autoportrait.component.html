@@ -156,7 +156,7 @@
 
 <div class="container" *ngIf="!autoPortraitValide && testAutoPortrait">
 
-  <ul class="item select" *ngIf="!list2">
+  <ul class="item resultat" *ngIf="!list2">
 
    <li *ngIf="traitId1<=1" disabled="disabled"><mat-icon>close</mat-icon></li>
     <li *ngIf="traitId1>1" (click)="getTraitList(0) "><mat-icon class="icon">keyboard_arrow_up</mat-icon></li>
@@ -168,7 +168,7 @@
     <li *ngIf="traitId5>=50" disabled="disabled"><mat-icon>close</mat-icon></li>
     <li *ngIf="traitId5<50" (click)="getTraitList(1) "><mat-icon class="icon">keyboard_arrow_down</mat-icon></li>
   </ul>
-<ul class="item selection" *ngIf="!list1">
+<ul class="item resultat" *ngIf="!list1">
   <li (click)="delete(0,1)">{{resultAutoPortrait.list1[0]}}</li>
   <li (click)="delete(1,1)">{{resultAutoPortrait.list1[1]}}</li>
   <li (click)="delete(2,1)">{{resultAutoPortrait.list1[2]}}</li>
@@ -177,7 +177,7 @@
   <li class="valide" *ngIf="!list1&&choixList1==5" (click)="resultList('list1')">Valider</li>
   <li disabled="disabled" class="invalide" *ngIf="!list1&&choixList1<5" >{{choixList1}}</li>
 </ul>
-<ul class="item selection" *ngIf="list1&&!list2">
+<ul class="item resultat" *ngIf="list1&&!list2">
   <li (click)="delete(0,2)">{{resultAutoPortrait.list2[0]}}</li>
   <li (click)="delete(1,2)">{{resultAutoPortrait.list2[1]}}</li>
   <li (click)="delete(2,2)">{{resultAutoPortrait.list2[2]}}</li>

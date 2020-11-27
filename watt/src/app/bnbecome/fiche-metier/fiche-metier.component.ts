@@ -38,10 +38,11 @@ export class FicheMetierComponent implements OnInit {
 
   constructor(private httpClient: HttpClient, private router: Router,private serviceBnDream:BndreamService,
               private ficheMetierService:FicheMetierService,private hostTestService:ApiService ,private route: ActivatedRoute) {
-      }
+  }
   @Output() public pick:EventEmitter<number>=new EventEmitter<number>();
   public idCarrousel:number=1;
   public photoCarrousel: any;
+  public photodetail:any;
   public listImageFicheMetier=[];
   public metierDico:string;
   public selectFicheMetierValide: boolean;
@@ -87,10 +88,22 @@ export class FicheMetierComponent implements OnInit {
 
           this.listImage.push({photo:this.photoCarrousel,metier:this.retrieveResonse.name,id:idCarrousel});
           this.metierDico=this.retrieveResonse.name;        }
-
       );
 
   }
+  getImageDetail(idCarrousel) {
+    this.ficheMetierService.ficheMetierByImage(idCarrousel)
+      .subscribe(
+        res => {
+          this.retrieveResonse = res;
+          this.base64Data = this.retrieveResonse.picByte;
+          this.photodetail = 'data:image/jpeg;base64,' + this.base64Data;
+
+        }
+      );
+
+  }
+
   getAllFicheMetier() {
     this.ficheMetierService.ficheMetierAll()
       .subscribe(
@@ -125,11 +138,11 @@ export class FicheMetierComponent implements OnInit {
         }
       );
   }
-split(phrase:string){
+  split(phrase:string){
 
-  return phrase.split("-");
+    return phrase.split("-");
 
-}
+  }
 
 
   page(s: string) {
@@ -149,6 +162,7 @@ split(phrase:string){
   }
 
   clic(idCarrousel: number) {
+    this.fichedetail=false;
     this.router.navigate(['/gonBelieve/fichesMetiers']);
     this.ficheMetierService.ficheMetierByPhotoId(idCarrousel)
       .subscribe(
@@ -166,6 +180,7 @@ split(phrase:string){
       .subscribe(
         res => {
           this.FicheMetier=res;
+          this.getImageDetail(this.FicheMetier.photo.id);
           this.competences=this.split(this.FicheMetier.competence);
           this.qualites=this.split(this.FicheMetier.qualite);
           this.fichedetail=true;
@@ -214,4 +229,5 @@ split(phrase:string){
     }
   }
 }
+
 

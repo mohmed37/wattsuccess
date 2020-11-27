@@ -123,3 +123,7 @@ h2{
   margin-right: 50px;
 }
 /*contexte/objectifs/process*/
+
+mat-checkbox{
+  margin-right: 10px;
+}
